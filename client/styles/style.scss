@@ -22,6 +22,7 @@
 @import '_config/foundation/z-index/functions';
 @import '_config/foundation/z-index/variables';
 // LAYOUTS
+@import '_config/layouts/helpers';
 @import '_config/layouts/mixins';
 
 // APP: These files output css, using the setup from CONFIG
@@ -51,3 +52,6 @@
 @import 'app/base/preformatted-text/preformatted-text';
 @import 'app/base/table/mixins';
 @import 'app/base/table/table';
+
+// COMPONENTS
+@import '../components/header';

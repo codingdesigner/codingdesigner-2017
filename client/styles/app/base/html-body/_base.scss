@@ -27,5 +27,6 @@ html {
 }
 
 body {
-  // add body styles if needed
+  margin: 0 auto;
+  padding: 0 get-spacing(side-margin);
 }

@@ -1,0 +1,28 @@
+////
+/// @group Layout
+////
+
+/// Compensate for page margins
+/// @param {string} $sides [both] - both, left, right
+@mixin margin-compensation($sides: 'both') {
+  $side-margin: get-spacing(side-margin);
+  $side-margin--wide: get-spacing(side-margin--wide);
+  @if ($sides == 'both') {
+    margin-right: -$side-margin;
+    margin-left: -$side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-right: -$side-margin--wide;
+      margin-left: -$side-margin--wide;
+    }
+  } @else if ($sides == 'left') {
+    margin-left: -$side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-left: -$side-margin--wide;
+    }
+  } @else if ($sides == 'right') {
+    margin-right: -$side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-right: -$side-margin--wide;
+    }
+  }
+}
