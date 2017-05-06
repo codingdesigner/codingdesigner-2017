@@ -1,18 +1,22 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import css from './styles/style.css';
 
 // import components
 import Main from './components/Main';
 
-// import react router deps
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
+// console.log(browserHistory)
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={Main}></IndexRoute>
-    </Route>
-  </Router>
-)
+    <Router>
+      <Route path="/" component={Main}>
+      </Route>
+    </Router>
+);
 
 render(router, document.getElementById('root'));
