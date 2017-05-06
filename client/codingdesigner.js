@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import css from './styles/style.css';
+import scss from './styles/style.scss';
 
 // import components
 import Main from './components/Main';
