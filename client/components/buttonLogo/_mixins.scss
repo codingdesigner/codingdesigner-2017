@@ -1,0 +1,41 @@
+@mixin button-logo--base($background-color: color(black), $foreground-color: color(white)) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: currentColor;
+  width: 100%;
+  height: 330px;
+  line-height: 1.2;
+  color: $background-color;
+  font-family: font(surveyor);
+  font-size: fontsize-rem(ms(4));
+  transition-property: border-radius, width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  @include breakpoint($bp-typography-narrow) {
+    border-radius: 50%;
+    width: 330px;
+  }
+  @include breakpoint($bp--title-curve--shrink) {
+    font-size: fontsize-rem(ms(3));
+  }
+  &.rectangle {
+    border-radius: 0;
+    width: auto;
+  }
+}
+
+@mixin button-logo-image($background-image, $background-color: #BBBBBB, $background-blend: multiply, $word-color: black) {
+  background-color: $background-color;
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: $background-blend;
+  .button-logo--word {
+    color: $word-color;
+    mix-blend-mode: screen;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 // import {Link} from 'react-router';
-import Header from './Header';
+import Header from './header/Header';
 
 class Main extends React.Component {
   constructor() {

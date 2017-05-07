@@ -43,6 +43,13 @@ module.exports = {
         use: ['babel-loader'],
         include: path.join(__dirname, 'client')
       },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      },
       // CSS
       {
         test: /\.scss$/,
@@ -52,6 +59,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              root: './',
               // minimize: true
             }
           },

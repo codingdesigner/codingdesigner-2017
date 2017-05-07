@@ -14,11 +14,13 @@
 @import '_config/foundation/sizes/variables';
 @import '_config/foundation/typography/fonts';
 @import '_config/foundation/typography/functions';
+@import '_config/foundation/typography/functions-shadows';
 @import '_config/foundation/typography/map';
 @import '_config/foundation/typography/variables';
 @import '_config/foundation/typography/mixins';
 @import '_config/foundation/typography/mixins-headings';
 @import '_config/foundation/typography/mixins-links';
+@import '_config/foundation/typography/mixins-rotate';
 @import '_config/foundation/z-index/functions';
 @import '_config/foundation/z-index/variables';
 // LAYOUTS
@@ -54,4 +56,7 @@
 @import 'app/base/table/table';
 
 // COMPONENTS
-@import '../components/header';
+@import '../components/header/header';
+@import '../components/buttonLogo/variables';
+@import '../components/buttonLogo/mixins';
+@import '../components/buttonLogo/button-logo';
