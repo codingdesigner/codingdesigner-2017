@@ -24,18 +24,14 @@ class NavigationMain extends React.Component {
       <nav id="nav-primary" className="nav nav-primary">
         <MediaQuery query="(max-device-width: 800px)">
           <input type="checkbox" id="nav-primary-trigger" onChange={(e) => this.showNav(e)}/>
-          <div className="nav-primary--fan">
-            <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label"><i className="fa fa-bars fa-lg" aria-label="Menu"></i></label>
-          </div>
-          { Object.keys(navigation).map(this.navItem) }
         </MediaQuery>
         <MediaQuery query="(min-device-width: 801px)">
           <input type="checkbox" id="nav-primary-trigger" onChange={(e) => this.showNav(e)} defaultChecked/>
-          <div className="nav-primary--fan">
-            <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label"><i className="fa fa-bars" aria-label="Menu"></i></label>
-          </div>
-          { Object.keys(navigation).map(this.navItem) }
         </MediaQuery>
+        <div className="nav-primary--fan">
+          <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label"><i className="fa fa-bars fa-lg" aria-label="Menu"></i></label>
+        </div>
+        { Object.keys(navigation).map(this.navItem) }
       </nav>
     )
   }
