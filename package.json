@@ -55,6 +55,7 @@
   "devDependencies": {
     "base64-inline-loader": "^1.1.0",
     "breakpoint-sass": "^2.7.1",
+    "copy-webpack-plugin": "^4.0.1",
     "expect": "^1.18.0",
     "expect-jsx": "^3.0.0",
     "file-loader": "^0.11.1",

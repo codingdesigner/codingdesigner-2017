@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // var PATHS = {
 //   // breakpoint: path.resolve(__dirname, 'node_modules/breakpoint-sass/stylesheets/'),
@@ -33,7 +34,16 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new CopyWebpackPlugin(
+      [
+        {
+          from: 'client/assets/images/favicons/**.*',
+          to: 'static',
+          flatten: true,
+        }
+      ]
+    )
   ],
   module: {
     rules: [

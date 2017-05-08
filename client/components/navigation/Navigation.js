@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
-import navigation from '../data/navigation';
+import navigation from '../../data/navigation';
 
 class NavigationMain extends React.Component {
 

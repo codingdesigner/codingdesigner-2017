@@ -21,12 +21,18 @@ html {
     @include fluid-type(font-size, $bp--xsmall, $bp--xlarge, $root-typesize--min, $root-typesize);
   }
 
-  else {
-    font-size: unitless-convert($root-typesize, 16px) * 100%;
+  @else {
+    font-size: unitless-convert(ms(1, 18px), 16px) * 100%;
+    @include breakpoint($bp-typography-narrow) {
+      font-size: unitless-convert(ms(0, 18px), 16px) * 100%;
+    }
   }
 }
 
 body {
   margin: 0 auto;
   padding: 0 get-spacing(side-margin);
+  @include breakpoint($bp-typography-narrow) {
+    padding: 0 get-spacing(side-margin--wide);
+  }
 }

@@ -1,11 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
 
-    './client/reduxstagram'
+    './client/codingdesigner'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -13,7 +14,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': "'production'"
@@ -23,22 +24,57 @@ module.exports = {
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new CopyWebpackPlugin(
+      [
+        {
+          from: 'client/assets/images/favicons/**.*',
+          to: '',
+          flatten: true,
+        }
+      ]
+    )
   ],
   module: {
-    loaders: [
-    // js
-    {
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'client')
-    },
-    // CSS
-    {
-      test: /\.styl$/,
-      include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
-    }
+    rules: [
+      // js
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        include: path.join(__dirname, 'client')
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      },
+      // CSS
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: 'style-loader'},
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              root: './',
+              // minimize: true
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              // includePaths: [PATHS.breakpoint, PATHS.normalize]
+            }
+          }
+        ]
+      }
     ]
   }
 };

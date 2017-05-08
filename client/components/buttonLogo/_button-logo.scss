@@ -67,7 +67,7 @@
   height: 0;
   text-transform: uppercase;
   color: $button-logo-foreground-color;
-  font-family: font(archer);
+  font-family: get-font(archer);
   font-size: fontsize-rem(ms(0));
   font-weight: 700;
   .rectangle & {

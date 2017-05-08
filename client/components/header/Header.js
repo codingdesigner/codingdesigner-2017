@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonLogo from '../buttonLogo/ButtonLogo';
-import NavigationMain from '../NavigationMain';
+import NavigationMain from '../navigation/Navigation';
 
 class Header extends React.Component {
   constructor() {

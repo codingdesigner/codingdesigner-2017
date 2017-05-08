@@ -1,0 +1,107 @@
+$navigation-count: 7;
+
+.nav-primary {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+  @include breakpoint($bp--navigation--wide) {
+    top: -1em;
+    z-index: 3;
+  }
+  //.nav-item {}
+  //.site-header & {}
+}
+
+.nav-primary-trigger--label {
+  @include nav-primary--item();
+  @include icon(menu, $text-replace: true);
+  z-index: 1;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.nav-primary--fan {
+  @include nav-primary--item();
+  @include breakpoint($bp--navigation--narrow) {
+    opacity: 0;
+    padding-top: 0;
+    padding-right: 0.5em;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    max-height: 0;
+    overflow: hidden;
+    text-align: right;
+    font-weight: 800;
+    transition-property: max-height, padding, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    &:nth-of-type(1) {
+      opacity: 1;
+      z-index: 1;
+      margin-top: -2.5em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      max-height: 10em;
+      color: color(white);
+    }
+    &:nth-of-type(1n+2) {
+      margin-right: 0;
+      border-bottom: 2px solid color(gray, light);
+      padding-right: 0;
+    }
+    // sass-lint:disable no-ids
+    #nav-primary-trigger:checked ~ & {
+      opacity: 1;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      max-height: 10em;
+    }
+    // sass-lint:enable no-ids
+  }
+  @include breakpoint($bp--navigation--wide) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: rotate(0deg);
+    margin-left: -9em;
+    padding-left: 10em;
+    list-style-type: none;
+    transform-origin: 0 50%;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    &:nth-of-type(1n + 2) {
+      opacity: 0;
+    }
+    @for $i from 1 through $navigation-count {
+      &:nth-of-type(#{$i}) {
+        z-index: $navigation-count - $i;
+      }
+    }
+    // sass-lint:disable no-ids
+    #nav-primary-trigger:checked ~ & {
+      @include fan-items(
+        $num-items: $navigation-count,
+        $angle-span: 65deg,
+        $angle-offset: -40deg
+      );
+      opacity: 1;
+    }
+    // sass-lint:enable no-ids
+    a {
+      border-bottom: 1px solid color(black);
+    }
+  }
+  a {
+    @include unset-border-links();
+    display: block;
+  }
+}
+
+// sass-lint:disable no-ids
+#nav-primary-trigger {
+  @include visuallyhidden();
+}
+// sass-lint:enable no-ids

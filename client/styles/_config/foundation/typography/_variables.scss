@@ -20,7 +20,7 @@ $root-typesize: 18px;
 
 /// Use fluid type sizes on the root element?
 /// @type boolean
-$use-fluid-type: true;
+$use-fluid-type: false;
 
 /// site minimum type size
 /// @type px
@@ -52,7 +52,7 @@ $use-modular-scale: true;
 /// __Sassy Modular Scale__ base size
 /// @link https://github.com/modularscale/modularscale-sass
 /// @type px | em
-$ms-base: em($root-typesize);
+$ms-base: $root-typesize;
 
 /// __Sassy Modular Scale__ ratio
 /// @link https://github.com/modularscale/modularscale-sass
