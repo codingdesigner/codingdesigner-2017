@@ -10,16 +10,26 @@ $navigation-count: 7;
     top: -1em;
     z-index: 3;
   }
-  //.nav-item {}
-  //.site-header & {}
 }
 
 .nav-primary-trigger--label {
   @include nav-primary--item();
-  @include icon(menu, $text-replace: true);
+  //@include icon(menu, $text-replace: true);
   z-index: 1;
   margin: 0;
   letter-spacing: 0;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  @include breakpoint($bp--navigation--narrow) {
+    color: get-color(white);
+  }
+  @include breakpoint($bp--navigation--wide) {
+    #nav-primary-trigger:checked ~ .nav-primary--fan & {
+      opacity: 0.1;
+    }
+  }
 }
 
 .nav-primary--fan {
