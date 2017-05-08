@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var sassLintPlugin = require('sasslint-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // var PATHS = {
@@ -35,6 +36,20 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new sassLintPlugin({
+      configFile: '.sass-lint.yml',
+      context: './client',
+      ignoreFiles: [
+        './client/styles/_config/vendor/fontAwesome/_animated.scss',
+        './client/styles/_config/vendor/fontAwesome/_bordered-pulled.scss',
+        './client/styles/_config/vendor/fontAwesome/_core.scss',
+        './client/styles/_config/vendor/fontAwesome/_larger.scss',
+        './client/styles/_config/vendor/fontAwesome/_list.scss',
+        './client/styles/_config/vendor/fontAwesome/_mixins.scss',
+        './client/styles/_config/vendor/fontAwesome/_path.scss',
+        './client/styles/_config/vendor/fontAwesome/_stacked.scss'
+      ]
+    }),
     new CopyWebpackPlugin(
       [
         {

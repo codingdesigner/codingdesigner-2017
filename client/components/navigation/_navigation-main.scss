@@ -14,11 +14,10 @@ $navigation-count: 7;
 
 .nav-primary-trigger--label {
   @include nav-primary--item();
-  //@include icon(menu, $text-replace: true);
+  opacity: 1;
   z-index: 1;
   margin: 0;
   letter-spacing: 0;
-  opacity: 1;
   transition-property: opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -26,7 +25,7 @@ $navigation-count: 7;
     color: get-color(white);
   }
   @include breakpoint($bp--navigation--wide) {
-    #nav-primary-trigger:checked ~ .nav-primary--fan & {
+    [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
       opacity: 0.1;
     }
   }
@@ -47,6 +46,7 @@ $navigation-count: 7;
     transition-property: max-height, padding, opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+
     &:nth-of-type(1) {
       opacity: 1;
       z-index: 1;
@@ -56,13 +56,15 @@ $navigation-count: 7;
       max-height: 10em;
       color: color(white);
     }
+
     &:nth-of-type(1n+2) {
       margin-right: 0;
       border-bottom: 2px solid color(gray, light);
       padding-right: 0;
     }
+
     // sass-lint:disable no-ids
-    #nav-primary-trigger:checked ~ & {
+    [id='nav-primary-trigger']:checked ~ & {
       opacity: 1;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
@@ -82,14 +84,17 @@ $navigation-count: 7;
     transition-property: transform, opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+
     &:nth-of-type(1n + 2) {
       opacity: 0;
     }
+
     @for $i from 1 through $navigation-count {
       &:nth-of-type(#{$i}) {
         z-index: $navigation-count - $i;
       }
     }
+
     // sass-lint:disable no-ids
     #nav-primary-trigger:checked ~ & {
       @include fan-items(
@@ -99,11 +104,13 @@ $navigation-count: 7;
       );
       opacity: 1;
     }
+
     // sass-lint:enable no-ids
     a {
       border-bottom: 1px solid color(black);
     }
   }
+
   a {
     @include unset-border-links();
     display: block;
@@ -111,7 +118,7 @@ $navigation-count: 7;
 }
 
 // sass-lint:disable no-ids
-#nav-primary-trigger {
+[id='nav-primary-trigger'] {
   @include visuallyhidden();
 }
 // sass-lint:enable no-ids

@@ -1,6 +1,7 @@
 .site-header {
   @include margin-compensation();
   position: relative;
+
   @include breakpoint($bp--navigation--wide) {
     display: flex;
     align-items: center;
@@ -12,16 +13,21 @@
     padding-left: get-spacing(side-margin--wide);
     min-width: 40em;
   }
+
   @include breakpoint(870px) {
     padding-left: 15%;
   }
+
   @include breakpoint(1100px) {
     justify-content: center;
     padding-left: 0;
+
     .button-logo {
       margin-left: -7em;
     }
+
   }
+
   .button-logo {
     z-index: 1;
   }

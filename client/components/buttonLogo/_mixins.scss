@@ -14,17 +14,21 @@
   transition-property: border-radius, width;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
   @include breakpoint($bp-typography-narrow) {
     border-radius: 50%;
     width: 330px;
   }
+
   @include breakpoint($bp--title-curve--shrink) {
     font-size: fontsize-rem(ms(3));
   }
+
   &.rectangle {
     border-radius: 0;
     width: auto;
   }
+
 }
 
 @mixin button-logo-image($background-image, $background-color: #BBBBBB, $background-blend: multiply, $word-color: black) {
@@ -34,8 +38,10 @@
   background-position: center;
   background-size: cover;
   background-blend-mode: $background-blend;
+
   .button-logo--word {
     color: $word-color;
     mix-blend-mode: screen;
   }
+
 }
