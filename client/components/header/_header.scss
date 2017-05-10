@@ -8,10 +8,14 @@
     justify-content: flex-start;
     margin-bottom: 5em;
     border-bottom: 0.33em dotted currentColor;
+    background-clip: padding-box;
     padding-top: 1.5em;
     padding-bottom: 5em;
     padding-left: get-spacing(side-margin--wide);
     min-width: 40em;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 
     &.image-1 {
       background-color: #253e3f;
