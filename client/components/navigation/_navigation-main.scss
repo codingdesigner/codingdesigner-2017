@@ -25,6 +25,18 @@ $navigation-count: 7;
     color: get-color(white);
   }
   @include breakpoint($bp--navigation--wide) {
+    .image-1 &,
+    .image-2 &,
+    .image-3 &,
+    .image-5 &,
+    .image-6 &,
+    .image-7 &,
+    .image-8 &,
+    .image-9 &,
+    .image-10 & {
+      color: get-color(white);
+    }
+
     [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
       opacity: 0.1;
     }
@@ -107,12 +119,26 @@ $navigation-count: 7;
 
     // sass-lint:enable no-ids
     a {
-      border-bottom: 1px solid color(black);
+      @include unset-faux-underline-links();
+      border-bottom: 1px solid get-color(black);
+
+      .image-1 &,
+      .image-2 &,
+      .image-3 &,
+      .image-5 &,
+      .image-6 &,
+      .image-7 &,
+      .image-8 &,
+      .image-9 &,
+      .image-10 & {
+        @include link-reverse();
+      }
+
     }
   }
 
   a {
-    @include unset-border-links();
+    //@include unset-border-links();
     display: block;
   }
 }

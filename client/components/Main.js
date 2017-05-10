@@ -3,19 +3,10 @@ import React from 'react';
 import Header from './header/Header';
 
 class Main extends React.Component {
-  constructor() {
-    super();
-
-    // initial state
-    this.state = {
-      menuVisible: true
-    }
-  }
-
   render() {
     return (
       <div>
-        <Header menuVisible={this.state.menuVisible}/>
+        <Header/>
         <h1>
           {/*<Link to="/">The Coding Designer</Link>*/}
         </h1>

@@ -1,32 +1,43 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ButtonLogo from '../buttonLogo/ButtonLogo';
 import NavigationMain from '../navigation/Navigation';
 
 class Header extends React.Component {
   constructor() {
     super();
+    this.setHeaderImage = this.setHeaderImage.bind(this);
+    this.calculateButtonImage = this.calculateButtonImage.bind(this);
 
     // initial state
     this.state = {
-      menuVisible: true
+      headerImage: 1
     }
   }
 
+  setHeaderImage(i) {
+    this.setState({headerImage: i});
+  }
+
+  calculateButtonImage(min = 1, max = 10) {
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
+    this.setHeaderImage(random);
+    return random;
+  }
+
+  componentWillMount() {
+    this.calculateButtonImage();
+  }
+
   render() {
-    const { menuVisible } = this.props;
+    const headerClass = 'site-header image-' + this.state.headerImage;
 
     return (
-      <header className="site-header" role="banner">
-        <ButtonLogo/>
-        <NavigationMain menuVisible={this.state.menuVisible}/>
+      <header className={headerClass} role="banner">
+        <ButtonLogo headerImage={this.state.headerImage} setHeaderImage={this.setHeaderImage} calculateButtonImage={this.calculateButtonImage} />
+        <NavigationMain headerImage={this.state.headerImage} calculateButtonImage={this.calculateButtonImage} />
       </header>
     )
   }
 }
-
-Header.propTypes = {
-  menuVisible: PropTypes.bool.isRequired
-};
 
 export default Header;

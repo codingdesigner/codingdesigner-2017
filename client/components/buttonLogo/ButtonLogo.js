@@ -1,11 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ButtonLogo extends React.Component {
   render() {
-    const min = Math.ceil(1);
-    const max = Math.floor(10);
-    const random = Math.floor(Math.random() * (max - min)) + min;
-    const buttonClass = 'button-logo image-' + random;
+    const buttonClass = 'button-logo image-' + this.props.headerImage;
 
     return (
       <div className={buttonClass}>
@@ -38,5 +36,9 @@ class ButtonLogo extends React.Component {
     )
   }
 }
+
+ButtonLogo.propTypes = {
+  headerImage: PropTypes.number.isRequired
+};
 
 export default ButtonLogo;

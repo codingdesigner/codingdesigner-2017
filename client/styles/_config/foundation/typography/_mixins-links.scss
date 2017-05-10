@@ -210,3 +210,15 @@
   @include set-faux-underline-links();
   @include set-link-transitions();
 }
+
+/// Standard link
+/// * change to suit your app
+@mixin link-reverse() {
+  @include set-link-colors(
+    $link-normal: get-link-parameter(reverse),
+    $link-hover: get-link-parameter(reverse, hover),
+    $link-active: get-link-parameter(reverse, active),
+    $link-visited: get-link-parameter(reverse, visited),
+    $link-focus: get-link-parameter(reverse, focus)
+  );
+}

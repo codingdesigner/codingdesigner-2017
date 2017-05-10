@@ -212,5 +212,12 @@ $color-theme--link-map: (
     focus: $color-theme--link-b,
     size: 1px,
     background-color: $color-theme--background
-  )
+  ),
+  reverse: (
+    initial: get-color(white),
+    active: get-color(white),
+    visited: get-color(white),
+    hover: get-color(white),
+    focus: get-color(white),
+  ),
 );
