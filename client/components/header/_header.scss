@@ -18,43 +18,53 @@
     transition-timing-function: ease-in-out;
 
     &.image-1 {
-      background-color: #253e3f;
+      background-color: currentColor;
+      color: #253e3f;
     }
 
     &.image-2 {
-      background-color: #023a43;
+      background-color: currentColor;
+      color: #023a43;
     }
 
     &.image-3 {
-      background-color: #2a2933;
+      background-color: currentColor;
+      color: #2a2933;
     }
 
     &.image-4 {
-      background-color: #b1b8a4;
+      background-color: currentColor;
+      color: #b1b8a4;
     }
 
     &.image-5 {
-      background-color: #d6bb4a;
+      background-color: currentColor;
+      color: #d6bb4a;
     }
 
     &.image-6 {
-      background-color: #094e8e;
+      background-color: currentColor;
+      color: #094e8e;
     }
 
     &.image-7 {
-      background-color: #2D5185;
+      background-color: currentColor;
+      color: #2D5185;
     }
 
     &.image-8 {
-      background-color: #303738;
+      background-color: currentColor;
+      color: #303738;
     }
 
     &.image-9 {
-      background-color: #504530;
+      background-color: currentColor;
+      color: #504530;
     }
 
     &.image-10 {
-      background-color: #002a32;
+      background-color: currentColor;
+      color: #002a32;
     }
 
   }
