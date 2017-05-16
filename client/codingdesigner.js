@@ -8,15 +8,15 @@ import {
 import scss from './styles/style.scss';
 
 // import components
-import Main from './components/Main';
+import Home from './components/Home';
 
 
 // console.log(browserHistory)
 const router = (
-    <Router>
-      <Route path="/" component={Main}>
-      </Route>
-    </Router>
+  <Router>
+    <Route path="/" component={Home}>
+    </Route>
+  </Router>
 );
 
 render(router, document.getElementById('root'));

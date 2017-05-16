@@ -1,0 +1,79 @@
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6em;
+  @include breakpoint($bp--page-speaking-3) {
+    justify-content: space-between;
+  }
+}
+
+.intro--text {
+  max-width: 100%;
+  @include breakpoint($bp--page-speaking-3) {
+    flex-basis: calc(#{golden-large(100%)} - 1.5em);
+  }
+
+  .page--speaking & {
+    margin-bottom: 1.5em;
+    background-color: #0F0F0F;
+    background-image: url('../assets/images/speaking/sass-conf--speaker-panel.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    padding: 0.5em 0.5em 34em;
+    color: get-color(white);
+    // @todo refactor to use eq.js
+    @include breakpoint($bp--page-speaking-1) {
+      padding-bottom: 25em;
+    }
+    @include breakpoint($bp--page-speaking-2) {
+      padding-bottom: 18em;
+    }
+    @include breakpoint($bp--page-speaking-3) {
+      padding-bottom: 25em;
+    }
+    @include breakpoint($bp--page-speaking-4) {
+      padding-bottom: 20em;
+    }
+    @include breakpoint($bp--page-speaking-5) {
+      padding-bottom: 18em;
+    }
+
+    .intro-graphs-caption {
+      position: relative;
+      top: 34em;
+      font-style: italic;
+      @include breakpoint($bp--page-speaking-1) {
+        top: 25em;
+      }
+      @include breakpoint($bp--page-speaking-2) {
+        top: 18em;
+      }
+      @include breakpoint($bp--page-speaking-3) {
+        top: 25em;
+      }
+      @include breakpoint($bp--page-speaking-4) {
+        top: 20em;
+      }
+      @include breakpoint($bp--page-speaking-5) {
+        top: 18em;
+      }
+    }
+
+  }
+
+}
+
+.intro-image {
+  margin-bottom: 2em;
+  max-width: 100%;
+  @include breakpoint($bp--page-speaking-3) {
+    flex-basis: calc(#{golden-small(100%)} - 1.5em);
+  }
+
+  img {
+    border: 1px solid get-color(black);
+  }
+
+}
+

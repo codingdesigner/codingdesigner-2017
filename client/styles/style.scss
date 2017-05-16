@@ -26,6 +26,7 @@
 // LAYOUTS
 @import '_config/layouts/helpers';
 @import '_config/layouts/mixins';
+@import '_config/layouts/mixins-grid';
 
 // Vendor
 @import '_config/vendor/variables';
@@ -59,6 +60,10 @@
 @import 'app/base/table/mixins';
 @import 'app/base/table/table';
 
+// Foundation
+@import 'app/foundation/page/page';
+@import 'app/foundation/page/page-title';
+
 // COMPONENTS
 @import '../components/header/header';
 @import '../components/buttonLogo/variables';
@@ -66,3 +71,5 @@
 @import '../components/buttonLogo/button-logo';
 @import '../components/navigation/navigation';
 @import '../components/navigation/navigation-main';
+@import '../components/intro/intro';
+@import '../components/homeIntro/home-intro';

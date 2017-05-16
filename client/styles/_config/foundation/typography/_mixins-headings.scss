@@ -41,40 +41,58 @@
 /// @param {color | null} $heading-color [null]
 @mixin h1($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h1);
+  @include heading-typography(h1-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h1);
+  }
 }
 
 /// Assign default H2 styles to a mixin so they can be applied anywhere
 /// @param {color | null} $heading-color [null]
 @mixin h2($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h2);
+  @include heading-typography(h2-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h2);
+  }
 }
 
 /// Assign default H3 styles to a mixin so they can be applied anywhere
 /// @param {color | null} $heading-color [null]
 @mixin h3($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h3);
+  @include heading-typography(h3-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h3);
+  }
 }
 
 /// Assign default H4 styles to a mixin so they can be applied anywhere
 /// @param {color | null} $heading-color [null]
 @mixin h4($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h4);
+  @include heading-typography(h4-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h4);
+  }
 }
 
 /// Assign default H5 styles to a mixin so they can be applied anywhere
 /// @param {color | null} $heading-color [null]
 @mixin h5($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h5);
+  @include heading-typography(h5-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h5);
+  }
 }
 
 /// Assign default H6 styles to a mixin so they can be applied anywhere
 /// @param {color | null} $heading-color [null]
 @mixin h6($heading-color: null) {
   @include heading-base($heading-color);
-  @include heading-typography(h6);
+  @include heading-typography(h6-narrow);
+  @include breakpoint($bp-typography-narrow) {
+    @include heading-typography(h6);
+  }
 }

@@ -134,41 +134,78 @@ $color-theme--heading--default: $color-theme--text;
 ///     margin-top: 0.5, // Percentage of $base-line-em
 ///     margin-bottom: 0.5 // Percentage of $base-line-em
 ///   ),
+
 $heading-typography: (
-  h1: (
+  h1-narrow: (
     size: get-font-size(4),
     line-height: 1.1,
-    margin-top: 0.5,
+    margin-top: unitless-convert(ms(4)),
+    margin-bottom: 0.5
+  ),
+  h1: (
+    size: get-font-size(6),
+    line-height: 1.1,
+    margin-top: unitless-convert(ms(6)),
+    margin-bottom: 0.5
+  ),
+  h2-narrow: (
+    size: get-font-size(2),
+    line-height: 1.1,
+    margin-top: unitless-convert(ms(2)),
     margin-bottom: 0.5
   ),
   h2: (
+    size: get-font-size(5),
+    line-height: 1.1,
+    margin-top: unitless-convert(ms(5)),
+    margin-bottom: 0.5
+  ),
+  h3-narrow: (
     size: get-font-size(2),
     line-height: 1.1,
-    margin-top: 0.5,
+    margin-top: unitless-convert(ms(2)),
     margin-bottom: 0.5
   ),
   h3: (
-    size: get-font-size(2),
+    size: get-font-size(4),
     line-height: 1.1,
-    margin-top: 0.5,
+    margin-top: unitless-convert(ms(4)),
     margin-bottom: 0.5
   ),
-  h4: (
+  h4-narrow: (
     size: get-font-size(1),
     line-height: 1.3,
-    margin-top: 0.25,
+    margin-top: unitless-convert(ms(1)),
+    margin-bottom: 0.25
+  ),
+  h4: (
+    size: get-font-size(3),
+    line-height: 1.3,
+    margin-top: unitless-convert(ms(3)),
+    margin-bottom: 0.25
+  ),
+  h5-narrow: (
+    size: get-font-size(0),
+    line-height: 1.5,
+    margin-top: unitless-convert(ms(0)),
     margin-bottom: 0.25
   ),
   h5: (
+    size: get-font-size(2),
+    line-height: 1.5,
+    margin-top: unitless-convert(ms(2)),
+    margin-bottom: 0.25
+  ),
+  h6-narrow: (
     size: get-font-size(0),
     line-height: 1.5,
-    margin-top: 0.25,
+    margin-top: unitless-convert(ms(0)),
     margin-bottom: 0.25
   ),
   h6: (
-    size: get-font-size(0),
+    size: get-font-size(1),
     line-height: 1.5,
-    margin-top: 0.25,
+    margin-top: unitless-convert(ms(1)),
     margin-bottom: 0.25
   )
 );
