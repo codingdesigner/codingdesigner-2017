@@ -1,0 +1,5 @@
+{
+  "dest": "sassdoc",
+  "verbose": false,
+  "theme": "default"
+}

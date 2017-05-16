@@ -8,7 +8,10 @@
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf dist",
     "start": "node devServer.js",
-    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel codingdesigner"
+    "browsersync": "browser-sync start --proxy localhost:7770 --tunnel codingdesigner",
+    "docs:sass": "sassdoc './client/styles/**/*.scss'",
+    "docs:sass:watch": "watch `sassdoc './client/styles/**/*.scss'` './client/styles/*.scss' --ignoreUnreadable --ignoreDotFiles",
+    "docs:sass:serve": "browser-sync start --server --startPath 'sassdoc'"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
+    "browser-sync": "^2.18.8",
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-plugin-babel": "^4.1.1",
@@ -48,6 +52,9 @@
     "redbox-react": "^1.2.3",
     "redux": "^3.5.2",
     "rimraf": "^2.5.2",
+    "sass-lint": "^1.10.2",
+    "sassdoc": "^2.2.2",
+    "sasslint-webpack-plugin": "^1.0.4",
     "style-loader": "^0.17.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
