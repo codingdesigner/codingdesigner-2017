@@ -1,5 +1,5 @@
 import React from 'react';
-// const ReactDOM = require('react-dom');
+import TweetEmbed from 'react-tweet-embed'
 import Header from './Header/Header';
 import HomeIntro from './HomeIntro/HomeIntro';
 import PortfolioOverview from './PortfolioOverview/PortfolioOverview';
@@ -18,14 +18,10 @@ class Main extends React.Component {
           <HomeIntro/>
         </div>
         <PortfolioOverview/>
-
-          {/*{{>molecules-tweet-rwd-hard}}*/}
-
-        {/*<ReactMarkdown source={input} />*/}
+        <TweetEmbed id='182147993800159232'/>
       </div>
     )
   }
 }
-;
 
 export default Main;
