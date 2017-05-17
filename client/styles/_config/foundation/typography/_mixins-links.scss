@@ -221,4 +221,5 @@
     $link-visited: get-link-parameter(reverse, visited),
     $link-focus: get-link-parameter(reverse, focus)
   );
+  @include unset-faux-underline-links();
 }

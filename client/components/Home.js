@@ -1,13 +1,13 @@
 import React from 'react';
-import TweetEmbed from 'react-tweet-embed'
 import Header from './Header/Header';
-import Footer from './Footer/Footer';
 import HomeIntro from './HomeIntro/HomeIntro';
 import PortfolioOverview from './PortfolioOverview/PortfolioOverview';
+import TweetEmbed from 'react-tweet-embed'
+import Footer from './Footer/Footer';
 
 
 
-class Main extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div>
@@ -26,4 +26,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Home;

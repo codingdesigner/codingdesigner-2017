@@ -44,12 +44,12 @@ class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <div class="styleguide">
+        <div className="styleguide">
           <p>
             <Link to="/support/dest/pattern-lab/?p=pages-home">Styleguide (Pattern Lab) for this site</Link>
           </p>
         </div>
-        <div class="copyright">
+        <div className="copyright">
           <p>&copy; 2016, 2017 Mason Wendell. All rights reserved.</p>
         </div>
       </footer>

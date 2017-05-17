@@ -16,7 +16,7 @@ class PortfolioOverview extends React.Component {
 
     return (
       <div className="portfolio-overview--item" key={key}>
-        <h3 class="po-item--name"><a href="">{overviewItem.item_name}</a></h3>
+        <h3 className="po-item--name"><a href="">{overviewItem.item_name}</a></h3>
         <Link to="/" className="portfolio--view-full-item">View full portfolio item</Link>
         <Link to="/" className={overviewItemImageLinkClass} />
       </div>
