@@ -1,5 +1,6 @@
 .portfolio-overview {
   margin-bottom: 5vh;
+
   .section-title {
     @include h1();
   }
@@ -12,53 +13,62 @@
 }
 
 .po-item--link {
-  @include unset-background-links();
+  @include unset-faux-underline-links();
   display: block;
-  border-top: 2px dashed color(black);
-  border-bottom: 2px dashed color(black);
-  box-shadow: 0 1em 0 0 rgba(color(white), 0.75) inset;
+  border-top: 2px dashed get-color(black);
+  border-bottom: 2px dashed get-color(black);
+  box-shadow: 0 1em 0 0 rgba(get-color(white), 0.75) inset;
   background-attachment: fixed;
   background-clip: padding-box;
   background-repeat: repeat-y;
   background-position: top left;
   background-size: 100% auto;
   height: 75vh;
+
   &.touch-detected {
     background-attachment: scroll;
     height: 150vh;
   }
+
   @include breakpoint($bp--portfolio-overview--narrow) {
     &.reliefweb {
-      background-image: url('../src/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-narrow.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-narrow.png');
     }
+
     &.score {
-      background-image: url('../src/images/portfolio/score/score-home-overview-narrow.png');
+      background-image: url('../assets/images/portfolio/score/score-home-overview-narrow.png');
     }
   }
   @include breakpoint($bp--portfolio-overview--tween) {
     &.reliefweb {
-      background-image: url('../src/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-tween.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-tween.png');
     }
+
     &.score {
-      background-image: url('../src/images/portfolio/score/score-home-overview-tween.png');
+      background-image: url('../assets/images/portfolio/score/score-home-overview-tween.png');
     }
   }
   @include breakpoint($bp--portfolio-overview--med) {
     &.reliefweb {
-      background-image: url('../src/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-med.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-med.png');
     }
+
     &.score {
-      background-image: url('../src/images/portfolio/score/score-home-overview-med.png');
+      background-image: url('../assets/images/portfolio/score/score-home-overview-med.png');
     }
   }
+
   @include breakpoint($bp--portfolio-overview--wide) {
+
     &.reliefweb {
-      background-image: url('../src/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-wide.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-wide.png');
     }
+
     &.score {
-      background-image: url('../src/images/portfolio/score/score-home-overview-wide.png');
+      background-image: url('../assets/images/portfolio/score/score-home-overview-wide.png');
     }
   }
+
   @include breakpoint($bp--page-over-wide) {
     background-position: top center;
     background-size: $page-max-width;
@@ -66,36 +76,40 @@
 }
 
 .po-item--name {
-  @include margin-compensation--inner();
+  @include margin-compensation--inner($side-margin: get-spacing(side-margin), $side-margin--wide: get-spacing(side-margin--wide));
   display: inline-block;
   position: relative;
   transform: translateY(0.25em);
   margin-bottom: 0;
-  border: 1px solid color(white);
-  box-shadow: 0 0 0 4px color(black);
-  background-color: color(black);
+  border: 1px solid get-color(white);
+  box-shadow: 0 0 0 4px get-color(black);
+  background-color: get-color(black);
   padding: 0.125em 1em 0.125em 0.5em;
   text-transform: none;
-  color: color(white);
+  color: get-color(white);
+
   &:before {
-    @include arrow($color: color(black), $arrow-length: 0.33em, $arrow-breadth: 0.33em * 3) {
+    @include arrow($color: get-color(black), $arrow-length: 0.33em, $arrow-breadth: 0.33em * 3) {
       top: 50%;
       right: 0.41em;
       transform: translateY(-50%);
       z-index: 2;
     }
   }
+
   &:after {
-    @include arrow($color: color(white), $arrow-length: 0.33em) {
+    @include arrow($color: get-color(white), $arrow-length: 0.33em) {
       top: 50%;
       right: 0.25em;
       transform: translateY(-50%);
       z-index: 1;
     }
   }
+
   a {
-    @include link-knockout();
+    @include link-reverse();
   }
+
 }
 
 .portfolio--view-full-item {
@@ -106,8 +120,8 @@
 .portfolio--view-all {
   display: table;
   margin-top: -5em;
-  border-bottom: 2px dashed color(white);
-  background-color: color(gray, light);
+  border-bottom: 2px dashed get-color(white);
+  background-color: get-color(gray, light);
   padding: 1em 0.5em;
   width: auto;
 }

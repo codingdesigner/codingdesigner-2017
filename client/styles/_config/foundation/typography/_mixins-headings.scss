@@ -18,7 +18,7 @@
 }
 
 /// Set Heading Size
-/// @param {color} $size
+/// @param {number} $size
 /// @param {number} $line-height [false]
 @mixin heading-size($size, $line-height: false) {
   font-size: fontsize-rem($size);

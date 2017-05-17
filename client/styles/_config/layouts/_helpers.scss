@@ -26,3 +26,26 @@
     }
   }
 }
+
+/// Compensate for page margins in inner items
+/// @param {string} $sides [both] - both, left, right
+@mixin margin-compensation--inner($sides: 'both', $side-margin: 0, $side-margin--wide: 0) {
+  @if ($sides == 'both') {
+    margin-right: $side-margin;
+    margin-left: $side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-right: $side-margin--wide;
+      margin-left: $side-margin--wide;
+    }
+  } @else if ($sides == 'left') {
+    margin-left: $side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-left: $side-margin--wide;
+    }
+  } @else if ($sides == 'right') {
+    margin-right: $side-margin;
+    @include breakpoint($bp-typography-narrow) {
+      margin-right: $side-margin--wide;
+    }
+  }
+}

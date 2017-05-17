@@ -23,6 +23,7 @@
 @import '_config/foundation/typography/mixins-rotate';
 @import '_config/foundation/z-index/functions';
 @import '_config/foundation/z-index/variables';
+@import '_config/foundation/shapes/mixins';
 // LAYOUTS
 @import '_config/layouts/helpers';
 @import '_config/layouts/mixins';
@@ -65,11 +66,12 @@
 @import 'app/foundation/page/page-title';
 
 // COMPONENTS
-@import '../components/header/header';
-@import '../components/buttonLogo/variables';
-@import '../components/buttonLogo/mixins';
-@import '../components/buttonLogo/button-logo';
-@import '../components/navigation/navigation';
-@import '../components/navigation/navigation-main';
-@import '../components/intro/intro';
-@import '../components/homeIntro/home-intro';
+@import '../components/Header/header';
+@import '../components/ButtonLogo/variables';
+@import '../components/ButtonLogo/mixins';
+@import '../components/ButtonLogo/button-logo';
+@import '../components/Navigation/navigation';
+@import '../components/Navigation/navigation-main';
+@import '../components/Intro/intro';
+@import '../components/HomeIntro/home-intro';
+@import '../components/PortfolioOverview/portfolio-overview';

@@ -254,7 +254,7 @@ $color-theme--link-map: (
     initial: get-color(white),
     active: get-color(white),
     visited: get-color(white),
-    hover: get-color(white),
-    focus: get-color(white),
+    hover: get-color(gray, light),
+    focus: get-color(gray, light),
   ),
 );

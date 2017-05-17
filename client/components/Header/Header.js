@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonLogo from '../buttonLogo/ButtonLogo';
-import NavigationMain from '../navigation/Navigation';
+import ButtonLogo from '../ButtonLogo/ButtonLogo';
+import NavigationMain from '../Navigation/Navigation';
 
 class Header extends React.Component {
   constructor() {

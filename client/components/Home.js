@@ -1,7 +1,8 @@
 import React from 'react';
 // const ReactDOM = require('react-dom');
-import Header from './header/Header';
-import HomeIntro from './homeIntro/HomeIntro';
+import Header from './Header/Header';
+import HomeIntro from './HomeIntro/HomeIntro';
+import PortfolioOverview from './PortfolioOverview/PortfolioOverview';
 
 
 
@@ -16,8 +17,8 @@ class Main extends React.Component {
           </h1>
           <HomeIntro/>
         </div>
+        <PortfolioOverview/>
 
-          {/*{{>organisms-portfolio-overview}}*/}
           {/*{{>molecules-tweet-rwd-hard}}*/}
 
         {/*<ReactMarkdown source={input} />*/}
