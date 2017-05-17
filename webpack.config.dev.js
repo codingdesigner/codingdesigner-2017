@@ -69,7 +69,7 @@ module.exports = {
         include: path.join(__dirname, 'client')
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2|mp3)$/,
         loader: 'url-loader',
         options: {
           limit: 10000
