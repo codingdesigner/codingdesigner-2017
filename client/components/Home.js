@@ -1,6 +1,7 @@
 import React from 'react';
 import TweetEmbed from 'react-tweet-embed'
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import HomeIntro from './HomeIntro/HomeIntro';
 import PortfolioOverview from './PortfolioOverview/PortfolioOverview';
 
@@ -16,9 +17,10 @@ class Main extends React.Component {
             Hi. <span className="my-name">I’m <span className="no-break">Mason Wendell.</span></span>
           </h1>
           <HomeIntro/>
+          <PortfolioOverview/>
+          <TweetEmbed id='182147993800159232'/>
         </div>
-        <PortfolioOverview/>
-        <TweetEmbed id='182147993800159232'/>
+        <Footer/>
       </div>
     )
   }
