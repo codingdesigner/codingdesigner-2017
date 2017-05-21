@@ -4,7 +4,7 @@ const navigation = [
     'text': 'Home'
   },
   {
-    'path': '/',
+    'path': 'portfolio',
     'text': 'Portfolio'
   },
   {

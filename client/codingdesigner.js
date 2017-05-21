@@ -3,20 +3,27 @@ import {render} from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Switch
 } from 'react-router-dom'
 import scss from './styles/style.scss';
 
 // import components
 import Home from './components/Home';
+import Portfolio from './components/Portfolio';
+import NotFound from './components/NotFound';
 
 
 // console.log(browserHistory)
-const router = (
-  <Router>
-    <Route path="/" component={Home}>
-    </Route>
-  </Router>
-);
+const Root = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/portfolio" component={Portfolio} />
+        <Route component={NotFound}/>
+      </Switch>
+    </Router>
+  )
+};
 
-render(router, document.getElementById('root'));
+render(<Root/>, document.getElementById('root'));
