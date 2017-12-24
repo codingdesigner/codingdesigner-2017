@@ -1,0 +1,100 @@
+{
+  "pi--project-name": "Score.org",
+  "pi--overview--text": "Engage and create <em>relationships</em> with <em>entrpreneurs</em>",
+  "pi--item-label--client": "<abbr>SCORE</abbr>",
+  "pi--item-label--link--show": "true",
+  "pi--item-label--link": "http://score.org",
+  "pi--item-label--link--domain": "score.org",
+  "pi--about--show": true,
+  "pi--about": "<p>I worked with SCORE to realign their design to their brand. Through discovery exercises and research I learned that the relationships they facilitate between experienced business mentors and entrepreneurs is at the core of everything they do. The arrows that point between different content items and sections are subtle reminders of those relationships.</p><p>I also wanted to connect with entrepreneurs and their passion for their businesses. The moment when an entrepreneur first holds their own business card is the moment when their dreams start to feel real. I wanted to bring that reality to this site. So I made real letterpress business cards and photographed them for the site header. The result is more tangible, and suggests that we’re ready to get down to business.</p>",
+  "pi--responsibilities": [
+    {"item": "Art Direction"},
+    {"item": "Lead Designer"},
+    {"item": "Responsive Design"},
+    {"item": "Presentations"},
+    {"item": "Kick-off lead"},
+    {"item": "Front End Development"},
+    {"item": "Styleguide"},
+    {"item": "Prototyping"}
+  ],
+  "pi--agency": "Phase2",
+  "pi--link-to-agency": true,
+  "pi--agency--link": "http://www.phase2technology.com",
+  "pi--images": [
+    {
+      "pi--image--classes": "pi--image--wide pi--image--photo",
+      "pi--image--path": "score/score-printing-3.jpg",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--wide",
+      "pi--image--path": "score/score-home-devices.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--wide",
+      "pi--image--path": "score/score-home-laptop.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--narrow",
+      "pi--image--path": "score/score-home-phone.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium",
+      "pi--image--path": "score/score-home-tablet.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--narrow",
+      "pi--image--path": "score/score-home-menu-phone.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium pi--image--photo",
+      "pi--image--path": "score/score-printing-2.jpg",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium pi--image--photo",
+      "pi--image--path": "score/score-printing.jpg",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium pi--image--photo",
+      "pi--image--path": "score/score-printing-4.jpg",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--wide",
+      "pi--image--path": "score/score-article-laptop.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--narrow",
+      "pi--image--path": "score/score-article-phone.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium",
+      "pi--image--path": "score/score-article-tablet.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--wide",
+      "pi--image--path": "score/score-library-laptop.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--narrow",
+      "pi--image--path": "score/score-library-phone.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    },
+    {
+      "pi--image--classes": "pi--image--medium",
+      "pi--image--path": "score/score-library-tablet.png",
+      "pi--image--alt": "Screenshots of Score.org"
+    }
+  ]
+}

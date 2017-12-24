@@ -1,7 +1,7 @@
 {
   "name": "codingdesigner-2017",
   "version": "1.0.0",
-  "description": ":) ",
+  "description": "💀",
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
@@ -16,6 +16,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/codingdesigner/codingdesigner-2017.git"
+  },
+  "engines": {
+    "node": "^6.11"
   },
   "author": "Mason Wendell",
   "dependencies": {
