@@ -19,8 +19,8 @@ const Root = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
-        {/*<Route path="/portfolio" component={Portfolio} />*/}
         <Route path="/portfolio/:portfolioId" component={Portfolio} />
+        <Route path="/portfolio" component={Portfolio} />
         <Route component={NotFound}/>
       </Switch>
     </Router>

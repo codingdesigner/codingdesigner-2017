@@ -2,8 +2,8 @@
   @include margin-compensation();
   clear: both;
   margin-top: 8em;
-  border-top: 2em dotted get-color(black);
-  border-bottom: 4em dotted get-color(black);
+  border-top: 2em dashed get-color(black);
+  border-bottom: 4em dashed get-color(black);
   padding: 2em get-spacing(side-margin);
 }
 

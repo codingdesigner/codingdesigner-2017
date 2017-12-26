@@ -36,3 +36,7 @@ body {
     padding: 0 get-spacing(side-margin--wide);
   }
 }
+
+.hidden {
+  @include hide();
+}
