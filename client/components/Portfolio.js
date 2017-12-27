@@ -14,9 +14,11 @@ const importAllImages = (files) => {
 
 const allImages = importAllImages(require.context('../../client/assets/images/portfolio/score', false, /\.(png|jpe?g|mov|mp4)$/));
 
+console.log(allImages);
+
 class Portfolio extends React.Component {
-  componentWillMount() {
-    // this runs right before the app is rendered
+  componentDidMount() {
+    console.log(this);
     console.log(PortfolioId);
     const PortfolioId = this.props.match.params.portfolioId;
     console.log(PortfolioId);
@@ -75,7 +77,7 @@ class Portfolio extends React.Component {
 
     if (item.pi__image__path) {
       return (
-        <picture className={classes}>
+        <picture className={classes} key={key}>
           <img src={allImages[item.pi__image__path]} alt={item.pi__image__alt}/>
         </picture>
       );
@@ -94,6 +96,7 @@ class Portfolio extends React.Component {
       <div>
         <Header/>
         {this.props.match.params.portfolioId}
+        {this.props.PortfolioId}
         <div className="page--home page-content">
           <h1 className="page-title">{portfolio_content.pi__project_name}</h1>
           <div className="pi--overview">
@@ -134,5 +137,9 @@ class Portfolio extends React.Component {
     )
   }
 }
+
+// Portfolio.defaultProps = {
+//   PortfolioId: 'yermom'
+// };
 
 export default Portfolio;
