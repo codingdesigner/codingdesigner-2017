@@ -18,60 +18,60 @@ class PortfolioItem extends React.Component {
   }
 
   piLinkShow(portfolioItem) {
-    const itemLabelLinkShow = JSON.parse(portfolioItem.pi__item_label__link__show);
+    const itemLabelLinkShow = JSON.parse(portfolioItem.item_label__link__show);
     if (itemLabelLinkShow === true) {
       return (
         <div className="pi--item-label--link"><a
-          href={portfolioItem.pi__item_label__link}>{portfolioItem.pi__item_label__link__domain}</a></div>
+          href={portfolioItem.item_label__link}>{portfolioItem.item_label__link__domain}</a></div>
       );
     }
   }
 
   piAboutShow(portfolioItem) {
-    const aboutShowBool = JSON.parse(portfolioItem.pi__about__show);
+    const aboutShowBool = JSON.parse(portfolioItem.about__show);
     if (aboutShowBool === true) {
       return (
         <div className="pi--item-description">
           <h4 className="pi--item-label--about">About:</h4>
-          <div className="pi--about" dangerouslySetInnerHTML={{__html: portfolioItem.pi__about}}/>
+          <div className="pi--about" dangerouslySetInnerHTML={{__html: portfolioItem.about}}/>
         </div>
       );
     }
   }
 
   piResponsibilities(key) {
-    const item = this.props.portfolioItem.pi__responsibilities[key];
+    const item = this.props.portfolioItem.responsibilities[key];
     return (
       <li key={key}>{item.item}</li>
     );
   }
 
   piLinkToAgency(portfolioItem) {
-    const piLinkToAgencyBool = JSON.parse(portfolioItem.pi__link_to_agency);
+    const piLinkToAgencyBool = JSON.parse(portfolioItem.link_to_agency);
     if (piLinkToAgencyBool === true) {
       return (
         <div className="pi--agency">
-          <a href={portfolioItem.pi__agency__link}>{portfolioItem.pi__agency}</a>
+          <a href={portfolioItem.agency__link}>{portfolioItem.agency}</a>
         </div>
       );
     } else {
       return (
-        <div className="pi--agency">{portfolioItem.pi__agency}</div>
+        <div className="pi--agency">{portfolioItem.agency}</div>
       );
     }
   }
 
   piImages(key) {
-    const item = this.props.portfolioItem.pi__images[key];
-    const classes = 'pi--image ' + item.pi__image__classes;
+    const item = this.props.portfolioItem.images[key];
+    const classes = 'pi--image ' + item.image__classes;
 
-    if (item.pi__image__path) {
+    if (item.image__path) {
       return (
         <picture className={classes} key={key}>
-          <img src={allImages[item.pi__image__path]} alt={item.pi__image__alt}/>
+          <img src={allImages[item.image__path]} alt={item.image__alt}/>
         </picture>
       );
-    } else if (item.pi__image__mov) {
+    } else if (item.image__mov) {
       return (
         <h1>Movie will go here.</h1>
       )
@@ -81,10 +81,10 @@ class PortfolioItem extends React.Component {
   render() {
     return (
       <div className="portfolio-item_pi page-content">
-        <h1 className="page-title">{this.props.portfolioItem.pi__project_name}</h1>
+        <h1 className="page-title">{this.props.portfolioItem.project_name}</h1>
         <div className="pi--overview">
           <div className="pi--overview--text"
-               dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__overview__text}}/>
+               dangerouslySetInnerHTML={{__html: this.props.portfolioItem.overview__text}}/>
         </div>
         <div className="pi--details">
           <input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>
@@ -95,13 +95,13 @@ class PortfolioItem extends React.Component {
             <div className="pi--item-description">
               <h4 className="pi--item-label--client">Client:</h4>
               <div className="pi--client"
-                   dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__item_label__client}}/>
+                   dangerouslySetInnerHTML={{__html: this.props.portfolioItem.item_label__client}}/>
               {this.piLinkShow(this.props.portfolioItem)}
               {this.piAboutShow(this.props.portfolioItem)}
               <div className="pi--item-description">
                 <h4 className="pi--item-label--responsibilities">Responsibilities:</h4>
                 <ul className="pi--responsibilities">
-                  {Object.keys(this.props.portfolioItem.pi__responsibilities).map(this.piResponsibilities)}
+                  {Object.keys(this.props.portfolioItem.responsibilities).map(this.piResponsibilities)}
                 </ul>
               </div>
               <div className="pi--item-description">
@@ -112,7 +112,7 @@ class PortfolioItem extends React.Component {
           </div>
         </div>
         <div className="pi--images" data-eq-pts="small: 600, mid: 800, large: 1200">
-          {Object.keys(this.props.portfolioItem.pi__images).map(this.piImages)}
+          {Object.keys(this.props.portfolioItem.images).map(this.piImages)}
         </div>
       </div>
     )
