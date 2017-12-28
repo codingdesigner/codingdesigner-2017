@@ -8,9 +8,7 @@ const importAllImages = (files) => {
   return images;
 };
 
-const allImages = importAllImages(require.context('../../../client/assets/images/portfolio/score', false, /\.(png|jpe?g|mov|mp4)$/));
-
-console.log(allImages);
+const allImages = importAllImages(require.context('../../../client/assets/images/portfolio', false, /\.(png|jpe?g|mov|mp4)$/));
 
 class PortfolioItem extends React.Component {
   constructor(props) {
