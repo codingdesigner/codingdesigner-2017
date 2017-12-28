@@ -32,40 +32,40 @@
 
   @include breakpoint($bp--portfolio-overview--narrow) {
     &.reliefweb {
-      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-narrow.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-narrow.png');
     }
 
     &.score {
-      background-image: url('../assets/images/portfolio/score/score-home-overview-narrow.png');
+      background-image: url('../assets/images/portfolio/score-home-overview-narrow.png');
     }
   }
   @include breakpoint($bp--portfolio-overview--tween) {
     &.reliefweb {
-      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-tween.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-tween.png');
     }
 
     &.score {
-      background-image: url('../assets/images/portfolio/score/score-home-overview-tween.png');
+      background-image: url('../assets/images/portfolio/score-home-overview-tween.png');
     }
   }
   @include breakpoint($bp--portfolio-overview--med) {
     &.reliefweb {
-      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-med.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-med.png');
     }
 
     &.score {
-      background-image: url('../assets/images/portfolio/score/score-home-overview-med.png');
+      background-image: url('../assets/images/portfolio/score-home-overview-med.png');
     }
   }
 
   @include breakpoint($bp--portfolio-overview--wide) {
 
     &.reliefweb {
-      background-image: url('../assets/images/portfolio/reliefweb-crisis/reliefweb-crisis-overview-wide.png');
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-wide.png');
     }
 
     &.score {
-      background-image: url('../assets/images/portfolio/score/score-home-overview-wide.png');
+      background-image: url('../assets/images/portfolio/score-home-overview-wide.png');
     }
   }
 

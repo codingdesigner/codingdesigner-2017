@@ -1,0 +1,102 @@
+{
+  "portfolio_content": {
+    "pi__project_name": "Score.org",
+    "pi__overview__text": "Engage and create <em>relationships</em> with <em>entrpreneurs</em>",
+    "pi__item_label__client": "<abbr>SCORE</abbr>",
+    "pi__item_label__link__show": "true",
+    "pi__item_label__link": "http://score.org",
+    "pi__item_label__link__domain": "score.org",
+    "pi__about__show": true,
+    "pi__about": "<p>I worked with SCORE to realign their design to their brand. Through discovery exercises and research I learned that the relationships they facilitate between experienced business mentors and entrepreneurs is at the core of everything they do. The arrows that point between different content items and sections are subtle reminders of those relationships.</p><p>I also wanted to connect with entrepreneurs and their passion for their businesses. The moment when an entrepreneur first holds their own business card is the moment when their dreams start to feel real. I wanted to bring that reality to this site. So I made real letterpress business cards and photographed them for the site header. The result is more tangible, and suggests that we’re ready to get down to business.</p>",
+    "pi__responsibilities": [
+      {"item": "Art Direction"},
+      {"item": "Lead Designer"},
+      {"item": "Responsive Design"},
+      {"item": "Presentations"},
+      {"item": "Kick-off lead"},
+      {"item": "Front End Development"},
+      {"item": "Styleguide"},
+      {"item": "Prototyping"}
+    ],
+    "pi__agency": "Phase2",
+    "pi__link_to_agency": true,
+    "pi__agency__link": "http://www.phase2technology.com",
+    "pi__images": [
+      {
+        "pi__image__classes": "pi--image--wide pi--image--photo",
+        "pi__image__path": "score-printing-3",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--wide",
+        "pi__image__path": "score-home-devices",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--wide",
+        "pi__image__path": "score-home-laptop",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--narrow",
+        "pi__image__path": "score-home-phone",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium",
+        "pi__image__path": "score-home-tablet",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--narrow",
+        "pi__image__path": "score-home-menu-phone",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium pi--image--photo",
+        "pi__image__path": "score-printing-2",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium pi--image--photo",
+        "pi__image__path": "score-printing",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium pi--image--photo",
+        "pi__image__path": "score-printing-4",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--wide",
+        "pi__image__path": "score-article-laptop",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--narrow",
+        "pi__image__path": "score-article-phone",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium",
+        "pi__image__path": "score-article-tablet",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--wide",
+        "pi__image__path": "score-library-laptop",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--narrow",
+        "pi__image__path": "score-library-phone",
+        "pi__image__alt": "Screenshots of Score.org"
+      },
+      {
+        "pi__image__classes": "pi--image--medium",
+        "pi__image__path": "score-library-tablet",
+        "pi__image__alt": "Screenshots of Score.org"
+      }
+    ]
+  }
+}

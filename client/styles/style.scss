@@ -1,6 +1,7 @@
 // A cleaner way to do breakpoints/media queries, http://breakpoint-sass.com/
 @import "~breakpoint-sass/stylesheets/breakpoint";
 @import '~modularscale-sass/stylesheets/modularscale';
+@import '~video-react/styles/scss/video-react';
 
 // CONFIG: for setup and configuration. These files should output no CSS by themselves
 // UTILITIES: general math and styles calculations
@@ -74,6 +75,8 @@
 @import '../components/Navigation/navigation-main';
 @import '../components/Intro/intro';
 @import '../components/HomeIntro/home-intro';
+@import '../components/PortfolioItem/portfolio-item';
+@import '../components/PortfolioNavigation/portfolio-nav';
 @import '../components/PortfolioOverview/portfolio-overview';
 @import '../components/Footer/footer';
 @import '../components/Monogram/monogram';

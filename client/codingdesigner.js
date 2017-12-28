@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 import scss from './styles/style.scss';
 
 // import components
@@ -19,6 +19,7 @@ const Root = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route path="/portfolio/:portfolioId" component={Portfolio} />
         <Route path="/portfolio" component={Portfolio} />
         <Route component={NotFound}/>
       </Switch>
