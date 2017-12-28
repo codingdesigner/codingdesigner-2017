@@ -1,8 +1,8 @@
 import React from 'react';
 import {Player} from 'video-react';
-import {portfolio_items} from "../../data/portfolio/portfolio_all";
+import {portfolio_items} from '../../data/portfolio/portfolio_all';
 import 'eq.js';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class PortfolioItem extends React.Component {
   constructor(props) {
