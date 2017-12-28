@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import PortfolioNavigation from './PortfolioNavigation/PortfolioNavigation';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
 import Footer from './Footer/Footer';
-import {portfolio_items} from '../data/portfolio';
+import {portfolio_items} from '../data/portfolio/portfolio_all';
 import find from 'lodash/find';
 
 const importAllImages = (files) => {

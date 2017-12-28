@@ -1,6 +1,5 @@
 import React from 'react';
 import {Player} from 'video-react';
-import {portfolio_items} from '../../data/portfolio/portfolio_all';
 import 'eq.js';
 import PropTypes from 'prop-types';
 
