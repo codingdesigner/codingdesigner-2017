@@ -5,6 +5,7 @@ $flag-color: get-color(black);
   margin-top: 2rem;
   margin-bottom: 2rem;
   //border-top: 0.5em dashed color(black);
+
   @include breakpoint($bp--portfolio--show-details) {
     display: flex;
     flex-wrap: wrap;
@@ -17,9 +18,11 @@ $flag-color: get-color(black);
 
 .pi--overview {
   padding-left: 0.66em;
+
   @include breakpoint($bp--portfolio--overview-padding) {
     padding-left: 2em;
   }
+
   @include breakpoint($bp--portfolio--show-details) {
     flex-basis: 100vw;
     padding-left: 10vw;
@@ -36,9 +39,11 @@ $flag-color: get-color(black);
   color: get-color(white);
   font-size: fontsize-rem(ms(1));
   font-weight: 800;
+
   @include breakpoint($bp-typography-narrow) {
     font-size: fontsize-rem(ms(2));
   }
+
   @include breakpoint($bp--portfolio--show-details) {
     flex-basis: 100vw;
     transform: perspective(600px) rotateX(-12deg) rotateY(20deg) rotateZ(5deg) translateY(10px);
@@ -46,6 +51,7 @@ $flag-color: get-color(black);
     transform-origin: center;
     transform-style: preserve-3d;
   }
+
   &:before {
     position: absolute;
     bottom: 100%;
@@ -55,6 +61,7 @@ $flag-color: get-color(black);
     height: 1em;
     content: '';
   }
+
   em {
     font-family: get-font(surveyor);
     font-weight: 200;
@@ -63,6 +70,7 @@ $flag-color: get-color(black);
 
 .pi--details {
   max-width: 30em;
+
   @include breakpoint($bp--portfolio--show-details) {
     flex-basis: 33%;
     order: 4;
@@ -86,10 +94,12 @@ $flag-color: get-color(black);
   // sass-lint:disable no-misspelled-properties, no-vendor-prefixes
   -webkit-overflow-scrolling: touch;
   // sass-lint:enable no-misspelled-properties, no-vendor-prefixes
+
   @include breakpoint($bp--portfolio--details-limit-width) {
     width: 30em;
     transition-property: transform;
   }
+
   @include breakpoint($bp--portfolio--show-details) {
     position: static;
     border-left: 0;
@@ -102,10 +112,12 @@ $flag-color: get-color(black);
   &:checked {
     & ~ .pi--details--offside {
       left: 5vw;
+
       @include breakpoint($bp--portfolio--details-limit-width) {
         left: 100vw;
         transform: translateX(-30em);
       }
+
       @include breakpoint($bp--portfolio--show-details) {
         left: auto;
         transform: none;
@@ -124,9 +136,11 @@ $flag-color: get-color(black);
   font-family: get-font(surveyor-fine);
   font-size: fontsize-rem(ms(2));
   font-style: italic;
+
   @include breakpoint($bp--portfolio--show-details) {
     display: none;
   }
+
   &:after {
     margin-left: 0.5em;
     border-width: 0.5em 0.66em 0.5em 0;
@@ -152,6 +166,7 @@ $flag-color: get-color(black);
   width: 1.5em;
   height: 1.5em;
   line-height: 0.66em;
+
   @include breakpoint($bp--portfolio--show-details) {
     display: none;
   }
@@ -197,6 +212,7 @@ $flag-color: get-color(black);
   flex-wrap: wrap;
   margin-top: 0;
   padding-left: 0;
+
   li {
     flex-basis: 8em;
     margin: 0 0.5em 0.5em 0;
@@ -223,9 +239,11 @@ $flag-color: get-color(black);
   justify-content: space-between;
   margin: 0 -1em 1em;
   max-width: 100%;
+
   &[data-eq-state$='small'] {
     margin: 0 -3em 1em;
   }
+
   @include breakpoint($bp--portfolio--show-details) {
     flex-basis: 66%;
     order: 3;
@@ -239,50 +257,62 @@ $flag-color: get-color(black);
   padding: 0 1em;
   max-width: 100%;
   text-align: center;
+
   img {
     width: 100%;
   }
+
   &.pi--image--narrow {
     img {
       max-width: 400px;
     }
   }
+
   &.pi--image--medium {
     img {
       max-width: 800px;
     }
   }
+
   &.pi--image--wide {
     img {
       max-width: 1500px;
     }
   }
+
   [data-eq-state$='small'] & {
     margin-bottom: 6em;
     padding: 0 3em;
+
     &.pi--image--narrow {
       flex-basis: 50%;
     }
   }
+
   [data-eq-state$='mid'] & {
     &.pi--image--narrow {
       flex-basis: 33%;
     }
+
     &.pi--image--medium {
       flex-basis: 50%;
     }
+
     &.pi--image--wide {
       flex-basis: 66%;
       flex-grow: 1;
     }
   }
+
   [data-eq-state$='large'] & {
     &.pi--image--narrow {
       flex-basis: 25%;
     }
+
     &.pi--image--medium {
       flex-basis: 50%;
     }
+
     &.pi--image--wide {
       flex-basis: 75%;
     }

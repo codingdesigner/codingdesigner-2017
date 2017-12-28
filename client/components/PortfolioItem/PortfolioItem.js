@@ -19,6 +19,7 @@ class PortfolioItem extends React.Component {
 
   piLinkShow(portfolioItem) {
     const itemLabelLinkShow = JSON.parse(portfolioItem.item_label__link__show);
+
     if (itemLabelLinkShow === true) {
       return (
         <div className="pi--item-label--link"><a
@@ -29,6 +30,7 @@ class PortfolioItem extends React.Component {
 
   piAboutShow(portfolioItem) {
     const aboutShowBool = JSON.parse(portfolioItem.about__show);
+
     if (aboutShowBool === true) {
       return (
         <div className="pi--item-description">
@@ -48,6 +50,7 @@ class PortfolioItem extends React.Component {
 
   piLinkToAgency(portfolioItem) {
     const piLinkToAgencyBool = JSON.parse(portfolioItem.link_to_agency);
+
     if (piLinkToAgencyBool === true) {
       return (
         <div className="pi--agency">

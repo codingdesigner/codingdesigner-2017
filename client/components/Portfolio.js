@@ -26,7 +26,7 @@ class Portfolio extends React.Component {
             <h2 className="section-title">Portfolio</h2>
             <ul className="pn--nav-list">
               <li className="pn--nav-list-item">
-                <a href="03-pages-01-portfolio-item.html" class="pn--nav-list-item--link">
+                <a href="03-pages-01-portfolio-item.html" className="pn--nav-list-item--link">
                   <div className="pn--nav-list-item--image"/>
                   <div className="pn--nav-list-item--name">SCORE</div>
                 </a>
