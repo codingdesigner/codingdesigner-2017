@@ -1,4 +1,5 @@
 import React from 'react';
+import {Player} from 'video-react';
 import {portfolio_items} from "../../data/portfolio/portfolio_all";
 import 'eq.js';
 
@@ -68,7 +69,14 @@ class PortfolioItem extends React.Component {
       );
     } else if (item.image__mov) {
       return (
-        <h1>Movie will go here.</h1>
+        <Player
+          playsInline
+          loop
+          width={1400}
+          autoPlay={true}
+          src={this.props.allImages[item.image__mov]}
+          key={key}
+        />
       )
     }
   }

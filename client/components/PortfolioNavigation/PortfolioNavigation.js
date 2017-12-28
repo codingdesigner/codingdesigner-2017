@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class PortfolioNavigation extends React.Component {
-
   constructor(props) {
     super(props);
     this.navigationItems = this.navigationItems.bind(this);
@@ -19,7 +18,7 @@ class PortfolioNavigation extends React.Component {
           <div className="pn--nav-list-item--image">
             <img src={this.props.allImages[item.thumbnail_image]} alt={item.project_name}/>
           </div>
-          <div className="pn--nav-list-item--name">{item.project_name}</div>
+          <div className="pn--nav-list-item--name">{item.project_name_short}</div>
         </Link>
       </li>
     );

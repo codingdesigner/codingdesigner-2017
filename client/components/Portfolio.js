@@ -13,10 +13,7 @@ const importAllImages = (files) => {
 };
 const allImages = importAllImages(require.context('../assets/images/portfolio', false, /\.(png|jpe?g|mov|mp4)$/));
 
-console.log(allImages);
-
 class Portfolio extends React.Component {
-
   constructor(props) {
     super(props);
     this.updatePortfolio = this.updatePortfolio.bind(this);
