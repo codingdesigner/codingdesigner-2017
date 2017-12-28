@@ -80,41 +80,39 @@ class PortfolioItem extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="page--home page-content">
-          <h1 className="page-title">{this.props.portfolioItem.pi__project_name}</h1>
-          <div className="pi--overview">
-            <div className="pi--overview--text"
-                 dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__overview__text}}/>
-          </div>
-          <div className="pi--details">
-            <input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>
-            <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label">What I did</label>
-            <div className="pi--details--offside">
-              <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label--close">X</label>
-              <h3 className="pi--details--title">What I did</h3>
+      <div className="portfolio-item_pi page-content">
+        <h1 className="page-title">{this.props.portfolioItem.pi__project_name}</h1>
+        <div className="pi--overview">
+          <div className="pi--overview--text"
+               dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__overview__text}}/>
+        </div>
+        <div className="pi--details">
+          <input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>
+          <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label">What I did</label>
+          <div className="pi--details--offside">
+            <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label--close">X</label>
+            <h3 className="pi--details--title">What I did</h3>
+            <div className="pi--item-description">
+              <h4 className="pi--item-label--client">Client:</h4>
+              <div className="pi--client"
+                   dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__item_label__client}}/>
+              {this.piLinkShow(this.props.portfolioItem)}
+              {this.piAboutShow(this.props.portfolioItem)}
               <div className="pi--item-description">
-                <h4 className="pi--item-label--client">Client:</h4>
-                <div className="pi--client"
-                     dangerouslySetInnerHTML={{__html: this.props.portfolioItem.pi__item_label__client}}/>
-                {this.piLinkShow(this.props.portfolioItem)}
-                {this.piAboutShow(this.props.portfolioItem)}
-                <div className="pi--item-description">
-                  <h4 className="pi--item-label--responsibilities">Responsibilities:</h4>
-                  <ul className="pi--responsibilities">
-                    {Object.keys(this.props.portfolioItem.pi__responsibilities).map(this.piResponsibilities)}
-                  </ul>
-                </div>
-                <div className="pi--item-description">
-                  <h4 className="pi--item-label--agency">Agency:</h4>
-                  {this.piLinkToAgency(this.props.portfolioItem)}
-                </div>
+                <h4 className="pi--item-label--responsibilities">Responsibilities:</h4>
+                <ul className="pi--responsibilities">
+                  {Object.keys(this.props.portfolioItem.pi__responsibilities).map(this.piResponsibilities)}
+                </ul>
+              </div>
+              <div className="pi--item-description">
+                <h4 className="pi--item-label--agency">Agency:</h4>
+                {this.piLinkToAgency(this.props.portfolioItem)}
               </div>
             </div>
           </div>
-          <div className="pi--images" data-eq-pts="small: 600, mid: 800, large: 1200">
-            {Object.keys(this.props.portfolioItem.pi__images).map(this.piImages)}
-          </div>
+        </div>
+        <div className="pi--images" data-eq-pts="small: 600, mid: 800, large: 1200">
+          {Object.keys(this.props.portfolioItem.pi__images).map(this.piImages)}
         </div>
       </div>
     )
