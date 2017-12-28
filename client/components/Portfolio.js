@@ -4,7 +4,7 @@ import PortfolioNavigation from './PortfolioNavigation/PortfolioNavigation';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
 import Footer from './Footer/Footer';
 import {portfolio_items} from '../data/portfolio/portfolio_all';
-const _ = require('lodash');
+import find from 'lodash/find';
 
 const importAllImages = (files) => {
   let images = {};
@@ -29,7 +29,7 @@ class Portfolio extends React.Component {
 
   initialPortfolio() {
     if (typeof this.props.match.params.portfolioId === 'string') {
-      return _.find(portfolio_items, {'project_id': this.props.match.params.portfolioId});
+      return find(portfolio_items, {'project_id': this.props.match.params.portfolioId});
     } else {
       return portfolio_items[0];
     }
