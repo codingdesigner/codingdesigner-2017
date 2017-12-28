@@ -2,6 +2,7 @@ import React from 'react';
 import {Player} from 'video-react';
 import {portfolio_items} from "../../data/portfolio/portfolio_all";
 import 'eq.js';
+import PropTypes from "prop-types";
 
 class PortfolioItem extends React.Component {
   constructor(props) {
@@ -121,5 +122,10 @@ class PortfolioItem extends React.Component {
     )
   }
 }
+
+PortfolioItem.propTypes = {
+  allImages: PropTypes.object.isRequired,
+  portfolioItem: PropTypes.object.isRequired
+};
 
 export default PortfolioItem;

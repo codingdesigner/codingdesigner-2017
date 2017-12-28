@@ -15,7 +15,7 @@ class NavigationMain extends React.Component {
 
     return (
       <div className="nav-primary--fan" key={key}>
-        <Link to={navItem.path} className="nav-item" onClick={() => this.props.calculateButtonImage()}>{navItem.text}</Link>
+        <Link to={navItem.path} className="nav-item" onClick={() => this.props.randomizeHeader()}>{navItem.text}</Link>
       </div>
     )
   }
@@ -40,7 +40,7 @@ class NavigationMain extends React.Component {
 
 NavigationMain.propTypes = {
   headerImage: PropTypes.number.isRequired,
-  calculateButtonImage: PropTypes.func.isRequired
+  randomizeHeader: PropTypes.func.isRequired
 };
 
 export default NavigationMain;

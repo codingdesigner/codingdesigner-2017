@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class PortfolioNavigation extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class PortfolioNavigation extends React.Component {
   handlePortfolioItemChange(e, key) {
     const updatedPortfolioItem = this.props.portfolioItems[key];
     this.props.updatePortfolio(updatedPortfolioItem);
+    this.props.randomizeHeader();
   }
 
   render() {
@@ -40,5 +42,12 @@ class PortfolioNavigation extends React.Component {
     )
   }
 }
+
+PortfolioNavigation.propTypes = {
+  allImages: PropTypes.object.isRequired,
+  portfolioItems: PropTypes.array.isRequired,
+  randomizeHeader: PropTypes.func.isRequired,
+  updatePortfolio: PropTypes.func.isRequired
+};
 
 export default PortfolioNavigation;
