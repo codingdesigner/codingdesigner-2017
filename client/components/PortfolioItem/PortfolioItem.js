@@ -2,14 +2,6 @@ import React from 'react';
 import {portfolio_items} from "../../data/portfolio/portfolio_all";
 import 'eq.js';
 
-const importAllImages = (files) => {
-  let images = {};
-  files.keys().map((item, index) => { images[item.replace('./', '').replace(/\.[^/.]+$/, '')] = files(item); });
-  return images;
-};
-
-const allImages = importAllImages(require.context('../../../client/assets/images/portfolio', false, /\.(png|jpe?g|mov|mp4)$/));
-
 class PortfolioItem extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +63,7 @@ class PortfolioItem extends React.Component {
     if (item.image__path) {
       return (
         <picture className={classes} key={key}>
-          <img src={allImages[item.image__path]} alt={item.image__alt}/>
+          <img src={this.props.allImages[item.image__path]} alt={item.image__alt}/>
         </picture>
       );
     } else if (item.image__mov) {

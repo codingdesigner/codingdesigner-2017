@@ -23,6 +23,7 @@
       "agency": "Phase2",
       "link_to_agency": true,
       "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "score-home-thumb",
       "images": [
         {
           "image__classes": "pi--image--wide pi--image--photo",
@@ -123,6 +124,7 @@
       "link_to_agency": true,
       "agency": "Phase2",
       "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "reliefweb-crisis-thumb",
       "images": [
         {
           "image__classes": "pi--image--wide",

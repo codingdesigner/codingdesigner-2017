@@ -1,20 +1,39 @@
 import React from 'react';
 import Header from './Header/Header';
+import PortfolioNavigation from './PortfolioNavigation/PortfolioNavigation';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
 import Footer from './Footer/Footer';
 import {portfolio_items} from '../data/portfolio/portfolio_all';
 const _ = require('lodash');
 
+const importAllImages = (files) => {
+  let images = {};
+  files.keys().map((item, index) => { images[item.replace('./', '').replace(/\.[^/.]+$/, '')] = files(item); });
+  return images;
+};
+const allImages = importAllImages(require.context('../assets/images/portfolio', false, /\.(png|jpe?g|mov|mp4)$/));
+
+console.log(allImages);
+
 class Portfolio extends React.Component {
 
   constructor(props) {
     super(props);
+    this.updatePortfolio = this.updatePortfolio.bind(this);
 
     if (typeof this.props.match.params.portfolioId === 'string') {
-      this.PortfolioItem = _.find(portfolio_items, {'project_id': this.props.match.params.portfolioId});
+      this.state = {
+        'PortfolioItem': _.find(portfolio_items, {'project_id': this.props.match.params.portfolioId})
+      }
     } else {
-      this.PortfolioItem = portfolio_items[0];
+      this.state = {
+        'PortfolioItem': portfolio_items[0]
+      }
     }
+  }
+
+  updatePortfolio(updatedPortfolioItem) {
+    this.setState({'PortfolioItem': updatedPortfolioItem});
   }
 
   render() {
@@ -22,18 +41,13 @@ class Portfolio extends React.Component {
       <div>
         <Header/>
         <div className="page--portfolio page-content">
-          <nav className="portfolio-navigation">
-            <h2 className="section-title">Portfolio</h2>
-            <ul className="pn--nav-list">
-              <li className="pn--nav-list-item">
-                <a href="03-pages-01-portfolio-item.html" className="pn--nav-list-item--link">
-                  <div className="pn--nav-list-item--image"/>
-                  <div className="pn--nav-list-item--name">SCORE</div>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <PortfolioItem portfolioItem={this.PortfolioItem}/>
+          <PortfolioNavigation
+            portfolioItems={portfolio_items}
+            allImages={allImages}
+            updatePortfolio={this.updatePortfolio}/>
+          <PortfolioItem
+            portfolioItem={this.state.PortfolioItem}
+            allImages={allImages}/>
         </div>
         <Footer/>
       </div>
