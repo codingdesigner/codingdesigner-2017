@@ -1,6 +1,6 @@
 import React from 'react';
 import {intro} from '../../data/speaking';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class SpeakingIntro extends React.Component {
   render() {

@@ -53,7 +53,7 @@
     "react-sound": "^0.6.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
-    "react-tweet-embed": "^1.0.6",
+    "react-tweet-embed": "^1.0.8",
     "redbox-react": "^1.2.3",
     "redux": "^3.5.2",
     "rimraf": "^2.5.2",

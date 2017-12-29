@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import SpeakingIntro from './SpeakingIntro/SpeakingIntro';
+import Talk from './Talk/Talk';
+import {talks} from '../data/speaking';
 
 const importAllImages = (files) => {
   let images = {};
@@ -15,6 +17,7 @@ class Speaking extends React.Component {
     super(props);
     this.randomheaderRange = this.randomheaderRange.bind(this);
     this.randomizeHeader = this.randomizeHeader.bind(this);
+    this.loadTalks = this.loadTalks.bind(this);
 
     this.state = {
       'randomPhoto': this.randomheaderRange()
@@ -30,12 +33,22 @@ class Speaking extends React.Component {
     this.setState({'randomPhoto': random});
   }
 
+  loadTalks(key) {
+    return (
+      <Talk
+        talk={talks[key]}
+        allImages={allImages}
+        key={key}/>
+    );
+  }
+
   render() {
     return (
       <div>
         <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
         <div className="page--speaking page-content">
           <SpeakingIntro allImages={allImages}/>
+          {Object.keys(talks).map(this.loadTalks)}
         </div>
         <Footer/>
       </div>

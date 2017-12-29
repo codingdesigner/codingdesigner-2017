@@ -89,3 +89,15 @@
 @function column-calc($cols, $total: 12) {
   @return $cols / $total * 100%;
 }
+
+/// Calculating Phi-a
+/// @param $number
+@function phi-a($number) {
+  @return $number / 1.61803398875;
+}
+
+/// Calculating Phi-a
+/// @param $number
+@function phi-b($number) {
+  @return $number - ($number / 1.61803398875);
+}
