@@ -223,3 +223,22 @@
   );
   @include unset-faux-underline-links();
 }
+
+@mixin link-knockout-underline() {
+  @include set-link-defaults();
+  @include set-link-colors (
+    $link-normal: get-color(white),
+    $link-hover: get-color(gray, light),
+    $link-active: get-color(white),
+    $link-visited: get-color(white),
+    $link-focus: get-color(gray, light)
+  );
+  @include unset-faux-underline-links();
+  @include set-faux-underline-links(
+    $link-faux-normal: get-color(white),
+    $link-faux-hover: get-color(gray, light),
+    $link-faux-active: get-color(white),
+    $link-faux-visited: get-color(white),
+    $link-faux-focus: get-color(gray, light)
+  );
+}

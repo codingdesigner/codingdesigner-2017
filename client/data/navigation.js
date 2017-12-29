@@ -8,7 +8,7 @@ const navigation = [
     'text': 'Portfolio'
   },
   {
-    'path': '/',
+    'path': '/speaking',
     'text': 'Speaking'
   },
   {

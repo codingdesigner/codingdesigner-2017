@@ -1,0 +1,251 @@
+{
+  "intro": {
+    "intro_graphs": "<p>I've been speaking national and regional conferences, meetups, bar camps for the last six years.</p><p>I often speak about Designing in the Browser, Responsive Web Design, Sass, and Drupal. I produced a video podcast that teaches people about how they can use these tools and techniques creatively. I also blog at The Coding Designer and The Sass Way.</p>",
+    "intro_graphs_caption": "SassConf Speakers Panel. l-r: Una Kravets, Rachel Ober, Elise Holladay, Mason Wendell, Jina Anne, Natalie Weizenbaum",
+    "intro_image": {
+      "src": "devsigner-2015-keynote",
+      "alt": "Mason Wendell speaking at Devsigner in Portland, Oregon",
+      "caption": "Keynote speaker at Devsigner in Portland, Oregon <br/>Photo by <a href='https://twitter.com/Mindewen/status/614835142842912768'>@Mindewen</a>"
+    }
+  },
+  "talks": [
+    {
+      "talk_title": "Thinking Inside the Box <br/>Inside the Box Inside the Box",
+      "talk_description": "<p>Great design, like jazz, needs both harmony and discord skillfully executed in just the right places. On the web, many of our projects are playing sour notes. Let’s get in tune.</p>\n        <p>Even in the age of Responsive Web Design, many sites are designed from the outside in. Whether the page is designed in Photoshop or, let’s hope, in-browser, many design projects slide out of tune when they get to the second or third page. Components are inconsistent, page and layout dimensions vary, font sizes shift. These details add up. Living style guides have been proposed to address this problem, the trouble is they’re often extracted from the finished project.</p>\n        <p>Let’s design the style guide first. Start from inside out with the most common aspects of a design language. Instead of envisioning individual pages, work to create a cohesive family of components and layouts that can be assembled into any page. By leveraging a tools that help us create the elements of out design language and visualize them in various contexts, we can make components, layouts, and even working pages that snap together beautifully. It’s the new blank paper.</p>",
+      "talk_events": [
+        {
+          "event_url": "http://www.devsignercon.com/conference/keynote",
+          "event_name": "Devsigner Con 2015",
+          "event_emphasis": "[KEYNOTE]",
+          "event_location": "Portland, OR"
+        },
+        {
+          "event_name": "Capital Camp",
+          "event_location": "Alexandria, VA"
+        },
+        {
+          "event_name": "Design 4 Drupal",
+          "event_location": "MIT, Cambridge, MA"
+        },
+        {
+          "event_url": "http://environmentsforhumans.com/2014/sass-summit/",
+          "event_name": "Sass Summit",
+          "event_location": "online"
+        },
+        {
+          "event_url": "http://sassconf.com/",
+          "event_name": "SassConf 2014",
+          "event_location": "NYC, NY"
+        },
+        {
+          "event_url": "https://austin2014.drupal.org/session/thinking-inside-box-inside-box-inside-box",
+          "event_name": "DrupalCon 2014",
+          "event_location": "Austin, TX"
+        }
+      ],
+      "talk_sample_slide": {
+        "slide_url": "http://codingdesigner.github.io/box/#/main-title",
+        "slide_img_src": "box--sample-slide",
+        "slide_img_alt": "Sample slide from presentation",
+        "slide_figcaption": "Sample slide from presentation. All slides are based on classic Jazz album covers from the 50’s and 60’s, and built using HTML and cutting edge CSS and SVG. "
+      },
+      "talk_video": {
+        "talk_video_youtube_embed_url": [
+          {
+            "embed_url": "https://www.youtube-nocookie.com/embed/SG9ZU5ZJgbw?rel=0&amp;showinfo=0"
+          },
+          {
+            "embed_url": "https://www.youtube.com/embed/jenoiaPwDHk?list=PLV7474yy8FTYHQ5Fk6v2vUQxWeeiqClRH"
+          }
+        ]
+      },
+      "talk_reactions": [
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "614836891951591424"
+        },
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "614843355273412609"
+        },
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "614838606771941376"
+        },
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "474308270555791360"
+        },
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "474301519475388416"
+        },
+        {
+          "reaction_type_tweet": true,
+          "reaction_content": "474298313739862016"
+        },
+        {
+          "reaction_type_quote": true,
+          "reaction_content": "<blockquote class=\"comment\">\n<p>This session was hands-down my most productive hour at Drupalcon. Not only did it open my mind to a completely different approach to design, but it streamlined my development process as well. I now have a brand new mindset going into my current projects.</p><footer>\n<cite>drupalatx via <a href=\"https://austin2014.drupal.org/comment/2513.html#comment-2513\">Drupalcon</a></cite>\n</footer></blockquote>"
+        }
+      ]
+    },
+    {
+      "talk_title": "Managing Responsive Web Design With Sass And Breakpoint",
+      "talk_description": "<p>Writing css for responsive web design can get out of control quickly. Write some media queries for your layouts, some more for your menus, and even more to catch all the little details in a well-crafted design and they really add up.</p>\n      <p>I created a Sass extension called Breakpoint that lets you boil your media queries to their essential properties, and to give each one a meaningful name. This helps you write your styles more quickly, while also creating more maintainable and future-proof code. I'll demonstrate why this is needed and how it's become indespensible in my RWD toolset.</p>",
+      "talk_events": [
+        {
+          "event_url": "https://portland2013.drupal.org/session/managing-responsive-web-design-sass-and-breakpoint.html",
+          "event_name": "Drupalcon 2013",
+          "event_location": "Portland, OR"
+        }
+      ],
+      "talk_sample_slide": {
+        "slide_url": "http://codingdesigner.github.io/managing-rwd-presentation/#/main-title",
+        "slide_img_src": "managing-responsive-screen",
+        "slide_img_alt": "Sample slide from presentation.",
+        "slide_figcaption": "Sample slide from presentation. Slides are created with HTML and CSS. "
+      },
+      "talk_video": {
+        "talk_video_youtube_embed_url": [
+          {
+            "embed_url": "https://www.youtube-nocookie.com/embed/fgmXVxYnoWo?rel=0"
+          }
+        ]
+      },
+      "talk_reactions": [
+        {
+          "reaction_type_quote": true,
+          "reaction_content": "<blockquote class=\"comment\">\n<p>Doing mostly backend development, over time I've shied away from front end development. Mason as a coding designer has made me more interested in bridging those. One of the things I like about Sass is how reusable style rules can help the process become really simplified and more logical. But one of the questions I've had is how to keep it all manageable - media queries for example. A tool to help with that sounds like something I'd like to hear about.</p><footer>\n<cite>scottrigby via <a href=\"https://portland2013.drupal.org/comment/928.html#comment-928\">Drupalcon</a></cite>\n</footer></blockquote>"
+        }
+      ]
+    },
+    {
+      "talk_title": "Designing with a Living Style Guide",
+      "talk_description": "<p>An introduction to designing a styleguide as you create a new design language. </p>",
+      "talk_events": [
+        {
+          "event_url": "http://www.meetup.com/gothamsass/events/86565842/",
+          "event_name": "NYC Sass Meetup",
+          "event_location": "NYC, NY"
+        }
+      ],
+      "talk_sample_slide": {
+        "slide_img_src": "designing-living-style-guide",
+        "slide_img_alt": "Sample slide from presentation.",
+        "slide_figcaption": "Sample slide from presentation."
+      }
+    },
+    {
+      "talk_title": "Responsive Web Design<br/> – Shrinking Websites on Phones",
+      "talk_description": "<p>An introduction to mobile-first responsive web design.</p>",
+      "talk_events": [
+        {
+          "event_url": "http://www.meetup.com/rwd-nyc/events/79888832/",
+          "event_name": "NYC Responsive Web Design Meetup",
+          "event_location": "NYC, NY"
+        }
+      ],
+      "talk_sample_slide": {
+        "slide_img_src": "rwd-meetup-nyc",
+        "slide_img_alt": "Sample slide from presentation.",
+        "slide_figcaption": "Sample slide from presentation."
+      }
+    },
+    {
+      "talk_title": "Mobile and Responsive Design with Sass",
+      "talk_description": "<p>Approaches for doing mobile-first responsive web design, with an emphasis on advances Sass techniques.</p>",
+      "talk_events": [
+        {
+          "event_name": "Drupaldelphia 2012",
+          "event_location": "Philadelphia, PA"
+        },
+        {
+          "event_name": "NYC Sass Meetup",
+          "event_location": "NYC, NY"
+        },
+        {
+          "event_name": "Capital Camp 2012",
+          "event_location": "Washington, DC"
+        },
+        {
+          "event_name": "NYC Camp",
+          "event_location": "NYC, NY"
+        }
+      ],
+      "talk_sample_slide": {
+        "slides_slideshare": true,
+        "slides_slideshare_embed": "<iframe src=\"//www.slideshare.net/slideshow/embed_code/key/4oW4K3JJM5NCPp\" width=\"595\" height=\"485\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" allowfullscreen> </iframe> <div style=\"margin-bottom:5px\"> <strong> <a href=\"//www.slideshare.net/nyccamp/mobile-and-responsive-design-with-sass\" title=\"Mobile and Responsive Design with Sass\" target=\"_blank\">Mobile and Responsive Design with Sass</a> </strong> from <strong><a href=\"//www.slideshare.net/nyccamp\" target=\"_blank\">nyccamp</a></strong> </div>"
+      },
+      "talk_video": {
+        "talk_video_vimeo_embed": [
+          {
+            "embed_url": "<iframe src=\"https://player.vimeo.com/video/44889054\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n      <p><a href=\"https://vimeo.com/44889054\">Mobile and Responsive Design with Sass by Mason Wendell</a> from <a href=\"https://vimeo.com/drupaldelphia\">Drupaldelphia</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p></iframe>"
+          }
+        ]
+      }
+    },
+    {
+      "talk_title": "The Coding Designer’s Survival Kit",
+      "talk_description": "<p>Markup, CSS, and JavaScript tools for Designing in the Browser. I outlined the philosophy and reasoning behind the in-browser approach. </p>",
+      "talk_events": [
+        {
+          "event_name": "Drupaldelphia, 2011",
+          "event_location": "Philadelphia, PA"
+        },
+        {
+          "event_name": "NY Drupal Camp 10",
+          "event_location": "NYC, NY"
+        },
+        {
+          "event_name": "Design for Drupal 2011",
+          "event_location": "MIT, Cambridge, MA"
+        },
+        {
+          "event_name": "Capital Camp 2011",
+          "event_location": "Washington, DC"
+        }
+      ],
+      "talk_sample_slide": {
+        "slides_slideshare": true,
+        "slides_slideshare_embed": "<iframe src=\"//www.slideshare.net/slideshow/embed_code/key/LMISSbxFPwDMFC\" width=\"595\" height=\"485\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" allowfullscreen> </iframe> <div style=\"margin-bottom:5px\"> <strong> <a href=\"//www.slideshare.net/canarymason/the-coding-designers-survival-kit-capital-camp\" title=\"The Coding Designer&#x27;s Survival Kit - Capital Camp\" target=\"_blank\">The Coding Designer&#x27;s Survival Kit - Capital Camp</a> </strong> from <strong><a href=\"//www.slideshare.net/canarymason\" target=\"_blank\">canarymason</a></strong> </div>"
+      }
+    },
+    {
+      "talk_title": "Design in the Browser",
+      "talk_description": "<p>Designing in the browser was very new. I made my case for it.</p>",
+      "talk_events": [
+        {
+          "event_url": "http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients",
+          "event_name": "Drupalcon 2011",
+          "event_location": "Chicago, IL"
+        },
+        {
+          "event_name": "Drupal Camp Denver, 2011",
+          "event_location": "Denver, CO"
+        },
+        {
+          "event_name": "Design for Drupal 2010",
+          "event_location": "MIT, Cambridge, MA"
+        },
+        {
+          "event_name": "NY Drupal Camp 8",
+          "event_location": "NYC, NY"
+        },
+        {
+          "event_name": "BAD Camp 2010",
+          "event_location": "San Fransisco"
+        },
+        {
+          "event_name": "Drupaldelphia 2010",
+          "event_location": "Philadelphia, PA"
+        }
+      ],
+      "talk_sample_slide": {
+        "slide_img_src": "design-in-browser-css-stop-lying",
+        "slide_img_alt": "Sample slide from presentation",
+        "slide_figcaption": "Sample slide from presentation."
+      }
+    }
+  ]
+}

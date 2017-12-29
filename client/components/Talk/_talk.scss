@@ -1,0 +1,160 @@
+.talk {
+  clear: both;
+  margin-bottom: 6em;
+
+  @include breakpoint($bp--talk-columns) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.talk--title {
+  flex-basis: 100%;
+  margin-bottom: 0.5em;
+  border-bottom: 0.25em solid currentColor;
+  padding-bottom: 4px;
+}
+
+.talk--sample-slide {
+  margin-bottom: 2em;
+
+  img {
+    border: 1px solid get-color(black);
+  }
+}
+
+.talk--description-and-events {
+  @include flex-layout--2(1);
+}
+
+.talk--slides {
+  @include flex-layout--2(2);
+
+  &[data-eq-state*='medium'] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.talk--sample-slide {
+  flex-basis: calc(50% - 1.5em);
+}
+
+.talk--slides-link {
+  margin: 1em 0;
+
+  a {
+    @include unset-faux-underline-links();
+    display: inline-block;
+    position: relative;
+    border-bottom: 5px solid get-color(black);
+    padding: 0 1em 0.25em 0;
+    font-size: fontsize-rem(ms(1));
+    font-weight: 800;
+    font-style: italic;
+
+    &:after {
+      position: absolute;
+      right: -0.5em;
+      bottom: -5px;
+      transform: skewX(30deg);
+      border-width: 0.33em;
+      border-style: solid;
+      border-color: transparent transparent get-color(black) get-color(black);
+      width: 0;
+      height: 0;
+      content: '';
+      transform-origin: 100% 100%;
+    }
+  }
+}
+
+.talk--video {
+  flex-basis: calc(50% - 1.5em);
+  max-width: 100%;
+
+  iframe {
+    max-width: 100%;
+  }
+}
+
+.video-container--youtube {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//.talk--description {}
+.talk--events {
+  ul {
+    padding-left: 0.5em;
+    list-style-type: none;
+
+    li {
+      padding-left: 1em;
+
+      &:before {
+        margin-left: -1em;
+        //content: "—";
+        content: "» ";
+      }
+    }
+  }
+}
+
+.talk--event {
+  margin-bottom: 0.5em;
+
+  @include breakpoint($bp--talk-event--wide) {
+    font-size: fontsize-rem(ms(1));
+  }
+}
+
+.talk--event-name {
+  font-weight: 600;
+}
+
+.talk--reactions {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-top: 2em;
+
+  > * {
+    flex-basis: 22em;
+    margin-right: 1em;
+  }
+
+  .comment {
+    margin: 0;
+    border: 1px solid get-color(gray);
+    padding: 1em;
+
+    footer {
+      margin: 0 -1em -1em;
+      background: get-color(black);
+      padding: 0.25em 1em 1em;
+      color: get-color(white);
+
+      a {
+        @include link-knockout-underline();
+      }
+    }
+  }
+}
