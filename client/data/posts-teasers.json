@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "balancing",
+      "headline": "Balancing Ideal Sass and Ideal CSS",
+      "excerpt": "<p>Sass makes CSS fun again, right? Well yeah, but that also makes it easy to forget that we’re still writing CSS. We can get caught up in all the new tools and tricks that Sass lets us do so easily that we lose sight of some CSS that might not be as awesome as we think it is.</p>"
+    },
+    {
+      "id": "fixing",
+      "headline": "Fixing H&FJ Font Previews",
+      "excerpt": "<p>I'm considering Hoefler &amp; Frere-Jones webfonts for a new project. The service looks great but I haven't signed up yet. This may be different once I've paid for something, but for now their web preview kind of sucks. (sorry H&amp;FJ) I want to test my own text before making such a big commitment but they only show their own promo text.</p>",
+      "image": {
+        "src": "fixing-hfj",
+        "alt": "Square Thumbnail"
+      }
+    },
+    {
+      "id": "responsive",
+      "headline": "Responsive Web Design and Drupal",
+      "excerpt": "<p>We love Responsive Web Design, and we love Drupal. But do they love each other? After working on a number of RWD and Drupal projects this year, I’m happy to report that they get along just fine. Though “Love” might be stretching it a bit.</p>"
+    },
+    {
+      "id": "breakpoint",
+      "headline": "Breakpoint 1.0",
+      "excerpt": "<p>About a month ago I was working on a responsive site, and trying to do it right. So instead of setting break points to match device dimensions (for phone, tablet, and desktop) I would set break points when my content and design needed them. Taking this kind of control over your responsive design means two things:</p>",
+      "image": {
+        "src": "Breakpoint-Title-Card",
+        "alt": "Square Thumbnail"
+      }
+    }
+  ]
+}
+
+
