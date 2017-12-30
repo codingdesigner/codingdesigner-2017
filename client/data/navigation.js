@@ -20,7 +20,7 @@ const navigation = [
     'text': 'Posts'
   },
   {
-    'path': '/',
+    'path': '/about',
     'text': 'About'
   }
 ];
