@@ -13,6 +13,7 @@ import Portfolio from './components/Portfolio';
 import Speaking from './components/Speaking';
 import PostsTeasers from './components/PostsTeasers';
 import Post from './components/Post';
+import About from './components/About';
 import NotFound from './components/NotFound';
 
 
@@ -27,6 +28,7 @@ const Root = () => {
         <Route path="/speaking" component={Speaking} />
         <Route path="/posts/:postId" component={Post} />
         <Route path="/posts" component={PostsTeasers} />
+        <Route path="/about" component={About} />
         <Route component={NotFound}/>
       </Switch>
     </Router>
