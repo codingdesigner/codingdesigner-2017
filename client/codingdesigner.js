@@ -11,6 +11,8 @@ import scss from './styles/style.scss';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import Speaking from './components/Speaking';
+import PostsTeasers from './components/PostsTeasers';
+import Post from './components/Post';
 import NotFound from './components/NotFound';
 
 
@@ -23,6 +25,8 @@ const Root = () => {
         <Route path="/portfolio/:portfolioId" component={Portfolio} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/speaking" component={Speaking} />
+        <Route path="/posts/:postId" component={Post} />
+        <Route path="/posts" component={PostsTeasers} />
         <Route component={NotFound}/>
       </Switch>
     </Router>

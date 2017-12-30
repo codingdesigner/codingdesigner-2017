@@ -16,7 +16,7 @@ const navigation = [
     'text': 'Photos'
   },
   {
-    'path': '/',
+    'path': '/posts',
     'text': 'Posts'
   },
   {
