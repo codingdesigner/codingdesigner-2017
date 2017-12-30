@@ -39,6 +39,7 @@
     "express": "^4.13.4",
     "html-loader": "^0.4.5",
     "markdown-loader": "^2.0.0",
+    "moment": "^2.20.1",
     "prop-types": "^15.5.8",
     "raven-js": "^3.14.2",
     "react": "^15.0.2",
