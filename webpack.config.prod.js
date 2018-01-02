@@ -9,7 +9,7 @@ module.exports = {
     './client/codingdesigner'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
@@ -44,7 +44,7 @@ module.exports = {
         include: path.join(__dirname, 'client')
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2|mp3|mp4|mov)$/,
         loader: 'url-loader',
         options: {
           limit: 10000
@@ -72,6 +72,19 @@ module.exports = {
               sourceMap: true,
               // includePaths: [PATHS.breakpoint, PATHS.normalize]
             }
+          }
+        ]
+      },
+      // Markdown
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+
           }
         ]
       }
