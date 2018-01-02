@@ -1,0 +1,127 @@
+.portfolio-overview {
+  margin-bottom: 5vh;
+
+  .section-title {
+    @include h1();
+  }
+}
+
+.portfolio-overview--item {
+  @include margin-compensation();
+  flex: 1;
+  margin-bottom: 5em;
+}
+
+.po-item--link {
+  @include unset-faux-underline-links();
+  display: block;
+  border-top: 2px dashed get-color(black);
+  border-bottom: 2px dashed get-color(black);
+  box-shadow: 0 1em 0 0 rgba(get-color(white), 0.75) inset;
+  background-attachment: fixed;
+  background-clip: padding-box;
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 100% auto;
+  height: 75vh;
+
+  &.touch-detected {
+    background-attachment: scroll;
+    height: 150vh;
+  }
+
+  @include breakpoint($bp--portfolio-overview--narrow) {
+    &.reliefweb {
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-narrow.png');
+    }
+
+    &.score {
+      background-image: url('../assets/images/portfolio/score-home-overview-narrow.png');
+    }
+  }
+  @include breakpoint($bp--portfolio-overview--tween) {
+    &.reliefweb {
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-tween.png');
+    }
+
+    &.score {
+      background-image: url('../assets/images/portfolio/score-home-overview-tween.png');
+    }
+  }
+  @include breakpoint($bp--portfolio-overview--med) {
+    &.reliefweb {
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-med.png');
+    }
+
+    &.score {
+      background-image: url('../assets/images/portfolio/score-home-overview-med.png');
+    }
+  }
+
+  @include breakpoint($bp--portfolio-overview--wide) {
+
+    &.reliefweb {
+      background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-wide.png');
+    }
+
+    &.score {
+      background-image: url('../assets/images/portfolio/score-home-overview-wide.png');
+    }
+  }
+
+  @include breakpoint($bp--page-over-wide) {
+    background-position: top center;
+    background-size: $page-max-width;
+  }
+}
+
+.po-item--name {
+  @include margin-compensation--inner($side-margin: get-spacing(side-margin), $side-margin--wide: get-spacing(side-margin--wide));
+  display: inline-block;
+  position: relative;
+  transform: translateY(0.25em);
+  margin-bottom: 0;
+  border: 1px solid get-color(white);
+  box-shadow: 0 0 0 4px get-color(black);
+  background-color: get-color(black);
+  padding: 0.125em 1em 0.125em 0.5em;
+  text-transform: none;
+  color: get-color(white);
+
+  &:before {
+    @include arrow($color: get-color(black), $arrow-length: 0.33em, $arrow-breadth: 0.33em * 3) {
+      top: 50%;
+      right: 0.41em;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+  }
+
+  &:after {
+    @include arrow($color: get-color(white), $arrow-length: 0.33em) {
+      top: 50%;
+      right: 0.25em;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+
+  a {
+    @include link-reverse();
+  }
+
+}
+
+.portfolio--view-full-item {
+  display: inline-block;
+  margin: 1em 0.5em 0.5em;
+}
+
+.portfolio--view-all {
+  display: table;
+  margin-top: -5em;
+  border-bottom: 2px dashed get-color(white);
+  background-color: get-color(gray, light);
+  padding: 1em 0.5em;
+  width: auto;
+}

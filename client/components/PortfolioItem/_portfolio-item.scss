@@ -1,0 +1,326 @@
+//$flag-color: #84C759;
+$flag-color: get-color(black);
+
+.portfolio-item_pi {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  //border-top: 0.5em dashed color(black);
+
+  @include breakpoint($bp--portfolio--show-details) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
+//.pi--project-name {}
+
+.pi--overview {
+  padding-left: 0.66em;
+
+  @include breakpoint($bp--portfolio--overview-padding) {
+    padding-left: 2em;
+  }
+
+  @include breakpoint($bp--portfolio--show-details) {
+    flex-basis: 100vw;
+    padding-left: 10vw;
+  }
+}
+
+.pi--overview--text {
+  position: relative;
+  margin-bottom: 1.5em;
+  background-image: linear-gradient(-45deg, transparent 0.5rem, $flag-color 0);
+  padding: 1em;
+  max-width: 20em;
+  line-height: 1.4;
+  color: get-color(white);
+  font-size: fontsize-rem(ms(1));
+  font-weight: 800;
+
+  @include breakpoint($bp-typography-narrow) {
+    font-size: fontsize-rem(ms(2));
+  }
+
+  @include breakpoint($bp--portfolio--show-details) {
+    flex-basis: 100vw;
+    transform: perspective(600px) rotateX(-12deg) rotateY(20deg) rotateZ(5deg) translateY(10px);
+    margin-bottom: 3em;
+    transform-origin: center;
+    transform-style: preserve-3d;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-image: linear-gradient(45deg, $flag-color 0.5em, transparent 0);
+    width: 1em;
+    height: 1em;
+    content: '';
+  }
+
+  em {
+    font-family: get-font(surveyor);
+    font-weight: 200;
+  }
+}
+
+.pi--details {
+  max-width: 30em;
+
+  @include breakpoint($bp--portfolio--show-details) {
+    flex-basis: 33%;
+    order: 4;
+  }
+}
+
+.pi--details--offside {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 100;
+  border-left: 0.5em solid $flag-color;
+  background-color: get-color(white);
+  padding: 1em;
+  width: 95vw;
+  height: 100vh;
+  transition-property: left;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  // sass-lint:disable no-misspelled-properties, no-vendor-prefixes
+  -webkit-overflow-scrolling: touch;
+  // sass-lint:enable no-misspelled-properties, no-vendor-prefixes
+
+  @include breakpoint($bp--portfolio--details-limit-width) {
+    width: 30em;
+    transition-property: transform;
+  }
+
+  @include breakpoint($bp--portfolio--show-details) {
+    position: static;
+    border-left: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+.pi--details--trigger {
+  &:checked {
+    & ~ .pi--details--offside {
+      left: 5vw;
+
+      @include breakpoint($bp--portfolio--details-limit-width) {
+        left: 100vw;
+        transform: translateX(-30em);
+      }
+
+      @include breakpoint($bp--portfolio--show-details) {
+        left: auto;
+        transform: none;
+      }
+    }
+  }
+}
+
+.pi--details--trigger-label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1.5em;
+  width: calc(100vw - 0.5rem);
+  font-family: get-font(surveyor-fine);
+  font-size: fontsize-rem(ms(2));
+  font-style: italic;
+
+  @include breakpoint($bp--portfolio--show-details) {
+    display: none;
+  }
+
+  &:after {
+    margin-left: 0.5em;
+    border-width: 0.5em 0.66em 0.5em 0;
+    border-style: solid;
+    border-color: transparent $flag-color;
+    width: 0;
+    height: 0;
+    content: "";
+  }
+}
+
+.pi--details--trigger-label--close {
+  display: flex;
+  position: absolute;
+  top: -1em;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: get-color(black);
+  padding: 4px;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 0.66em;
+
+  @include breakpoint($bp--portfolio--show-details) {
+    display: none;
+  }
+}
+
+.pi--details--title {
+  display: block;
+  margin-bottom: 1em;
+  border-bottom: 0.125em solid $flag-color;
+  width: auto;
+  text-transform: none;
+  font-size: fontsize-rem(ms(3));
+  font-weight: 800;
+  font-style: italic;
+}
+
+.pi--item-description {
+  margin-bottom: 2em;
+}
+
+[class^='pi--item-label'] {
+  @include h6();
+  margin-right: 0.5em;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.pi--item-label--client {
+  display: inline;
+}
+
+.pi--client {
+  display: inline;
+  font-weight: 200;
+}
+
+//.pi--item-label--link {}
+
+.pi--responsibilities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-left: 0;
+
+  li {
+    flex-basis: 8em;
+    margin: 0 0.5em 0.5em 0;
+    background-color: get-color(gray, light);
+    padding: 0.25em;
+    font-weight: 200;
+    list-style-type: none;
+  }
+}
+
+.pi--item-label--agency {
+  display: inline;
+}
+
+.pi--agency {
+  display: inline;
+}
+
+
+.pi--images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -1em 1em;
+  max-width: 100%;
+
+  &[data-eq-state$='small'] {
+    margin: 0 -3em 1em;
+  }
+
+  @include breakpoint($bp--portfolio--show-details) {
+    flex-basis: 66%;
+    order: 3;
+  }
+}
+
+.pi--image {
+  flex-basis: 100%;
+  flex-grow: 1;
+  margin-bottom: 3em;
+  padding: 0 1em;
+  max-width: 100%;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  &.pi--image--narrow {
+    img {
+      max-width: 400px;
+    }
+  }
+
+  &.pi--image--medium {
+    img {
+      max-width: 800px;
+    }
+  }
+
+  &.pi--image--wide {
+    img {
+      max-width: 1500px;
+    }
+  }
+
+  [data-eq-state$='small'] & {
+    margin-bottom: 6em;
+    padding: 0 3em;
+
+    &.pi--image--narrow {
+      flex-basis: 50%;
+    }
+  }
+
+  [data-eq-state$='mid'] & {
+    &.pi--image--narrow {
+      flex-basis: 33%;
+    }
+
+    &.pi--image--medium {
+      flex-basis: 50%;
+    }
+
+    &.pi--image--wide {
+      flex-basis: 66%;
+      flex-grow: 1;
+    }
+  }
+
+  [data-eq-state$='large'] & {
+    &.pi--image--narrow {
+      flex-basis: 25%;
+    }
+
+    &.pi--image--medium {
+      flex-basis: 50%;
+    }
+
+    &.pi--image--wide {
+      flex-basis: 75%;
+    }
+  }
+}
+
+.pi--image--photo {
+  img {
+    border: 1px solid get-color(black);
+  }
+}

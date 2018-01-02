@@ -1,0 +1,11 @@
+////
+/// @group Spacing
+////
+
+/// Get spacing value from $spacing-map
+/// @param {string} $state - must match an item defined in `$spacing-map`
+/// @returns {number}
+@function get-spacing($key) {
+  $item: map_get($spacing-map, $key);
+  @return $item;
+}

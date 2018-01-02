@@ -1,0 +1,743 @@
+{
+  "portfolio_items": [
+    {
+      "project_id": "score",
+      "project_name": "Score.org",
+      "project_name_short": "Score.org",
+      "overview__text": "Engage and create <em>relationships</em> with <em>entrpreneurs</em>",
+      "item_label__client": "<abbr>SCORE</abbr>",
+      "item_label__link__show": true,
+      "item_label__link": "http://score.org",
+      "item_label__link__domain": "score.org",
+      "about__show": true,
+      "about": "<p>I worked with SCORE to realign their design to their brand. Through discovery exercises and research I learned that the relationships they facilitate between experienced business mentors and entrepreneurs is at the core of everything they do. The arrows that point between different content items and sections are subtle reminders of those relationships.</p><p>I also wanted to connect with entrepreneurs and their passion for their businesses. The moment when an entrepreneur first holds their own business card is the moment when their dreams start to feel real. I wanted to bring that reality to this site. So I made real letterpress business cards and photographed them for the site header. The result is more tangible, and suggests that we’re ready to get down to business.</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Responsive Design"},
+        {"item": "Presentations"},
+        {"item": "Kick-off lead"},
+        {"item": "Front End Development"},
+        {"item": "Styleguide"},
+        {"item": "Prototyping"}
+      ],
+      "agency": "Phase2",
+      "link_to_agency": true,
+      "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "score-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide pi--image--photo",
+          "image__path": "score-printing-3",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "score-home-devices",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "score-home-laptop",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "score-home-phone",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "score-home-tablet",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "score-home-menu-phone",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium pi--image--photo",
+          "image__path": "score-printing-2",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium pi--image--photo",
+          "image__path": "score-printing",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium pi--image--photo",
+          "image__path": "score-printing-4",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "score-article-laptop",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "score-article-phone",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "score-article-tablet",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "score-library-laptop",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "score-library-phone",
+          "image__alt": "Screenshots of Score.org"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "score-library-tablet",
+          "image__alt": "Screenshots of Score.org"
+        }
+      ]
+    },
+    {
+      "project_id": "reliefweb",
+      "project_name": "UN Reliefweb Crisis Overview",
+      "project_name_short": "UN Reliefweb",
+      "overview__text": "Create a <em>data-driven</em> overview of a world crisis",
+      "item_label__client": "<abbr>UN OCHA</abbr> Reliefweb",
+      "item_label__link__show": "true",
+      "item_label__link": "http://crisis.rwlabs.org",
+      "item_label__link__domain": "crisis.rwlabs.org",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Responsive Design"},
+        {"item": "Presentations"},
+        {"item": "Front End Development"},
+        {"item": "Styleguide"},
+        {"item": "Prototyping"}
+      ],
+      "link_to_agency": true,
+      "agency": "Phase2",
+      "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "reliefweb-crisis-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "reliefweb-crisis-home-devices",
+          "image__alt": "Screenshots of ReliefWeb"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "reliefweb-crisis-home-laptop",
+          "image__alt": "Screenshots of ReliefWeb"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "reliefweb-crisis-home-phone",
+          "image__alt": "Screenshots of ReliefWeb"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "reliefweb-crisis-home-tablet",
+          "image__alt": "Screenshots of ReliefWeb"
+        }
+      ]
+    },
+    {
+      "project_id": "sassconf2014",
+      "project_name": "SassConf 2014",
+      "project_name_short": "SassConf 2014",
+      "overview__text": "Push the boundaries of <em>Sass</em> and <em>CSS</em>",
+      "item_label__client": "SassConf 2014",
+      "item_label__link__show": "true",
+      "item_label__link": "http://sassconf.thecodingdesigner.com/",
+      "item_label__link__domain": "sassconf.thecodingdesigner.com",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Responsive Design"},
+        {"item": "Presentations"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Speaker"}
+      ],
+      "link_to_agency": false,
+      "agency": "The Coding Designer",
+      "agency__link": "http://www.thecodingdesigner.com",
+      "thumbnail_image": "sassconf-2014-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-home-devices",
+          "image__alt": "SassConf 2014 home page"
+        },
+        {
+          "image__classes": "pi--image--wide pi--image--video",
+          "image__mov": "sassconf-2014-header",
+          "image__alt": "SassConf 2014 home page header scroll demonstration"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-home-scroll-devices",
+          "image__alt": "SassConf 2014 home page (mid-scroll)"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-footer-laptop",
+          "image__alt": "SassConf 2014 footer"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-footer-phone",
+          "image__alt": "SassConf 2014 footer"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-footer-tablet",
+          "image__alt": "SassConf 2014 footer"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-home-laptop",
+          "image__alt": "SassConf 2014 home"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-home-menu-phone",
+          "image__alt": "SassConf 2014 home"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-home-phone",
+          "image__alt": "SassConf 2014 home"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-home-scroll-laptop",
+          "image__alt": "SassConf 2014 home"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-home-tablet",
+          "image__alt": "SassConf 2014 home"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-schedule-devices",
+          "image__alt": "SassConf 2014 schedule"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-schedule-laptop",
+          "image__alt": "SassConf 2014 schedule"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-schedule-phone",
+          "image__alt": "SassConf 2014 schedule"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-schedule-tablet",
+          "image__alt": "SassConf 2014 schedule"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-speakers-devices",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-speakers-group-laptop",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-speakers-laptop",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-speakers-mason-laptop",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-speakers-mason-phone",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-speakers-panel-phone",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-speakers-panel-tablet",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-speakers-workshops-laptop",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-speakers-workshops-tablet",
+          "image__alt": "SassConf 2014 speakers"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "sassconf-2014-testimonials-laptop",
+          "image__alt": "SassConf 2014 testimonials"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "sassconf-2014-testimonials-phone",
+          "image__alt": "SassConf 2014 testimonials"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "sassconf-2014-testimonials-tablet",
+          "image__alt": "SassConf 2014 testimonials"
+        }
+      ]
+    },
+    {
+      "project_id": "thinkingbox",
+      "project_name": "Thinking Inside the Box Inside the Box Inside the Box",
+      "project_name_short": "Thinking Inside the Box",
+      "overview__text": "A web design presentation about <em>styleguides</em> and <em>jazz</em>",
+      "item_label__client": "Mason Wendell",
+      "item_label__link__show": "true",
+      "item_label__link": "http://codingdesigner.github.io/box/",
+      "item_label__link__domain": "codingdesigner.github.io/box",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Writing"},
+        {"item": "Speaking"}
+      ],
+      "link_to_agency": false,
+      "agency": "The Coding Designer",
+      "agency__link": "http://www.thecodingdesigner.com",
+      "thumbnail_image": "thinking-box-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-1-title-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-2-music-nerd-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-3-design-in-browser-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-4-present-in-browser-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-5-what-are-we-designin-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-6-design-tool-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-7-component-driven-design-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-8-blank-page-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-9-hard-bop-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-10-musical-thinking-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-11-content-content-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-12-component-based-design-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-13-instruments-and-designers-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-14-type-sizes-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-15-color-schemes-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-16-color-schemes-2-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-17-its-time-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-18-unity-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "thinking-box-19-simple-trick-laptop",
+          "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
+        }
+      ]
+    },
+    {
+      "project_id": "mac",
+      "project_name": "MAC Cosmetics",
+      "project_name_short": "MAC Cosmetics",
+      "overview__text": "Responsive design and front end development for one of the largest cosmetics brands",
+      "item_label__client": "MAC Cosmetics",
+      "item_label__link__show": "true",
+      "item_label__link": "http://www.maccosmetics.com/",
+      "item_label__link__domain": "maccosmetics.com",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Responsive Designs"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Styleguide"},
+        {"item": "Drupal Theming"},
+        {"item": "Presentations"}
+      ],
+      "link_to_agency": true,
+      "agency": "Phase2",
+      "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "mac-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "mac-home-devices",
+          "image__alt": "MAC Cosmetics home page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "mac-home-laptop",
+          "image__alt": "MAC Cosmetics home page"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "mac-home-tablet",
+          "image__alt": "MAC Cosmetics home page"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "mac-home-phone",
+          "image__alt": "MAC Cosmetics home page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "mac-artistry-devices",
+          "image__alt": "MAC Cosmetics artistry page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "mac-artistry-laptop",
+          "image__alt": "MAC Cosmetics artistry page"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "mac-artistry-tablet",
+          "image__alt": "MAC Cosmetics artistry page"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "mac-artistry-phone",
+          "image__alt": "MAC Cosmetics artistry page"
+        }
+      ]
+    },
+    {
+      "project_id": "estee",
+      "project_name": "Estée Lauder",
+      "project_name_short": "Estée Lauder",
+      "overview__text": "Responsive design and front end development for one of the largest cosmetics brands",
+      "item_label__client": "Estée Lauder",
+      "item_label__link__show": "true",
+      "item_label__link": "http://www.esteelauder.com/",
+      "item_label__link__domain": "esteelauder.com",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Responsive Designs"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Drupal Theming"},
+        {"item": "Presentations"}
+      ],
+      "link_to_agency": true,
+      "agency": "Phase2",
+      "agency__link": "http://www.phase2technology.com",
+      "thumbnail_image": "estee-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "estee-home-devices",
+          "image__alt": "Estée Lauder home page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "estee-home-laptop",
+          "image__alt": "Estée Lauder home page"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "estee-home-tablet",
+          "image__alt": "Estée Lauder home page"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "estee-home-phone",
+          "image__alt": "Estée Lauder home page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "estee-stories-devices",
+          "image__alt": "Estée Lauder stories page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "estee-stories-laptop",
+          "image__alt": "Estée Lauder stories page"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "estee-stories-tablet",
+          "image__alt": "Estée Lauder stories page"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "estee-stories-phone",
+          "image__alt": "Estée Lauder stories page"
+        }
+      ]
+    },
+    {
+      "project_id": "usa",
+      "project_name": "USA Network",
+      "project_name_short": "USA Network",
+      "overview__text": "A responsive site where <em>characters matter</em>",
+      "item_label__client": "USA Network",
+      "item_label__link__show": false,
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Front End Development"},
+        {"item": "Responsive Design"},
+        {"item": "Prototyping"},
+        {"item": "Drupal Theming"},
+        {"item": "Drupal Build"}
+      ],
+      "link_to_agency": false,
+      "agency": "NBC Universal",
+      "thumbnail_image": "usa-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "usa-home-devices",
+          "image__alt": "USA Network"
+        },
+        {
+          "image__classes": "pi--image--medium",
+          "image__path": "usa-home-tablet",
+          "image__alt": "USA Network"
+        },
+        {
+          "image__classes": "pi--image--narrow",
+          "image__path": "usa-home-phone",
+          "image__alt": "USA Network"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "usa-home-laptop",
+          "image__alt": "USA Network"
+        }
+      ]
+    },
+    {
+      "project_id": "marsalis",
+      "project_name": "Marsalis Music",
+      "project_name_short": "Marsalis Music",
+      "overview__text": "Design and build a home for jazz legends <em>Branford Marsalis</em> and <em>Harry Connick, Jr.'s</em> record label",
+      "item_label__client": "Marsalis Music",
+      "item_label__link__show": "true",
+      "item_label__link": "http://www.marsalismusic.com/",
+      "item_label__link__domain": "marsalismusic.com",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Presentations"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Drupal Theming"},
+        {"item": "Drupal Build"}
+      ],
+      "link_to_agency": false,
+      "agency": "Canary Promotion & Design",
+      "thumbnail_image": "marsalis-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "marsalis-home-laptop",
+          "image__alt": "Marsalis Music Home Page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "marsalis-artists-laptop",
+          "image__alt": "Marsalis Music Artists Page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "marsalis-artist-laptop",
+          "image__alt": "Marsalis Music Artist Page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "marsalis-releases-laptop",
+          "image__alt": "Marsalis Music Releases Page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "marsalis-release-laptop",
+          "image__alt": "Marsalis Music Release Page"
+        }
+      ]
+    },
+    {
+      "project_id": "arsnova",
+      "project_name": "Ars Nova Workshop",
+      "project_name_short": "Ars Nova Workshop",
+      "overview__text": "Design and build a home for <em>Avant-Garde Jazz</em> in Philadelphia",
+      "item_label__client": "Ars nova Workshop",
+      "item_label__link__show": "true",
+      "item_label__link": "http://arsnovaworkshop.com/",
+      "item_label__link__domain": "arsnovaworkshop.com",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Presentations"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Drupal Theming"},
+        {"item": "Drupal Build"}
+      ],
+      "link_to_agency": false,
+      "agency": "Canary Promotion & Design",
+      "thumbnail_image": "ars-nova-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "ars-nova-home-laptop",
+          "image__alt": "Ars Nova Workshop Home Page"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "ars-nova-events-laptop",
+          "image__alt": "Ars Nova Workshop Events Page"
+        }
+      ]
+    },
+    {
+      "project_id": "rosenbach",
+      "project_name": "Rosenbach Museum and Library",
+      "project_name_short": "Rosenbach Museum",
+      "overview__text": "Design and build a home for the home of many of the <em>world's literary treasures.</em>",
+      "item_label__client": "Rosenbach Museum and Library",
+      "item_label__link__show": "true",
+      "item_label__link": "https://www.rosenbach.org/",
+      "item_label__link__domain": "rosenbach.org",
+      "about__show": false,
+      "about": "<p>tktktktk</p>",
+      "responsibilities": [
+        {"item": "Art Direction"},
+        {"item": "Lead Designer"},
+        {"item": "Presentations"},
+        {"item": "Front End Development"},
+        {"item": "Prototyping"},
+        {"item": "Styleguide"},
+        {"item": "Drupal Theming"},
+        {"item": "Drupal Build"}
+      ],
+      "link_to_agency": false,
+      "agency": "Canary Promotion & Design",
+      "thumbnail_image": "rosenbach-home-thumb",
+      "images": [
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "rosenbach-home-laptop",
+          "image__alt": "Rosenbach Museum and Library"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "rosenbach-artists-laptop",
+          "image__alt": "Rosenbach Museum and Library"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "rosenbach-collections-laptop",
+          "image__alt": "Rosenbach Museum and Library"
+        },
+        {
+          "image__classes": "pi--image--wide",
+          "image__path": "rosenbach-exhibition-laptop",
+          "image__alt": "Rosenbach Museum and Library"
+        }
+      ]
+    }
+  ]
+}

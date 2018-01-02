@@ -1,0 +1,63 @@
+////
+/// @group Colors
+////
+
+// note: comments in color map are used to auto-generate json (not implemented here yet)
+// @todo implement scss--json conversions
+
+/// Color Palette Maps
+/// @type Map
+$palettes: (
+  red: (
+    base: red
+    //get-color(red): red;
+  ),
+  orange: (
+    base: orange
+    //get-color(orange): orange;
+  ),
+  yellow: (
+    base: yellow
+    //get-color(yellow): yellow;
+  ),
+  green: (
+    base: green
+    //get-color(green): green;
+  ),
+  blue: (
+    base: blue,
+    //get-color(blue): blue;
+  ),
+  indigo: (
+    base: indigo
+    //get-color(indigo): indigo;
+  ),
+  violet: (
+    base: violet
+    //get-color(violet): violet;
+  ),
+  gray: (
+    base: grey,
+    //get-color(gray): gray;
+    light: #e5e5e5,
+    //get-color(gray, light): #e5e5e5;
+    dark: darkgray
+    //get-color(gray, dark): darkgray;
+  ),
+  white: (
+    base: white,
+    //get-color(white): white;
+    warm: hsl(48, 20%, 95%),
+    //get-color(white, warm): hsl(48, 20%, 95%);
+    transparent: hsla(0, 0%, 100%, 0),
+    //get-color(white, transparent): hsla(0, 0%, 100%, 0);
+    semitrans: hsla(0, 0%, 100%, 0.15)
+    //get-color(white, semitrans): hsla(0, 0%, 100%, 0.15);
+  ),
+  black: (
+    base: black,
+    //get-color(black): black;
+    light: hsl(0, 0%, 8%),
+    //get-color(black, light): hsl(0, 0%, 8%);
+  )
+);

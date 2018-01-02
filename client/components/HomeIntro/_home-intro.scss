@@ -1,0 +1,25 @@
+.my-name {
+  font-weight: 200;
+  font-style: normal;
+
+  .no-break {
+    @include breakpoint(max-width 366px) {
+      display: block;
+      white-space: normal;
+    }
+  }
+
+}
+
+.intro-name {
+  display: inline-block;
+  border-width: 0 0 1px;
+  border-style: dashed;
+  border-color: color(black);
+  padding-right: 3px;
+  padding-left: 3px;
+  width: initial;
+  min-width: 12.5em;
+  max-width: 100%;
+  font-weight: 800;
+}

@@ -1,0 +1,12 @@
+{
+  "portfolio_overview__items": [
+    {
+      "class": "score",
+      "item_name": "SCORE"
+    },
+    {
+      "class": "reliefweb",
+      "item_name": "UN OCHA Relief Web"
+    }
+  ]
+}

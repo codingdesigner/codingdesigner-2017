@@ -1,0 +1,17 @@
+////
+/// @group Typography
+////
+
+/// Font Map
+/// * Store font stack strings in a map
+/// * Define font sizes in one list for tighter typographic control
+///
+/// @example   Apply font  using the `get-font()` function
+///   `font-family: get-font(serif);`
+/// @type Map
+$font-map: (
+  surveyor: #{'Surveyor SSm A', 'Surveyor SSm B', Georgia, serif},
+  surveyor-fine: #{'Surveyor Fine A', 'Surveyor Fine B', Georgia, serif},
+  archer: #{'Archer SSm A', 'Archer SSm B', sans-serif},
+  adobe-blank: #{'AdobeBlank', sans-serif}
+);

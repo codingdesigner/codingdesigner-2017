@@ -1,0 +1,56 @@
+////
+/// @group Typography
+////
+
+
+/// Rotate a line of text in an arc
+/// @param {integer} $num-letters [100] - how many characters
+/// @param {deg} $angle-span [180deg] - how far around the circle to rotate
+/// @param {deg} $angle-offset [0deg] - where to start the circle
+/// @param {deg} $angle-per-char [$angle-span / $num-letters] - how far apart to space the characters
+@mixin rotate-line-of-text (
+  $num-letters: 100,
+  $angle-span: 180deg,
+  $angle-offset: 0deg,
+  $angle-per-char: $angle-span / $num-letters) {
+  @for $i from 1 through $num-letters {
+    .char#{$i} {
+      transform: rotate($angle-offset + $angle-per-char * $i);
+    }
+  }
+}
+
+/// Fan items in an arc
+/// @param {integer} $num-items [10] - how many characters
+/// @param {deg} $angle-span [180deg] - how far around the circle to fan
+/// @param {deg} $angle-offset [0deg] - where to start the circle
+/// @param {deg} $angle-per-item [$angle-span / $num-items] - how far apart to space the items
+@mixin fan-items (
+  $num-items: 10,
+  $angle-span: 180deg,
+  $angle-offset: 0deg,
+  $angle-per-item: $angle-span / $num-items) {
+  @for $i from 1 through $num-items {
+    &:nth-of-type(#{$i}) {
+      transform: rotate($angle-offset + $angle-per-item * $i);
+    }
+  }
+}
+
+
+/// Spread a line of text in an line
+/// @param {integer} $num-letters [100] - how many characters
+/// @param {number} $width-span [20em] - how far along the line to go
+/// @param {number} $width-offset [0deg] - where to start the line
+/// @param {number} $width-per-char [$width-span / $num-letters] - how far apart to space the characters
+@mixin spread-line-of-text (
+  $num-letters: 100,
+  $width-span: 20em,
+  $width-offset: 0,
+  $width-per-char: $width-span / $num-letters) {
+  @for $i from 1 through $num-letters {
+    .char#{$i} {
+      transform: translateX($width-offset + $width-per-char * $i);
+    }
+  }
+}

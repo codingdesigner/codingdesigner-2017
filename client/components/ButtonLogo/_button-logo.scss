@@ -1,0 +1,125 @@
+.button-logo {
+  @include button-logo--base($background-color: $button-logo-background-color, $foreground-color: $button-logo-foreground-color);
+
+  &.image-1 {
+    @include button-logo-image('../assets/images/headers/space-helmet.jpg');
+  }
+
+  &.image-2 {
+    @include button-logo-image('../assets/images/headers/aligator-skull.jpg');
+  }
+
+  &.image-3 {
+    @include button-logo-image('../assets/images/headers/antler-skull.jpg');
+  }
+
+  &.image-4 {
+    @include button-logo-image('../assets/images/headers/snake-skeleton.jpg');
+  }
+
+  &.image-5 {
+    @include button-logo-image('../assets/images/headers/moon-landing.jpg', $background-color: #EFE07A);
+  }
+
+  &.image-6 {
+    @include button-logo-image('../assets/images/headers/rockies-1.jpg');
+  }
+
+  &.image-7 {
+    @include button-logo-image('../assets/images/headers/rockies-2.jpg');
+  }
+
+  &.image-8 {
+    @include button-logo-image('../assets/images/headers/roofs.jpg');
+  }
+
+  &.image-9 {
+    @include button-logo-image('../assets/images/headers/sc-sky.jpg');
+  }
+
+  &.image-10 {
+    @include button-logo-image('../assets/images/headers/bridge-lights.jpg');
+  }
+
+}
+
+.button-logo--words-wrapper {
+  display: flex;
+  position: relative;
+  top: 5px;
+  left: -8px;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include breakpoint($bp--title-curve--shrink) {
+    left: -16px;
+  }
+
+}
+
+.button-logo--word {
+  text-shadow: long-shadow(
+    $direction: 30deg,
+    $length: 0.3em,
+    $color: $button-logo-foreground-color,
+    $fade: $button-logo-foreground-color
+  );
+  font-weight: 800;
+  font-style: italic;
+  //mix-blend-mode: screen;
+  //transform: rotate(-10deg) translateY(-0.25em) translateX(-0.125em);
+  //transform: rotate(-10deg) ; // @todo debug breaks on ios: words disappear
+}
+
+.title-curve {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 0;
+  height: 0;
+  text-transform: uppercase;
+  color: $button-logo-foreground-color;
+  font-family: get-font(archer);
+  font-size: fontsize-rem(ms(0));
+  font-weight: 700;
+
+  .rectangle & {
+    right: 10em;
+    left: auto;
+  }
+
+  @include breakpoint($bp-typography-narrow) {
+    font-size: fontsize-rem(ms(1));
+  }
+
+  @include rotate-line-of-text(
+    $num-letters: 19,
+    $angle-span: 180deg,
+    $angle-offset: -140deg
+  );
+
+  [class^='char'] {
+    //outline: 1px solid red;
+    position: absolute;
+    $height-small: 6em;
+    $height: 7em;
+    $width: 1em;
+    top: -$height;
+    left: -#{$width / 2};
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: rgba(get-color(white), 0.15);
+    width: $width;
+    height: $height;
+    text-align: center;
+    transform-origin: 50% 100%;
+
+    @include breakpoint($bp--title-curve--shrink) {
+      top: -$height-small;
+      height: $height-small;
+    }
+
+  }
+
+}

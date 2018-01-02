@@ -1,0 +1,40 @@
+.monogram {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: get-color(black);
+  width: 2em;
+  height: 2em;
+  line-height: 1;
+  color: get-color(white);
+  font-family: get-font(surveyor-fine);
+  font-size: fontsize-rem(ms(6));
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  @include breakpoint($bp-typography-narrow) {
+    margin-bottom: 0;
+    font-size: fontsize-rem(ms(7));
+  }
+
+  &:hover {
+    transform: rotate(540deg);
+  }
+}
+
+.monogram--initial {
+  flex-basis: 100%;
+  text-align: center;
+  $vertical-adjust: 0.202898551em;
+
+  &.word-1 {
+    transform: translateY($vertical-adjust);
+  }
+
+  &.word-2 {
+    transform: translateY(-$vertical-adjust);
+  }
+}
