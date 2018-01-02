@@ -12,7 +12,7 @@ const navigation = [
     'text': 'Speaking'
   },
   {
-    'path': '/',
+    'path': '/photos',
     'text': 'Photos'
   },
   {
@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     'path': '/about',
-    'text': 'About'
+    'text': 'Photos'
   }
 ];
 
