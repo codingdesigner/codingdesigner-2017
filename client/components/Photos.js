@@ -23,8 +23,7 @@ class Photos extends React.Component {
   }
 
   componentDidMount () {
-    const axiosConfig = {headers: {'Access-Control-Allow-Origin': 'behance.net'}};
-    axios.get('http://behance.net/v2/projects/' + projectId + '?api_key=' + apiKey, axiosConfig)
+    axios.get('http://behance.net/v2/projects/' + projectId + '?api_key=' + apiKey)
       .then(res => {
         const behance = res.data.project;
         console.log(behance);
