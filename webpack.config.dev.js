@@ -3,25 +3,6 @@ var webpack = require('webpack');
 var sassLintPlugin = require('sasslint-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// var PATHS = {
-//   // breakpoint: path.resolve(__dirname, 'node_modules/breakpoint-sass/stylesheets/'),
-//   // modularScale: path.resolve(__dirname, 'node_modules/modularscale-sass/stylesheets'),
-//   // config: path.resolve(__dirname, 'config'),
-//   // font: path.resolve(__dirname, 'lib/client/fonts'),
-//   // image: path.resolve(__dirname, 'lib/client/images'),
-//   // lib: path.resolve(__dirname, 'lib'),
-//   // normalize: path.resolve(__dirname, 'node_modules/normalize.css'),
-//   // page: path.resolve(__dirname, 'lib/client/js/pages'),
-//   // public: path.resolve(__dirname, 'build/public'),
-//   // server: path.resolve(__dirname, 'build/server'),
-//   // style: path.resolve(__dirname, 'client/styles')
-//   // svg: path.resolve(__dirname, 'lib/client/svg'),
-//   // video: path.resolve(__dirname, 'lib/client/video'),
-//   // web: path.resolve(__dirname, 'lib/client/web')
-// };
-
-// module.exports.PATHS = PATHS;
-
 module.exports = {
   devtool: 'source-map',
   entry: [
@@ -29,7 +10,7 @@ module.exports = {
     './client/codingdesigner'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
