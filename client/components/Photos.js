@@ -28,6 +28,9 @@ class Photos extends React.Component {
         const behance = res.data.project;
         console.log(behance);
         this.setState({ behance });
+      })
+      .catch(error => {
+        console.log(error);
       });
   }
 
