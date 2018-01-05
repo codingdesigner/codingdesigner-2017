@@ -25,13 +25,19 @@ class Photos extends React.Component {
 
     this.state = {
       'randomPhoto': this.randomheaderRange(),
-      'flickr': [],
       'photosets': []
     };
   }
 
   componentDidMount () {
     this.getFlickrPhotoset(flickrPhotoset);
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (prevState.photosets !== this.state.photosets) {
+      console.log(this.state.photosets);
+      console.log('loop over photos in set and load images');
+    }
   }
 
   randomheaderRange(min = 1, max = 10) {
@@ -74,7 +80,10 @@ class Photos extends React.Component {
   }
 
   setPhotosets(photosetItem) {
-    this.setState({ photosets : photosetItem.data.photoset });
+    const photosetItemData = photosetItem.data.photoset;
+    const photosets = {...this.state.photosets};
+    photosets[photosetItemData.id] = photosetItemData;
+    this.setState({ photosets });
   }
 
   displayImage(key) {
