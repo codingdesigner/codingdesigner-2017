@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import SpeakingIntro from './SpeakingIntro/SpeakingIntro';
@@ -35,10 +36,11 @@ class Speaking extends React.Component {
 
   loadTalks(key) {
     return (
-      <Talk
-        talk={talks[key]}
-        allImages={allImages}
-        key={key}/>
+      <LazyLoad height={800} offset={100} key={key}>
+        <Talk
+          talk={talks[key]}
+          allImages={allImages}/>
+      </LazyLoad>
     );
   }
 

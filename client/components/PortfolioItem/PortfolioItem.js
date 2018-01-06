@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import {Player} from 'video-react';
 import 'eq.js';
 import PropTypes from 'prop-types';
@@ -63,20 +64,24 @@ class PortfolioItem extends React.Component {
 
     if (item.image__path) {
       return (
-        <picture className={classes} key={key}>
-          <img src={this.props.allImages[item.image__path]} alt={item.image__alt}/>
-        </picture>
+        <LazyLoad height={400} offset={100} key={key}>
+          <picture className={classes} key={key}>
+            <img src={this.props.allImages[item.image__path]} alt={item.image__alt}/>
+          </picture>
+        </LazyLoad>
       );
     } else if (item.image__mov) {
       return (
-        <Player
-          playsInline
-          loop
-          width={1400}
-          autoPlay={true}
-          src={this.props.allImages[item.image__mov]}
-          key={key}
-        />
+        <LazyLoad height={400} offset={100} key={key}>
+          <Player
+            playsInline
+            loop
+            width={1400}
+            autoPlay={true}
+            src={this.props.allImages[item.image__mov]}
+            key={key}
+          />
+        </LazyLoad>
       )
     }
   }
