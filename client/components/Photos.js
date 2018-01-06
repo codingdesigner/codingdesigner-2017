@@ -7,6 +7,8 @@ import Footer from './Footer/Footer';
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
 const flickrSecret = 'b29d00d5e97d29e8';
+const flickrAuthToken = '72157690302540301-50ba00e77ee6a660';
+const flickrApiSig = '92a179218fb155a4c2f31e077ddf0024';
 const flickrUser = '86001309%40N00'; // me
 const flickrPhotoset = '72157648966372560'; // Autumn/Wissahickon 2014
 
@@ -21,7 +23,9 @@ class Photos extends React.Component {
     this.randomheaderRange = this.randomheaderRange.bind(this);
     this.randomizeHeader = this.randomizeHeader.bind(this);
     this.displayImage = this.displayImage.bind(this);
+    this.getFlickrPhoto = this.getFlickrPhoto.bind(this);
     this.setPhotosets = this.setPhotosets.bind(this);
+    this.setPhotos = this.setPhotos.bind(this);
 
     this.state = {
       'randomPhoto': this.randomheaderRange(),
@@ -37,6 +41,8 @@ class Photos extends React.Component {
     if (prevState.photosets !== this.state.photosets) {
       console.log(this.state.photosets);
       console.log('loop over photos in set and load images');
+      console.log(Object.keys(this.state.photosets[flickrPhotoset].photo));
+      Object.keys(this.state.photosets[flickrPhotoset].photo).map((key) => {this.getFlickrPhoto(key, flickrPhotoset)});
     }
   }
 
@@ -49,11 +55,15 @@ class Photos extends React.Component {
     this.setState({'randomPhoto': random});
   }
 
-  axiosCall(url, callbackFunction) {
+  axiosCall(url, callbackFunction, passthru) {
     axios.get(url)
       .then(result => {
-        console.log(result);
-        callbackFunction(result);
+        // console.log(result);
+        if (typeof passthru !== 'undefined') {
+          callbackFunction(result, passthru);
+        } else {
+          callbackFunction(result);
+        }
       })
       .catch(function (error) {
         if (error.response) {
@@ -79,11 +89,29 @@ class Photos extends React.Component {
     const photoset = this.axiosCall('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + flickrKey + '&photoset_id=' + photoset_id + '&user_id=' + flickrUser + '&format=json&nojsoncallback=1', this.setPhotosets);
   }
 
+  getFlickrPhoto(key, photoset_id) {
+    const photoset = this.state.photosets[flickrPhotoset];
+    const photo_id = photoset.photo[key].id;
+    const photo = this.axiosCall('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + flickrKey + '&photo_id=' + photo_id + '&format=json&nojsoncallback=1', this.setPhotos, {'key': key, 'photoset_id': photoset_id});
+  }
+
   setPhotosets(photosetItem) {
-    const photosetItemData = photosetItem.data.photoset;
     const photosets = {...this.state.photosets};
+    const photosetItemData = photosetItem.data.photoset;
     photosets[photosetItemData.id] = photosetItemData;
+    console.log('!!!!get photos and sizes before setting state');
     this.setState({ photosets });
+  }
+
+  setPhotos(photoItem, photoItemContext) {
+    // console.log(photoItem);
+    console.log(photoItemContext);
+    const photosets = {...this.state.photosets};
+    const photoItemSizes = photoItem.data.sizes.size;
+    // console.log(photoItemSizes);
+    photosets[photoItemContext.photoset_id].photo[photoItemContext.key].sizes = photoItemSizes;
+    console.log(photosets);
+    // this.setState({ photosets });
   }
 
   displayImage(key) {
@@ -119,7 +147,9 @@ class Photos extends React.Component {
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
-            {Object.keys(this.state.behance.modules).map(this.displayImage)}
+            {/*{Object.keys(this.state.behance.modules).map(this.displayImage)}*/}
+            <h3>{this.state.photosets.title}</h3>
+            {/*<img src={this.state.flickr.photo[0].iconlarge}/>*/}
           </div>
         </div>
         <Footer/>
