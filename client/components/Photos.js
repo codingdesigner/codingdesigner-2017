@@ -29,7 +29,7 @@ class Photos extends React.Component {
     };
   }
 
-  componentDidMount () {
+  componentWillMount () {
     this.getFlickrPhotoset(flickrPhotoset);
   }
 
@@ -127,9 +127,13 @@ class Photos extends React.Component {
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
-            {/*<h3>{this.state.photosets[flickrPhotoset].title}</h3>*/}
+            <h3>{typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&
+              this.state.photosets[flickrPhotoset].title
+            }</h3>
             <div className="photo-gallery--photos">
-              {Object.keys(this.state.photosets[flickrPhotoset].photo).map(this.displayImage)}
+              {typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&
+                Object.keys(this.state.photosets[flickrPhotoset].photo).map(this.displayImage)
+              }
             </div>
           </div>
         </div>
