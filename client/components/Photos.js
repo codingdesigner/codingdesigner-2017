@@ -23,7 +23,6 @@ class Photos extends React.Component {
     this.getFlickrPhoto = this.getFlickrPhoto.bind(this);
     this.buildPhotosets = this.buildPhotosets.bind(this);
     this.buildPhotos = this.buildPhotos.bind(this);
-    // this.setPhotosets = this.setPhotosets.bind(this);
 
     this.state = {
       'randomPhoto': this.randomheaderRange(),
@@ -33,15 +32,6 @@ class Photos extends React.Component {
 
   componentDidMount () {
     this.getFlickrPhotoset(flickrPhotoset);
-  }
-
-  componentDidUpdate (prevProps, prevState) {
-    if (prevState.photosets !== this.state.photosets) {
-      console.log(this.state.photosets);
-      console.log('loop over photos in set and load images');
-      // console.log(Object.keys(this.state.photosets[flickrPhotoset].photo));
-      // Object.keys(this.state.photosets[flickrPhotoset].photo).map((key) => {this.getFlickrPhoto(key, flickrPhotoset)});
-    }
   }
 
   randomheaderRange(min = 1, max = 10) {
@@ -56,7 +46,6 @@ class Photos extends React.Component {
   axiosCall(url, callbackFunction, passthru) {
     axios.get(url)
       .then(result => {
-        // console.log(result);
         if (typeof passthru !== 'undefined') {
           callbackFunction(result, passthru);
         } else {
@@ -91,10 +80,7 @@ class Photos extends React.Component {
     const photosetItemData = photosetItem.data.photoset;
     // write this photoset to the photosetBuild var
     photosetBuild[photosetItemData.id] = photosetItemData;
-    console.log(photosetBuild);
-    console.log('!!!!get photos and sizes before setting state');
     // find all photos in this photoset
-    console.log(Object.keys(photosetBuild[flickrPhotoset].photo));
     Object.keys(photosetBuild[flickrPhotoset].photo).map((key) => {this.getFlickrPhoto(key, flickrPhotoset)});
   }
 
@@ -105,41 +91,12 @@ class Photos extends React.Component {
   }
 
   buildPhotos(photoItem, photoItemContext) {
-    // console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
-    // console.log(photoItem);
-    // console.log(photoItemContext);
     const photosets = {...this.state.photosets};
     const photoItemSizes = photoItem.data.sizes.size;
-    // console.log(photoItemSizes);
-    // photosets[photoItemContext.photoset_id].photo[photoItemContext.key].sizes = photoItemSizes;
     photosetBuild[photoItemContext.photoset_id].photo[photoItemContext.key].sizes = photoItemSizes;
     photosets[photoItemContext.photoset_id] = photosetBuild[photoItemContext.photoset_id];
-    // console.log(photosetBuild);
-    // this.checkAllPhotosLoaded(photoItemContext.photoset_id);
-    // this.setPhotosets(photosetBuild[photoItemContext.photoset_id]);
     debounce(this.setState({ photosets }), 150);
-    // this.setState({ photosets });
   }
-
-  // checkAllPhotosLoaded(photoset_id) {
-  //   // console.log(photosetBuild);
-  //   // if (typeof photosetBuild[photoset_id] !== 'undefined') {
-  //   //   Object.keys(photosetBuild[photoset_id].photo.map((key) => {
-  //   //     console.log(key);
-  //   //   }));
-  //   // }
-  // }
-
-  // setPhotosets(photosetItem) {
-  //   console.log(photosetItem);
-  //   const photosets = {...this.state.photosets};
-  //   const photosetItemData = photosetItem.data.photoset;
-  //   console.log(photosetItemData);
-  //   // photosets[photosetItemData.id] = photosetItemData;
-  //   // photosetBuild = photosets;
-  //   // this.setState({ photosets });
-  // }
-
 
   displayImage(key) {
     const item = this.state.behance.modules[key];
@@ -174,9 +131,7 @@ class Photos extends React.Component {
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
-            {/*{Object.keys(this.state.behance.modules).map(this.displayImage)}*/}
             <h3>{this.state.photosets[flickrPhotoset].title}</h3>
-            {/*<img src={this.state.flickr.photo[0].iconlarge}/>*/}
           </div>
         </div>
         <Footer/>
