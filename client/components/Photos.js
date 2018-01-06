@@ -3,15 +3,14 @@ import axios from 'axios';
 import LazyLoad from 'react-lazyload';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
-import debounce from 'lodash/find';
+import debounce from 'lodash/debounce';
+import find from 'lodash/find';
 
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
-const flickrSecret = 'b29d00d5e97d29e8';
-const flickrAuthToken = '72157690302540301-50ba00e77ee6a660';
-const flickrApiSig = '92a179218fb155a4c2f31e077ddf0024';
 const flickrUser = '86001309%40N00'; // me
 const flickrPhotoset = '72157648966372560'; // Autumn/Wissahickon 2014
+const imageSizes = ['Small 320', 'Medium', 'Large', 'Large 2048', 'Original'];
 let photosetBuild = [];
 
 class Photos extends React.Component {
@@ -99,29 +98,26 @@ class Photos extends React.Component {
   }
 
   displayImage(key) {
-    const item = this.state.behance.modules[key];
-    if (item.type === 'image') {
-      const dimensions = item.dimensions;
-      const sizes = item.sizes;
-      let srcSet = '';
+    const item = this.state.photosets[flickrPhotoset].photo[key];
+    let srcSet = '';
 
-      imageSizes.forEach((size) => {
-        srcSet += item.sizes[size] + ' ' + item.dimensions[size].width + 'w, ';
-      });
+    imageSizes.forEach((size) => {
+      const sizeItem = find(item.sizes, {'label': size});
+      if (typeof sizeItem !== 'undefined') {
+        srcSet += sizeItem.source + ' ' + sizeItem.width + 'w, ';
+      }
+    });
 
-      return (
-        <LazyLoad height={800} offset={100} key={key}>
-          <figure className="photograph">
-            <img srcSet={srcSet}/>
-            {typeof item.caption_plain !== 'undefined' &&
-              <figcaption>{item.caption_plain}</figcaption>
+    return (
+      <LazyLoad height={800} offset={100} key={key}>
+        <figure className="photograph">
+          <img srcSet={srcSet}/>
+            {typeof item.title !== 'undefined' &&
+              <figcaption>{item.title}</figcaption>
             }
-          </figure>
-        </LazyLoad>
-      );
-    }
-
-
+        </figure>
+      </LazyLoad>
+    );
   }
 
   render() {
@@ -132,6 +128,9 @@ class Photos extends React.Component {
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
             <h3>{this.state.photosets[flickrPhotoset].title}</h3>
+            <div className="photo-gallery--photos">
+              {Object.keys(this.state.photosets[flickrPhotoset].photo).map(this.displayImage)}
+            </div>
           </div>
         </div>
         <Footer/>
