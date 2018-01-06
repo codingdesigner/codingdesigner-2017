@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     'path': '/about',
-    'text': 'Photos'
+    'text': 'About'
   }
 ];
 

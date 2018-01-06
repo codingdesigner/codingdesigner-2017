@@ -29,6 +29,7 @@ class Portfolio extends React.Component {
 
   initialPortfolio() {
     if (typeof this.props.match.params.portfolioId === 'string') {
+
       return find(portfolio_items, {'project_id': this.props.match.params.portfolioId});
     } else {
       return portfolio_items[0];
