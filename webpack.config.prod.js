@@ -70,7 +70,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              // includePaths: [PATHS.breakpoint, PATHS.normalize]
+              includePaths: [
+                'node_modules'
+              ]
             }
           }
         ]

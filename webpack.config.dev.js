@@ -65,8 +65,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              root: './',
-              // minimize: true
+              root: './'
             }
           },
           {
@@ -76,7 +75,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              // includePaths: [PATHS.breakpoint, PATHS.normalize]
+              includePaths: [
+                'node_modules'
+              ]
             }
           }
         ]
