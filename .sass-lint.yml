@@ -2,21 +2,24 @@
 # rules: https://github.com/sasstools/sass-lint/tree/master/docs/rules
 # Get the default of this file which will contain any new rules: https://github.com/sasstools/sass-lint/blob/master/docs/sass-lint.yml
 
-files:
-  include: 'client/**/*.s+(a|c)ss'
-  ignore:
-    - 'client/styles/_config/vendor/**/*.s+(a|c)ss'
 options:
   formatter: stylish
   merge-default-rules: false
 rules:
+  bem-depth:
+    - 1
+    - max-depth: 2
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
   empty-line-between-blocks:
     - 1
     - include: true
   indentation:
     - 1
     - size: 2
-  mixins-before-declarations: 1
+  final-newline: true
+  mixins-before-declarations: 0
   nesting-depth:
     - 1
     - max-depth: 4

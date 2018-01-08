@@ -42,7 +42,7 @@
 @mixin h1($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h1-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h1);
   }
 }
@@ -52,7 +52,7 @@
 @mixin h2($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h2-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h2);
   }
 }
@@ -62,7 +62,7 @@
 @mixin h3($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h3-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h3);
   }
 }
@@ -72,7 +72,7 @@
 @mixin h4($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h4-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h4);
   }
 }
@@ -82,7 +82,7 @@
 @mixin h5($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h5-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h5);
   }
 }
@@ -92,7 +92,7 @@
 @mixin h6($heading-color: null) {
   @include heading-base($heading-color);
   @include heading-typography(h6-narrow);
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     @include heading-typography(h6);
   }
 }

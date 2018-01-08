@@ -2,7 +2,7 @@
   @include margin-compensation();
   position: relative;
 
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     display: flex;
     align-items: center;
     justify-content: flex-start;

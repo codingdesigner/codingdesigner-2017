@@ -1,0 +1,43 @@
+////
+/// @group Breakpoints
+////
+
+///
+$page-max-width: 1640px;
+///
+$typography-narrow: 650px;
+///
+$navigation--wide: $typography-narrow;
+
+$breakpoint-map: (
+  xs: 380px,
+  s: 500px,
+  m: 640px,
+  l: 768px,
+  xl: 1024px,
+  xxl: 1250px,
+  xxxl: 1600px,
+  page-max-width: $page-max-width,
+  bp-typography-narrow: 650px,
+  portfolio--show-details: 950px,
+  portfolio--overview-padding: 400px,
+  portfolio--details-limit-width: $typography-narrow,
+  title-curve--shrink: max-width 360px,
+  navigation--wide: $navigation--wide,
+  navigation--narrow: max-width ($navigation--wide - 1),
+  page-speaking-1: 400px,
+  page-speaking-2: $typography-narrow,
+  page-speaking-3: 720px,
+  page-speaking-4: 960px,
+  page-speaking-5: 1400px,
+  talk-columns: 830px,
+  talk-event--wide: $typography-narrow,
+  portfolio-overview--narrow: max-width 399px,
+  portfolio-overview--tween: 400px 767px,
+  portfolio-overview--med: 768px 1023px,
+  portfolio-overview--wide: 1024px,
+  page-over-wide: $page-max-width,
+  footer-small-text: max-width 400px,
+  post-teaser--columns: 600px,
+  post-teaser--re-center-image: 1000px
+);

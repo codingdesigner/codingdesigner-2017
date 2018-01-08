@@ -12,10 +12,10 @@
   flex-direction: column;
   align-items: flex-start;
   overflow: visible;
-  @include breakpoint($bp--footer-small-text) {
+  @include bp(footer-small-text) {
     font-size: fontsize-rem(ms(-1));
   }
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -34,14 +34,14 @@
 
 .monogram-wrapper {
   margin-top: -6em;
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     margin-top: -7em;
   }
 }
 
 .monogram {
   margin-bottom: 1rem;
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     margin-bottom: 0;
   }
 }
