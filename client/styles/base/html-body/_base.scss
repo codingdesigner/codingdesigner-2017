@@ -3,17 +3,12 @@
 ////
 
 // Better style reset
-@import "~normalize.scss/normalize.scss";
-
-* {
-  box-sizing: border-box;
-}
+//@import "~normalize.scss/normalize.scss";
 
 html {
-  background-color: $color-theme--background;
-  line-height: $base-line-height-unitless;
-  color: $color-theme--text;
-  font-family: $font-body;
+  //line-height: $base-line-height-unitless;
+  //color: $color-theme--text;
+  //font-family: $font-body;
 
   @if ($use-fluid-type) {
     // This will adjust the base HTML font size fluidly between the xsmall and

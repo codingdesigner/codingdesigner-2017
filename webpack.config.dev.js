@@ -21,14 +21,14 @@ module.exports = {
       configFile: '.sass-lint.yml',
       context: './client',
       ignoreFiles: [
-        './client/styles/_config/vendor/fontAwesome/_animated.scss',
-        './client/styles/_config/vendor/fontAwesome/_bordered-pulled.scss',
-        './client/styles/_config/vendor/fontAwesome/_core.scss',
-        './client/styles/_config/vendor/fontAwesome/_larger.scss',
-        './client/styles/_config/vendor/fontAwesome/_list.scss',
-        './client/styles/_config/vendor/fontAwesome/_mixins.scss',
-        './client/styles/_config/vendor/fontAwesome/_path.scss',
-        './client/styles/_config/vendor/fontAwesome/_stacked.scss'
+        './client/styles/vendor/fontAwesome/_animated.scss',
+        './client/styles/vendor/fontAwesome/_bordered-pulled.scss',
+        './client/styles/vendor/fontAwesome/_core.scss',
+        './client/styles/vendor/fontAwesome/_larger.scss',
+        './client/styles/vendor/fontAwesome/_list.scss',
+        './client/styles/vendor/fontAwesome/_mixins.scss',
+        './client/styles/vendor/fontAwesome/_path.scss',
+        './client/styles/vendor/fontAwesome/_stacked.scss'
       ]
     }),
     new CopyWebpackPlugin(
