@@ -1,25 +1,26 @@
-// Import codingdesigner-styles library
+// Import codingdesigner-styles tools
 @import "~codingdesigner-styles/scss/codingdesigner-tools";
 
-// A cleaner way to do breakpoints/media queries, http://breakpoint-sass.com/
-//@import "~breakpoint-sass/stylesheets/breakpoint";
+// Libraries
 @import '~modularscale-sass/stylesheets/modularscale';
 @import '~video-react/styles/scss/video-react';
 
-// CONFIG: for setup and configuration. These files should output no CSS by themselves
-// UTILITIES: general math and styles calculations
-//@import '_config/utilities/utilities';
-// FOUNDATION: set up variables, maps, functions, and mixins for design language
-@import 'overrides/breakpoint-overrides';
-@import 'overrides/color-overrides';
-@import 'overrides/sizes-overrides';
+// Tools
+@import 'tools/utilities/utilities-index';
 @import 'tools/mixins-links';
-@import 'overrides/typography-overrides-index';
 @import 'tools/functions-shadows';
 @import 'tools/mixins-rotate';
 @import 'tools/shapes-mixins';
 
+// Variable overrides
+@import 'overrides/breakpoint-overrides';
+@import 'overrides/color-overrides';
+@import 'overrides/sizes-overrides';
+@import 'overrides/typography-overrides-index';
+
+// codingdesigner-styles variables
 @import "~codingdesigner-styles/scss/codingdesigner-variables";
+
 // LAYOUTS
 @import '_config/layouts/helpers';
 @import '_config/layouts/mixins';
