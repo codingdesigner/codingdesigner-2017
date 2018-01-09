@@ -5,8 +5,8 @@
 /// Compensate for page margins
 /// @param {string} $sides [both] - both, left, right
 @mixin margin-compensation($sides: 'both') {
-  $side-margin: get-spacing(side-margin);
-  $side-margin--wide: get-spacing(side-margin--wide);
+  $side-margin: get-size(side-margin);
+  $side-margin--wide: get-size(side-margin--wide);
   @if ($sides == 'both') {
     margin-right: -$side-margin;
     margin-left: -$side-margin;

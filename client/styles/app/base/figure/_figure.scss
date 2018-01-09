@@ -9,6 +9,6 @@ figure {
 }
 
 figcaption {
-  margin: get-spacing(type-vertical) 0;
+  margin: get-size(type-vertical) 0;
   font-size: get-font-size(-1);
 }

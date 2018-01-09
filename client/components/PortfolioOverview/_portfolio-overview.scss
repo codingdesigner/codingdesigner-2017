@@ -76,7 +76,7 @@
 }
 
 .po-item--name {
-  @include margin-compensation--inner($side-margin: get-spacing(side-margin), $side-margin--wide: get-spacing(side-margin--wide));
+  @include margin-compensation--inner($side-margin: get-size(side-margin), $side-margin--wide: get-size(side-margin--wide));
   display: inline-block;
   position: relative;
   transform: translateY(0.25em);

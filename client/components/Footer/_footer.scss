@@ -4,7 +4,7 @@
   margin-top: 8em;
   border-top: 2em dashed get-color(black);
   border-bottom: 4em dashed get-color(black);
-  padding: 2em get-spacing(side-margin);
+  padding: 2em get-size(side-margin);
 }
 
 .footer-content {
@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 2em get-spacing(side-margin--wide);
+    padding: 2em get-size(side-margin--wide);
 
     .contact {
       flex-basis: calc(75% - 1.5em);

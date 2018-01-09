@@ -1,4 +1,5 @@
 // Import codingdesigner-styles library
+@import "~codingdesigner-styles/scss/codingdesigner-tools";
 
 // A cleaner way to do breakpoints/media queries, http://breakpoint-sass.com/
 //@import "~breakpoint-sass/stylesheets/breakpoint";
@@ -10,12 +11,9 @@
 //@import '_config/utilities/utilities';
 // FOUNDATION: set up variables, maps, functions, and mixins for design language
 @import '_config/foundation/breakpoint-overrides';
-@import "~codingdesigner-styles/scss/codingdesigner-tools";
-@import '_config/foundation/colors/functions';
-@import '_config/foundation/colors/map';
-@import '_config/foundation/colors/variables';
-@import '_config/foundation/sizes/functions';
-@import '_config/foundation/sizes/variables';
+@import '_config/foundation/color-overrides';
+@import '_config/foundation/sizes-overrides';
+@import "~codingdesigner-styles/scss/codingdesigner-variables";
 @import '_config/foundation/typography/fonts';
 @import '_config/foundation/typography/functions';
 @import '_config/foundation/typography/functions-shadows';

@@ -2,12 +2,29 @@
 /// @group Colors
 ////
 
-// note: comments in color map are used to auto-generate json (not implemented here yet)
-// @todo implement scss--json conversions
-
 /// Color Palette Maps
 /// @type Map
 $palettes: (
+  primary: (
+    base: blue,
+    light: lightblue,
+    faded: #3B5B86
+  ),
+  secondary: (
+    base: orange
+  ),
+  accent: (
+    base: red
+  ),
+  grayscale: (
+    lightest: white,
+    warm: hsl(48, 20%, 95%),
+    light: #e5e5e5,
+    base: grey,
+    dark: darkgray,
+    x-dark: hsl(0, 0%, 8%),
+    darkest: black
+  ),
   red: (
     base: red
     //get-color(red): red;
@@ -61,3 +78,10 @@ $palettes: (
     //get-color(black, light): hsl(0, 0%, 8%);
   )
 );
+
+/// site background color
+/// @type color
+$color-theme--background: get-color(white);
+/// site text color
+/// @type color
+$color-theme--text: get-color(black);

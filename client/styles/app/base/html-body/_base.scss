@@ -31,9 +31,9 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0 get-spacing(side-margin);
+  padding: 0 get-size(side-margin);
   @include bp(typography-narrow) {
-    padding: 0 get-spacing(side-margin--wide);
+    padding: 0 get-size(side-margin--wide);
   }
 }
 
