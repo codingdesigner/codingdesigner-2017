@@ -1,0 +1,13 @@
+/// Standard link
+/// * change to suit your app
+@mixin link-reverse() {
+  @include set-link-colors(reverse);
+  @include unset-faux-underline-links();
+}
+
+@mixin link-knockout-underline() {
+  @include set-link-defaults();
+  @include set-link-colors (knockout-underline);
+  @include unset-faux-underline-links();
+  @include set-faux-underline-links(knockout-underline);
+}

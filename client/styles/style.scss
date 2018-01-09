@@ -10,22 +10,16 @@
 // UTILITIES: general math and styles calculations
 //@import '_config/utilities/utilities';
 // FOUNDATION: set up variables, maps, functions, and mixins for design language
-@import '_config/foundation/breakpoint-overrides';
-@import '_config/foundation/color-overrides';
-@import '_config/foundation/sizes-overrides';
+@import 'overrides/breakpoint-overrides';
+@import 'overrides/color-overrides';
+@import 'overrides/sizes-overrides';
+@import 'tools/mixins-links';
+@import 'overrides/typography-overrides-index';
+@import 'tools/functions-shadows';
+@import 'tools/mixins-rotate';
+@import 'tools/shapes-mixins';
+
 @import "~codingdesigner-styles/scss/codingdesigner-variables";
-@import '_config/foundation/typography/fonts';
-@import '_config/foundation/typography/functions';
-@import '_config/foundation/typography/functions-shadows';
-@import '_config/foundation/typography/map';
-@import '_config/foundation/typography/variables';
-@import '_config/foundation/typography/mixins';
-@import '_config/foundation/typography/mixins-headings';
-@import '_config/foundation/typography/mixins-links';
-@import '_config/foundation/typography/mixins-rotate';
-@import '_config/foundation/z-index/functions';
-@import '_config/foundation/z-index/variables';
-@import '_config/foundation/shapes/mixins';
 // LAYOUTS
 @import '_config/layouts/helpers';
 @import '_config/layouts/mixins';
