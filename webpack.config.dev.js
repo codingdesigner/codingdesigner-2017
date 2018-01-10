@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var sassLintPlugin = require('sasslint-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const sassLintPlugin = require('sasslint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
