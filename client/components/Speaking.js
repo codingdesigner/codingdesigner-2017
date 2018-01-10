@@ -46,7 +46,7 @@ class Speaking extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="full-page">
         <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
         <div className="page--speaking page-content">
           <SpeakingIntro allImages={allImages}/>

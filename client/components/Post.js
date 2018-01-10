@@ -91,7 +91,7 @@ class Post extends React.Component {
   render() {
     const publishDate = moment(this.state.PostItem.date).format('dddd, MMMM Do, YYYY');
     return (
-      <div>
+      <div className="full-page">
         <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
         <div className="page--posts-page page-content">
           <h1 className="page-title">{this.state.PostItem.headline}</h1>

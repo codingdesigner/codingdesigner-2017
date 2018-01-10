@@ -1,0 +1,20 @@
+.full-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 get-size(side-margin);
+  min-height: 100vh;
+
+  @include bp(typography-narrow) {
+    padding: 0 get-size(side-margin--wide);
+  }
+}
+
+.page-content {
+  @include content-limiter();
+}
+
+.footer-content {
+  @include content-limiter();
+}
