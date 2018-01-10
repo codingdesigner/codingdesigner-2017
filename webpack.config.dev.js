@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var sassLintPlugin = require('sasslint-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const sassLintPlugin = require('sasslint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -21,14 +21,14 @@ module.exports = {
       configFile: '.sass-lint.yml',
       context: './client',
       ignoreFiles: [
-        './client/styles/_config/vendor/fontAwesome/_animated.scss',
-        './client/styles/_config/vendor/fontAwesome/_bordered-pulled.scss',
-        './client/styles/_config/vendor/fontAwesome/_core.scss',
-        './client/styles/_config/vendor/fontAwesome/_larger.scss',
-        './client/styles/_config/vendor/fontAwesome/_list.scss',
-        './client/styles/_config/vendor/fontAwesome/_mixins.scss',
-        './client/styles/_config/vendor/fontAwesome/_path.scss',
-        './client/styles/_config/vendor/fontAwesome/_stacked.scss'
+        './client/styles/vendor/fontAwesome/_animated.scss',
+        './client/styles/vendor/fontAwesome/_bordered-pulled.scss',
+        './client/styles/vendor/fontAwesome/_core.scss',
+        './client/styles/vendor/fontAwesome/_larger.scss',
+        './client/styles/vendor/fontAwesome/_list.scss',
+        './client/styles/vendor/fontAwesome/_mixins.scss',
+        './client/styles/vendor/fontAwesome/_path.scss',
+        './client/styles/vendor/fontAwesome/_stacked.scss'
       ]
     }),
     new CopyWebpackPlugin(
@@ -65,8 +65,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              root: './',
-              // minimize: true
+              root: './'
             }
           },
           {
@@ -76,7 +75,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              // includePaths: [PATHS.breakpoint, PATHS.normalize]
+              includePaths: [
+                'node_modules'
+              ]
             }
           }
         ]

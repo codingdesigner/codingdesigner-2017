@@ -1,0 +1,67 @@
+////
+/// @group Typography
+////
+
+/// link color (inactive)
+/// @type color
+$color-theme--link-a: get-color(black);
+/// link color (active)
+/// @type color
+$color-theme--link-b: get-color(gray);
+
+/// Set link colors and parameters in a map
+/// * Three link type options
+///   * __normal__ - standard underlined link
+///   * __border__ - use `bottom-border` to underline link
+///   * __faux-underline__ - use `background-image` and `text-shadow` to underline link, with descenders gracefully breaking the line
+/// * underline and faux-underline accept a `size` value
+/// * faux-underline accepts a `background-color` value, for the for the color behind the link
+$link-definitions: (
+  normal: (
+    initial: $color-theme--link-a,
+    active: $color-theme--link-a,
+    visited: $color-theme--link-a,
+    hover: $color-theme--link-b,
+    focus: $color-theme--link-b,
+  ),
+  border: (
+    initial: $color-theme--link-a,
+    active: $color-theme--link-a,
+    visited: $color-theme--link-a,
+    hover: $color-theme--link-b,
+    focus: $color-theme--link-b,
+    size: 1px
+  ),
+  faux-underline: (
+    initial: $color-theme--link-a,
+    active: $color-theme--link-a,
+    visited: $color-theme--link-a,
+    hover: $color-theme--link-b,
+    focus: $color-theme--link-b,
+    size: 1px,
+    background-color: $color-theme--background
+  ),
+  reverse: (
+    initial: get-color(white),
+    active: get-color(white),
+    visited: get-color(white),
+    hover: get-color(gray, light),
+    focus: get-color(gray, light),
+  ),
+  button: (
+    initial: get-color(white),
+    active: get-color(gray, light),
+    visited: get-color(gray, light),
+    hover: get-color(white),
+    focus: get-color(gray, light)
+  ),
+  knockout-underline: (
+    initial: get-color(white),
+    active: get-color(gray, light),
+    visited: get-color(gray, light),
+    hover: get-color(white),
+    focus: get-color(gray, light),
+    size: 1px,
+    background-color: $color-theme--background
+  )
+);

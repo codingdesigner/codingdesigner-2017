@@ -88,7 +88,7 @@ class PortfolioItem extends React.Component {
 
   render() {
     return (
-      <div className="portfolio-item_pi page-content">
+      <div className="portfolio-item-pi page-content">
         <h1 className="page-title">{this.props.portfolioItem.project_name}</h1>
         <div className="pi--overview">
           <div className="pi--overview--text"

@@ -30,7 +30,7 @@
     height: 150vh;
   }
 
-  @include breakpoint($bp--portfolio-overview--narrow) {
+  @include bp(portfolio-overview--narrow) {
     &.reliefweb {
       background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-narrow.png');
     }
@@ -39,7 +39,7 @@
       background-image: url('../assets/images/portfolio/score-home-overview-narrow.png');
     }
   }
-  @include breakpoint($bp--portfolio-overview--tween) {
+  @include bp(portfolio-overview--tween) {
     &.reliefweb {
       background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-tween.png');
     }
@@ -48,7 +48,7 @@
       background-image: url('../assets/images/portfolio/score-home-overview-tween.png');
     }
   }
-  @include breakpoint($bp--portfolio-overview--med) {
+  @include bp(portfolio-overview--med) {
     &.reliefweb {
       background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-med.png');
     }
@@ -58,7 +58,7 @@
     }
   }
 
-  @include breakpoint($bp--portfolio-overview--wide) {
+  @include bp(portfolio-overview--wide) {
 
     &.reliefweb {
       background-image: url('../assets/images/portfolio/reliefweb-crisis-overview-wide.png');
@@ -69,14 +69,14 @@
     }
   }
 
-  @include breakpoint($bp--page-over-wide) {
+  @include bp(page-over-wide) {
     background-position: top center;
     background-size: $page-max-width;
   }
 }
 
 .po-item--name {
-  @include margin-compensation--inner($side-margin: get-spacing(side-margin), $side-margin--wide: get-spacing(side-margin--wide));
+  @include margin-compensation--inner($side-margin: get-size(side-margin), $side-margin--wide: get-size(side-margin--wide));
   display: inline-block;
   position: relative;
   transform: translateY(0.25em);

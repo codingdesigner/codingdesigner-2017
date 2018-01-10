@@ -6,7 +6,7 @@ $navigation-count: 7;
   flex-direction: column;
   align-items: flex-end;
   z-index: 2;
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     top: -1em;
     z-index: 3;
   }
@@ -21,10 +21,10 @@ $navigation-count: 7;
   transition-property: opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
-  @include breakpoint($bp--navigation--narrow) {
+  @include bp(navigation--narrow) {
     color: get-color(white);
   }
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     .image-1 &,
     .image-2 &,
     .image-3 &,
@@ -45,7 +45,7 @@ $navigation-count: 7;
 
 .nav-primary--fan {
   @include nav-primary--item();
-  @include breakpoint($bp--navigation--narrow) {
+  @include bp(navigation--narrow) {
     opacity: 0;
     padding-top: 0;
     padding-right: 0.5em;
@@ -84,7 +84,7 @@ $navigation-count: 7;
     }
     // sass-lint:enable no-ids
   }
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     position: absolute;
     right: 0;
     left: 0;
