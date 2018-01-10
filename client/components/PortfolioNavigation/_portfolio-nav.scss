@@ -6,7 +6,7 @@
   justify-content: space-between;
   border-bottom: 0.25em solid color(black);
 
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     margin-top: -2em;
   }
 
@@ -29,7 +29,7 @@
   max-width: 6em;
   list-style-type: none;
 
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     margin-right: 2em;
   }
 
@@ -46,7 +46,7 @@
   margin-bottom: 0.25em;
   width: 4em;
 
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     width: 6em;
   }
 }
@@ -54,7 +54,7 @@
 .pn--nav-list-item--name {
   font-size: fontsize-rem(ms(-2));
 
-  @include breakpoint($bp--navigation--wide) {
+  @include bp(navigation--wide) {
     font-size: fontsize-rem(ms(-1));
   }
 }

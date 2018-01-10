@@ -1,12 +1,12 @@
 //$flag-color: #84C759;
 $flag-color: get-color(black);
 
-.portfolio-item_pi {
+.portfolio-item-pi {
   margin-top: 2rem;
   margin-bottom: 2rem;
   //border-top: 0.5em dashed color(black);
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -19,11 +19,11 @@ $flag-color: get-color(black);
 .pi--overview {
   padding-left: 0.66em;
 
-  @include breakpoint($bp--portfolio--overview-padding) {
+  @include bp(portfolio--overview-padding) {
     padding-left: 2em;
   }
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     flex-basis: 100vw;
     padding-left: 10vw;
   }
@@ -40,11 +40,11 @@ $flag-color: get-color(black);
   font-size: fontsize-rem(ms(1));
   font-weight: 800;
 
-  @include breakpoint($bp-typography-narrow) {
+  @include bp(typography-narrow) {
     font-size: fontsize-rem(ms(2));
   }
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     flex-basis: 100vw;
     transform: perspective(600px) rotateX(-12deg) rotateY(20deg) rotateZ(5deg) translateY(10px);
     margin-bottom: 3em;
@@ -71,7 +71,7 @@ $flag-color: get-color(black);
 .pi--details {
   max-width: 30em;
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     flex-basis: 33%;
     order: 4;
   }
@@ -95,12 +95,12 @@ $flag-color: get-color(black);
   -webkit-overflow-scrolling: touch;
   // sass-lint:enable no-misspelled-properties, no-vendor-prefixes
 
-  @include breakpoint($bp--portfolio--details-limit-width) {
+  @include bp(portfolio--details-limit-width) {
     width: 30em;
     transition-property: transform;
   }
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     position: static;
     border-left: 0;
     width: auto;
@@ -113,12 +113,12 @@ $flag-color: get-color(black);
     & ~ .pi--details--offside {
       left: 5vw;
 
-      @include breakpoint($bp--portfolio--details-limit-width) {
+      @include bp(portfolio--details-limit-width) {
         left: 100vw;
         transform: translateX(-30em);
       }
 
-      @include breakpoint($bp--portfolio--show-details) {
+      @include bp(portfolio--show-details) {
         left: auto;
         transform: none;
       }
@@ -137,7 +137,7 @@ $flag-color: get-color(black);
   font-size: fontsize-rem(ms(2));
   font-style: italic;
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     display: none;
   }
 
@@ -167,7 +167,7 @@ $flag-color: get-color(black);
   height: 1.5em;
   line-height: 0.66em;
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     display: none;
   }
 }
@@ -244,7 +244,7 @@ $flag-color: get-color(black);
     margin: 0 -3em 1em;
   }
 
-  @include breakpoint($bp--portfolio--show-details) {
+  @include bp(portfolio--show-details) {
     flex-basis: 66%;
     order: 3;
   }

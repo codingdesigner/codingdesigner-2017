@@ -16,7 +16,7 @@
     border-bottom: 1px solid get-color(black);
   }
 
-  @include breakpoint($bp--post-teaser--columns) {
+  @include bp(post-teaser--columns) {
     flex-direction: row;
     align-items: flex-spart;
     justify-content: space-between;
@@ -26,7 +26,7 @@
 .post-teaser--text {
   order: 2;
 
-  @include breakpoint($bp--post-teaser--columns) {
+  @include bp(post-teaser--columns) {
     flex-basis: phi-a(100%);
     order: inherit;
 
@@ -42,14 +42,14 @@
   order: 1;
   max-height: 8em;
   overflow: hidden;
-  @include breakpoint($bp--post-teaser--columns) {
+  @include bp(post-teaser--columns) {
     flex-basis: phi-b(100%);
     align-items: flex-start;
     order: inherit;
     margin-left: 2em;
     max-height: 22em;
   }
-  @include breakpoint($bp--post-teaser--re-center-image) {
+  @include bp(post-teaser--re-center-image) {
     align-items: center;
   }
 }

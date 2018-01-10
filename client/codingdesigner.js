@@ -24,12 +24,12 @@ const Root = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/portfolio" component={Portfolio} />
         <Route path="/portfolio/:portfolioId" component={Portfolio} />
+        <Route path="/portfolio" component={Portfolio} />
         <Route path="/speaking" component={Speaking} />
         <Route path="/photos" component={Photos} />
-        <Route path="/posts" component={PostsTeasers} />
         <Route path="/posts/:postId" component={Post} />
+        <Route path="/posts" component={PostsTeasers} />
         <Route path="/about" component={About} />
         <Route component={NotFound}/>
       </Switch>

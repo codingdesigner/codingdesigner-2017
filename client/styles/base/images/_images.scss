@@ -1,0 +1,28 @@
+////
+/// @group Base
+////
+
+.feature-image {
+  margin-bottom: $base-line-em;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  @include breakpoint(768px) {
+    float: right;
+    margin-left: 2rem;
+    width: 40%;
+  }
+
+  @include breakpoint(1024px) {
+    width: 50%;
+  }
+
+  &.organic {
+    img {
+      border-radius: #{phi-a(100%)} #{phi-b(100%)} / #{phi-b(100%)} #{phi-a(100%)};
+    }
+  }
+}
