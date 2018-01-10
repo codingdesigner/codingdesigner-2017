@@ -5,6 +5,10 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 @import '~video-react/styles/scss/video-react';
 
+// Vendor
+@import 'vendor/variables';
+@import 'vendor/fontAwesome/font-awesome';
+
 // Tools
 @import 'tools/utilities/utilities-index';
 @import 'tools/mixins-links';
@@ -19,51 +23,22 @@
 @import 'overrides/breakpoint-overrides';
 @import 'overrides/color-overrides';
 @import 'overrides/sizes-overrides';
+@import 'overrides/forms-overrides';
 @import 'overrides/typography-overrides-index';
 
 // codingdesigner-styles variables
 @import "~codingdesigner-styles/scss/codingdesigner-variables";
 
-// LAYOUTS
-@import '_config/layouts/helpers';
-@import '_config/layouts/mixins';
-@import '_config/layouts/mixins-grid';
+// codingdesigner-styles base
+@import "~codingdesigner-styles/scss/codingdesigner-base";
 
-// Vendor
-@import '_config/vendor/variables';
-@import '_config/vendor/fontAwesome/font-awesome';
-
-// APP: These files output css, using the setup from CONFIG
 // BASE: App styles for base markup elements
-@import 'app/base/html-body/base';
-@import 'app/base/forms/scss-utils/fields';
-@import 'app/base/forms/scss-utils/focus';
-@import 'app/base/forms/buttons/mixins';
-@import 'app/base/forms/buttons/buttons';
-@import 'app/base/forms/fieldset/fieldset';
-@import 'app/base/forms/input/input';
-@import 'app/base/forms/label/label';
-@import 'app/base/forms/select-menu/select';
-@import 'app/base/forms/textarea/textarea';
-@import 'app/base/forms/validate-require/validate-require';
-@import 'app/base/blockquote/blockquote';
-@import 'app/base/figure/figure';
-@import 'app/base/headings/headings';
-@import 'app/base/hr/hr';
-@import 'app/base/images/mixins';
-@import 'app/base/images/images';
-@import 'app/base/inline-elements/inline-elements';
-@import 'app/base/link/link';
-@import 'app/base/lists/mixins';
-@import 'app/base/lists/lists';
-@import 'app/base/p/p';
-@import 'app/base/preformatted-text/preformatted-text';
-@import 'app/base/table/mixins';
-@import 'app/base/table/table';
-
-// Foundation
-@import 'app/foundation/page/page';
-@import 'app/foundation/page/page-title';
+@import 'base/html-body/base';
+@import 'base/images/images';
+@import 'base/p/p';
+@import 'base/page/page';
+@import 'base/page/page-title';
+@import 'base/utility/utility';
 
 // COMPONENTS
 @import '../components/Header/header';

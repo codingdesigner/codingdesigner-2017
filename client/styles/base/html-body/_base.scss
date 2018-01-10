@@ -2,14 +2,7 @@
 /// @group Base
 ////
 
-// Better style reset
-//@import "~normalize.scss/normalize.scss";
-
 html {
-  //line-height: $base-line-height-unitless;
-  //color: $color-theme--text;
-  //font-family: $font-body;
-
   @if ($use-fluid-type) {
     // This will adjust the base HTML font size fluidly between the xsmall and
     // xlarge breakpoints to a font size between $root-typesize--min minimum to $root-typesize maximum.
@@ -30,8 +23,4 @@ body {
   @include bp(typography-narrow) {
     padding: 0 get-size(side-margin--wide);
   }
-}
-
-.hidden {
-  @include hide();
 }

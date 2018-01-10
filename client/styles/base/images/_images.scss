@@ -2,10 +2,6 @@
 /// @group Base
 ////
 
-img {
-  @include image-auto-size();
-}
-
 .feature-image {
   margin-bottom: $base-line-em;
   padding-bottom: 0.5rem;
