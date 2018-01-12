@@ -1,10 +1,157 @@
-@mixin nav-primary--item {
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  font-family: font(surveyor);
-  font-size: fontsize-rem(ms(0));
-  font-weight: 200;
+$navigation-count: 7;
+
+.nav-primary {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+
+  @include bp(navigation--narrow) {
+    order: -1;
+    background-color: get-color(white);
+  }
+
   @include bp(navigation--wide) {
-    font-size: fontsize-rem(ms(1));
+    top: -1em;
+    z-index: 3;
   }
 }
+
+.nav-primary-trigger--label {
+  @include nav-primary--item();
+  opacity: 1;
+  z-index: 1;
+  margin: 0;
+  letter-spacing: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  @include bp(navigation--narrow) {
+    color: get-color(white);
+  }
+  @include bp(navigation--wide) {
+    .image-1 &,
+    .image-2 &,
+    .image-3 &,
+    .image-5 &,
+    .image-6 &,
+    .image-7 &,
+    .image-8 &,
+    .image-9 &,
+    .image-10 & {
+      color: get-color(white);
+    }
+
+    [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
+      opacity: 0.1;
+    }
+  }
+}
+
+.nav-primary--fan {
+  @include nav-primary--item();
+
+  @include bp(navigation--narrow) {
+    padding-top: 0;
+    padding-right: 0.5em;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    max-height: 0;
+    overflow: hidden;
+    text-align: right;
+    font-weight: 800;
+    transition-property: max-height, padding, margin;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+
+    &:nth-of-type(1) {
+      position: absolute;
+      top: 100%;
+      z-index: 1;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      max-height: 10em;
+      color: get-color(white);
+    }
+
+    &:nth-of-type(1n+2) {
+      margin-top: -2px;
+      border-bottom: 2px solid get-color(gray, light);
+      padding-right: 0;
+    }
+
+    // sass-lint:disable no-ids
+    [id='nav-primary-trigger']:checked ~ & {
+      margin-top: 0;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      max-height: 10em;
+    }
+    // sass-lint:enable no-ids
+  }
+
+  @include bp(navigation--wide) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: rotate(0deg);
+    margin-left: -9em;
+    padding-left: 10em;
+    list-style-type: none;
+    transform-origin: 0 50%;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:nth-of-type(1n + 2) {
+      opacity: 0;
+    }
+
+    @for $i from 1 through $navigation-count {
+      &:nth-of-type(#{$i}) {
+        z-index: $navigation-count - $i;
+      }
+    }
+
+    // sass-lint:disable no-ids
+    #nav-primary-trigger:checked ~ & {
+      @include fan-items(
+        $num-items: $navigation-count,
+        $angle-span: 65deg,
+        $angle-offset: -40deg
+      );
+      opacity: 1;
+    }
+
+    // sass-lint:enable no-ids
+    a {
+      border-bottom: 1px solid get-color(black);
+
+      .image-1 &,
+      .image-2 &,
+      .image-3 &,
+      .image-5 &,
+      .image-6 &,
+      .image-7 &,
+      .image-8 &,
+      .image-9 &,
+      .image-10 & {
+        @include link-reverse();
+      }
+
+    }
+  }
+
+  a {
+    @include unset-faux-underline-links();
+    display: block;
+  }
+}
+
+// sass-lint:disable no-ids
+[id='nav-primary-trigger'] {
+  @include visuallyhidden();
+}
+// sass-lint:enable no-ids

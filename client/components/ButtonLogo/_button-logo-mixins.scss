@@ -9,7 +9,7 @@
   height: 330px;
   line-height: 1.2;
   color: $background-color;
-  font-family: font(surveyor);
+  font-family: get-font(surveyor);
   font-size: fontsize-rem(ms(4));
   transition-property: border-radius, width;
   transition-duration: 0.3s;

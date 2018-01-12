@@ -1,0 +1,11 @@
+@mixin nav-primary--item {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-family: get-font(surveyor);
+  font-size: fontsize-rem(ms(0));
+  font-weight: 200;
+
+  @include bp(navigation--wide) {
+    font-size: fontsize-rem(ms(1));
+  }
+}

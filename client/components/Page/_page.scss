@@ -1,10 +1,10 @@
 .full-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
   margin: 0 auto;
   padding: 0 get-size(side-margin);
   min-height: 100vh;
+  grid-gap: 2em;
+  grid-template-rows: auto 1fr auto;
 
   @include bp(typography-narrow) {
     padding: 0 get-size(side-margin--wide);
