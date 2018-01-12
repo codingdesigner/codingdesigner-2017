@@ -30,19 +30,20 @@
       flex-basis: calc(25% - 1.5em);
     }
   }
+
+  .monogram {
+    margin-bottom: 1rem;
+
+    @include bp(typography-narrow) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .monogram-wrapper {
   margin-top: -6em;
   @include bp(typography-narrow) {
     margin-top: -7em;
-  }
-}
-
-.monogram {
-  margin-bottom: 1rem;
-  @include bp(typography-narrow) {
-    margin-bottom: 0;
   }
 }
 

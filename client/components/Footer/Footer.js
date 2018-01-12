@@ -18,19 +18,19 @@ class Footer extends React.Component {
                 <span className="text">mason@thecodingdesigner.com</span>
               </Link>
             </div>
-            <div className="contact-item twitter">
-              <Link to="https://twitter.com/codingdesigner" className="icon-link">
-                <i className="fa fa-twitter fa-2x" aria-label="Menu"></i>
-              </Link>
-              <Link to="https://twitter.com/codingdesigner">
-                <span className="text">@codingdesigner</span>
-              </Link>
-            </div>
             <div className="contact-item instagram">
               <Link to="https://www.instagram.com/codingdesigner/" className="icon-link">
                 <i className="fa fa-instagram fa-2x" aria-label="Menu"></i>
               </Link>
               <Link to="https://www.instagram.com/codingdesigner/">
+                <span className="text">@codingdesigner</span>
+              </Link>
+            </div>
+            <div className="contact-item twitter">
+              <Link to="https://twitter.com/codingdesigner" className="icon-link">
+                <i className="fa fa-twitter fa-2x" aria-label="Menu"></i>
+              </Link>
+              <Link to="https://twitter.com/codingdesigner">
                 <span className="text">@codingdesigner</span>
               </Link>
             </div>
