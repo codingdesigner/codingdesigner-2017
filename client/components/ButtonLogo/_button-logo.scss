@@ -11,6 +11,12 @@
   .button-logo--word {
     color: get-color(black);
     mix-blend-mode: screen;
+
+    .collapse-header & {
+      @include bp(navigation--wide) {
+        color: var(--header-color);
+      }
+    }
   }
 
   .collapse-header & {
