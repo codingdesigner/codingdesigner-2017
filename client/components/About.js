@@ -3,6 +3,8 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 const ReactMarkdown = require('react-markdown');
 const aboutMD = require('../data/about-page.md');
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 const importAllImages = (files) => {
   let images = {};
@@ -14,27 +16,32 @@ const allImages = importAllImages(require.context('../assets/images/headshots', 
 class About extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange()
+      'randomPhotoObject': {}
     };
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
       <div className="full-page">
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+        <CustomProperties
+          global
+          properties={headerStyles}
+        />
+        <Header randomizeHeader={randomHeader.randomizeHeader}/>
         <div className="page--posts-page page-content">
           <h1 className="page-title">About Mason Wendell</h1>
           <article className="page">
