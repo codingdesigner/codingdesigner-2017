@@ -5,6 +5,8 @@ import Footer from './Footer/Footer';
 import SpeakingIntro from './SpeakingIntro/SpeakingIntro';
 import Talk from './Talk/Talk';
 import {talks} from '../data/speaking';
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 const importAllImages = (files) => {
   let images = {};
@@ -16,22 +18,15 @@ const allImages = importAllImages(require.context('../assets/images/speaking', f
 class Speaking extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
     this.loadTalks = this.loadTalks.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange()
+      'randomPhotoObject': {}
     };
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   loadTalks(key) {
@@ -45,15 +40,25 @@ class Speaking extends React.Component {
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
+      <CustomProperties className="full-page" properties={headerStyles} >
       <div className="full-page">
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--speaking page-content">
           <SpeakingIntro allImages={allImages}/>
           {Object.keys(talks).map(this.loadTalks)}
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

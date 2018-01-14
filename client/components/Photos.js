@@ -5,6 +5,8 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import debounce from 'lodash/debounce';
 import find from 'lodash/find';
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
@@ -16,30 +18,20 @@ let photosetBuild = [];
 class Photos extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
     this.displayImage = this.displayImage.bind(this);
     this.getFlickrPhoto = this.getFlickrPhoto.bind(this);
     this.buildPhotosets = this.buildPhotosets.bind(this);
     this.buildPhotos = this.buildPhotos.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange(),
+      'randomPhotoObject': {},
       'photosets': []
     };
   }
 
   componentWillMount () {
+    randomHeader.randomizeHeader(this);
     this.getFlickrPhotoset(flickrPhotoset);
-  }
-
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
   }
 
   axiosCall(url, callbackFunction, passthru) {
@@ -121,9 +113,18 @@ class Photos extends React.Component {
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
+      <CustomProperties className="full-page" properties={headerStyles} >
       <div className="full-page">
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
@@ -139,6 +140,7 @@ class Photos extends React.Component {
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

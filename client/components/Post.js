@@ -7,6 +7,8 @@ import Footer from './Footer/Footer';
 import {posts} from '../data/posts-teasers';
 import {portfolio_items} from "../data/portfolio";
 const ReactMarkdown = require('react-markdown');
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 const importAllImages = (files) => {
   let images = {};
@@ -18,24 +20,17 @@ const allImages = importAllImages(require.context('../assets/images/posts', fals
 class Post extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
     this.initialPost = this.initialPost.bind(this);
     this.embeds = this.embeds.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange(),
+      'randomPhotoObject': {},
       'PostItem': this.initialPost()
     };
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   initialPost() {
@@ -89,10 +84,19 @@ class Post extends React.Component {
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
     const publishDate = moment(this.state.PostItem.date).format('dddd, MMMM Do, YYYY');
+
     return (
+      <CustomProperties className="full-page" properties={headerStyles} >
       <div className="full-page">
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--posts-page page-content">
           <h1 className="page-title">{this.state.PostItem.headline}</h1>
           <article className="page">
@@ -104,6 +108,7 @@ class Post extends React.Component {
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

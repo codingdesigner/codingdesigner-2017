@@ -30,12 +30,10 @@ class Home extends React.Component {
     };
 
     return (
+      <CustomProperties className="full-page" properties={headerStyles} >
       <div className="full-page">
-        <CustomProperties
-          global
-          properties={headerStyles}
-        />
-        <Header randomizeHeader={randomHeader.randomizeHeader}/>
+
+        <Header randomizeHeader={() => randomHeader.randomizeHeader}/>
         <div className="page--home page-content">
           <h1 className="page-title">
             Hi. <span className="my-name">I’m <span className="no-break">Mason Wendell.</span></span>
@@ -46,6 +44,7 @@ class Home extends React.Component {
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

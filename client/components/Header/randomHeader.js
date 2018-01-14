@@ -13,7 +13,7 @@ exports.randomheaderRange = (min = 1, max = 10) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-exports.randomizeHeader = (component) => {
+exports.getRandomHeader = () => {
   const randomPhotoObject = {};
   const random = exports.randomheaderRange();
   const headerLayout = headerLayouts[random];
@@ -23,5 +23,11 @@ exports.randomizeHeader = (component) => {
   randomPhotoObject.backgroundColor = headerLayout.backgroundColor;
   randomPhotoObject.blend = headerLayout.blend;
   randomPhotoObject.linkColor = headerLayout.linkColor;
+  return randomPhotoObject;
+};
+
+exports.randomizeHeader = (component) => {
+  const randomPhotoObject = exports.getRandomHeader();
+  console.log(component);
   component.setState({randomPhotoObject});
 };
