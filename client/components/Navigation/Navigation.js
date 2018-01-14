@@ -39,7 +39,6 @@ class NavigationMain extends React.Component {
 }
 
 NavigationMain.propTypes = {
-  headerImage: PropTypes.number.isRequired,
   randomizeHeader: PropTypes.func.isRequired
 };
 

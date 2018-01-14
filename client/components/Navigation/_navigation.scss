@@ -146,16 +146,27 @@ $navigation-count: 7;
 
     // sass-lint:enable no-ids
     a {
-      .image-1 &,
-      .image-2 &,
-      .image-3 &,
-      .image-5 &,
-      .image-6 &,
-      .image-7 &,
-      .image-8 &,
-      .image-9 &,
-      .image-10 & {
-        @include link-reverse();
+      @include unset-faux-underline-links();
+      color: var(--header-link-color);
+
+      &:link {
+        color: var(--header-link-color);
+      }
+
+      &:visited {
+        color: var(--header-link-color);
+      }
+
+      &:hover {
+        color: var(--header-link-color);
+      }
+
+      &:active {
+        color: var(--header-link-color);
+      }
+
+      &:focus {
+        color: var(--header-link-color);
       }
 
       .collapse-header & {

@@ -1,70 +1,16 @@
 .button-logo {
   @include button-logo--base($background-color: $button-logo-background-color, $foreground-color: $button-logo-foreground-color);
 
-  &.image-1 {
-    @include button-logo-image('../assets/images/headers/space-helmet.jpg');
+  background-color: var(--header-background-color);
+  background-image: var(--header-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: var(--header-blend);
 
-    .collapse-header & {
-      display: grid;
-      align-items: end;
-      justify-content: start;
-      background-color: transparent;
-      background-image: none;
-      grid-template-columns: 60px auto;
-      grid-template-rows: repeat(2, 30px);
-      grid-gap: 8px;
-
-      &:before {
-        display: block;
-        position: relative;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        background-color: transparent;
-        background-image: url('../assets/images/headers/space-helmet.jpg');
-        background-size: contain;
-        width: 60px;
-        height: 60px;
-        content: '';
-        grid-row: span 2;
-      }
-    }
-  }
-
-  &.image-2 {
-    @include button-logo-image('../assets/images/headers/aligator-skull.jpg');
-  }
-
-  &.image-3 {
-    @include button-logo-image('../assets/images/headers/antler-skull.jpg');
-  }
-
-  &.image-4 {
-    @include button-logo-image('../assets/images/headers/snake-skeleton.jpg');
-  }
-
-  &.image-5 {
-    @include button-logo-image('../assets/images/headers/moon-landing.jpg', $background-color: #EFE07A);
-  }
-
-  &.image-6 {
-    @include button-logo-image('../assets/images/headers/rockies-1.jpg');
-  }
-
-  &.image-7 {
-    @include button-logo-image('../assets/images/headers/rockies-2.jpg');
-  }
-
-  &.image-8 {
-    @include button-logo-image('../assets/images/headers/roofs.jpg');
-  }
-
-  &.image-9 {
-    @include button-logo-image('../assets/images/headers/sc-sky.jpg');
-  }
-
-  &.image-10 {
-    @include button-logo-image('../assets/images/headers/bridge-lights.jpg');
+  .button-logo--word {
+    color: get-color(black);
+    mix-blend-mode: screen;
   }
 
   .collapse-header & {

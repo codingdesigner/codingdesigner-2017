@@ -14,21 +14,21 @@ class Header extends React.Component {
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll (event) {
+  handleScroll(event) {
     const scrollTop = event.target.scrollingElement.scrollTop;
     const collapseHeader = (scrollTop > 50) ? 'collapse-header' : false;
-    this.setState({ collapseHeader });
+    this.setState({collapseHeader});
   }
 
-  collapseClass () {
+  collapseClass() {
     if (this.state.collapseHeader !== false) {
       return this.state.collapseHeader;
     } else {
@@ -37,19 +37,18 @@ class Header extends React.Component {
   }
 
   render() {
-    const headerClass = 'site-header image-' + this.props.headerImage + ' ' + this.collapseClass();
+    const headerClass = 'site-header ' + this.collapseClass();
 
     return (
-      <header className={headerClass} role="banner">
-        <ButtonLogo headerImage={this.props.headerImage}/>
-        <NavigationMain headerImage={this.props.headerImage} randomizeHeader={this.props.randomizeHeader} />
-      </header>
+        <header className={headerClass} role="banner">
+          <ButtonLogo/>
+          <NavigationMain randomizeHeader={this.props.randomizeHeader}/>
+        </header>
     )
   }
 }
 
 Header.propTypes = {
-  headerImage: PropTypes.number.isRequired,
   randomizeHeader: PropTypes.func.isRequired
 };
 
