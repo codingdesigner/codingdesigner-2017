@@ -15,6 +15,13 @@ $navigation-count: 7;
   @include bp(navigation--wide) {
     top: -1em;
     z-index: 3;
+
+    .collapse-header & {
+      display: grid;
+      top: auto;
+      grid-template-columns: repeat(auto-fill, 9em);
+      grid-gap: .5em;
+    }
   }
 }
 
@@ -109,6 +116,18 @@ $navigation-count: 7;
       opacity: 0;
     }
 
+    .collapse-header & {
+      position: relative;
+      margin-right: 1em;
+      margin-left: 0;
+      padding-left: 0;
+      transition-property: none;
+
+      &:nth-of-type(1) {
+        display: none;
+      }
+    }
+
     @for $i from 1 through $navigation-count {
       &:nth-of-type(#{$i}) {
         z-index: $navigation-count - $i;
@@ -127,8 +146,6 @@ $navigation-count: 7;
 
     // sass-lint:enable no-ids
     a {
-      border-bottom: 1px solid get-color(black);
-
       .image-1 &,
       .image-2 &,
       .image-3 &,
@@ -141,6 +158,9 @@ $navigation-count: 7;
         @include link-reverse();
       }
 
+      .collapse-header & {
+        border-bottom: 1px solid rgba(get-color(black), 0.5);
+      }
     }
   }
 

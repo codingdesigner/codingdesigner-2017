@@ -1,7 +1,11 @@
 .site-header {
-  @include margin-compensation();
   display: grid;
-  position: relative;
+  position: fixed;
+  z-index: get-z(toggled-menu);
+  border-bottom: 0.75em solid get-color(white);
+  background-clip: padding-box;
+  width: 100vw;
+  overflow: hidden;
   grid-template-rows: repeat(2, auto);
 
   &.image-1 {
@@ -55,9 +59,8 @@
   }
 
   @include bp(navigation--wide) {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: flex-start;
     border-bottom: 0.33em dashed currentColor;
     background-clip: padding-box;
     padding-top: 1.5em;
@@ -67,6 +70,17 @@
     transition-property: background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+    grid-template-columns: 330px .6fr;
+
+    &.collapse-header {
+      display: grid;
+      padding: 0.25em 0.75rem 0;
+      grid-template-columns: 400px 1fr;
+      grid-gap: 1em;
+      @include breakpoint($page-max-width) {
+        @include content-limiter-padding();
+      }
+    }
   }
 
   @include breakpoint(870px) {
@@ -76,11 +90,10 @@
   @include breakpoint(1100px) {
     justify-content: center;
     padding-left: 0;
+  }
 
-    .button-logo {
-      margin-left: -7em;
-    }
-
+  @include breakpoint($page-max-width) {
+    @include content-limiter-padding();
   }
 
   .button-logo {

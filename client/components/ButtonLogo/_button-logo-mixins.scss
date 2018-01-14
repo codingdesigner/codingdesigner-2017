@@ -11,13 +11,17 @@
   color: $background-color;
   font-family: get-font(surveyor);
   font-size: fontsize-rem(ms(4));
-  transition-property: border-radius, width;
+  transition-property: border-radius, width, height;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
-  @include bp(typography-narrow) {
+  @include bp(navigation--wide) {
     border-radius: 50%;
     width: 330px;
+
+    .collapse-header & {
+      border-radius: 0;
+    }
   }
 
   @include bp(title-curve--shrink) {
@@ -43,5 +47,88 @@
     color: $word-color;
     mix-blend-mode: screen;
   }
+}
 
+@mixin button-logo--collapse-header-common() {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+@mixin button-logo--collapse-header-narrow($header-height: 60px) {
+  @include bp(navigation--narrow) {
+    height: $header-height;
+  }
+}
+
+@mixin button-logo--collapse-header-wide($header-height: 60px) {
+  @include bp(navigation--wide) {
+    height: $header-height;
+  }
+}
+
+@mixin button-logo--words-wrapper--collapse-header-common() {
+  display: inline;
+  top: auto;
+  left: auto;
+
+  .button-logo--word {
+    display: inline;
+  }
+}
+
+@mixin button-logo--words-wrapper--collapse-header-narrow() {
+  @include bp(navigation--narrow) {
+    margin-top: -6px;
+    font-size: fontsize-rem(ms(2));
+  }
+}
+
+@mixin button-logo--words-wrapper--collapse-header-wide() {
+  @include bp(navigation--wide) {
+    font-size: fontsize-rem(ms(3));
+  }
+}
+
+@mixin button-logo--title-curve--collapse-header-common() {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: auto;
+  height: auto;
+}
+
+@mixin button-logo--title-curve--collapse-header-narrow() {
+  @include bp(navigation--narrow) {
+    margin: 8px 3px 3px;
+  }
+}
+
+@mixin button-logo--title-curve--collapse-header-wide() {
+  @include bp(navigation--wide) {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+@mixin button-logo--class-char--collapse-header-common() {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: auto;
+  height: auto;
+}
+
+@mixin button-logo--class-char--collapse-header-narrow() {
+  @include bp(navigation--narrow) {
+
+  }
+}
+
+@mixin button-logo--class-char--collapse-header-wide() {
+  @include bp(navigation--wide) {
+
+  }
 }

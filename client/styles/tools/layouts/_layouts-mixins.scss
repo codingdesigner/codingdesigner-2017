@@ -49,3 +49,27 @@
     }
   }
 }
+
+/// Limit content dimensions
+@mixin content-limiter() {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $page-max-width;
+}
+
+/// Calculate widths for flex-layout columns
+/// @param {integer} $column [1] - what column
+@mixin flex-layout--2($column: 1) {
+  @if ($column == 1) {
+    flex-basis: calc(#{phi-a(100%)} - 1.5em);
+  }
+  @if ($column == 2) {
+    flex-basis: calc(#{phi-b(100%)} - 1.5em);
+  }
+}
+
+/// Limit content dimensions with padding (no wrapper)
+@mixin content-limiter-padding() {
+  padding-right: calc((100% - #{$page-max-width}) * .5);
+  padding-left: calc((100% - #{$page-max-width}) * .5);
+}
