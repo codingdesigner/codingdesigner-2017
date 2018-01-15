@@ -38,18 +38,7 @@ $navigation-count: 7;
     color: get-color(white);
   }
   @include bp(navigation--wide) {
-    .image-1 &,
-    .image-2 &,
-    .image-3 &,
-    .image-5 &,
-    .image-6 &,
-    .image-7 &,
-    .image-8 &,
-    .image-9 &,
-    .image-10 & {
-      color: get-color(white);
-    }
-
+    color: var(--header-link-color);
     [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
       opacity: 0.1;
     }
@@ -147,6 +136,7 @@ $navigation-count: 7;
     // sass-lint:enable no-ids
     a {
       @include unset-faux-underline-links();
+      display: inline-block;
       color: var(--header-link-color);
 
       &:link {

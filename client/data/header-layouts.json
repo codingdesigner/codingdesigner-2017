@@ -23,7 +23,7 @@
     },
     {
       "image": "snake-skeleton",
-      "color": "#b1b8a4",
+      "color": "#f1dd7c",
       "backgroundColor": "#EFE07A",
       "blend": "multiply",
       "linkColor": "#000000"
