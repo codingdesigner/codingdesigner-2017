@@ -1,12 +1,40 @@
 .button-logo {
-  @include button-logo--base($background-color: $button-logo-background-color, $foreground-color: $button-logo-foreground-color);
-
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   background-color: var(--header-background-color);
   background-image: var(--header-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 100%;
+  height: 330px;
+  line-height: 1.2;
+  color: $button-logo-background-color;
+  font-family: get-font(surveyor);
+  font-size: fontsize-rem(ms(4));
   background-blend-mode: var(--header-blend);
+
+  @include bp(navigation--narrow) {
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  @include bp(navigation--wide) {
+    border-radius: 50%;
+    width: 330px;
+
+    .collapse-header & {
+      border-radius: 0;
+    }
+  }
+
+  @include bp(title-curve--shrink) {
+    font-size: fontsize-rem(ms(3));
+  }
 
   .button-logo--word {
     color: get-color(black);

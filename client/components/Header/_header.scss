@@ -19,7 +19,8 @@
     padding-bottom: 2em;
     padding-left: get-size(side-margin--wide);
     min-width: 40em;
-    transition-property: background-color;
+    height: 398px;
+    transition-property: background-color, height;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
     grid-template-columns: 330px .6fr;
@@ -27,6 +28,7 @@
     &.collapse-header {
       display: grid;
       padding: 0.25em 0.75rem 0;
+      height: 90px;
       grid-template-columns: 400px 1fr;
       grid-gap: 1em;
       @include breakpoint($page-max-width) {
