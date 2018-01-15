@@ -23,10 +23,10 @@ class NavigationMain extends React.Component {
   render() {
     return (
       <nav id="nav-primary" className="nav nav-primary">
-        <MediaQuery query="(max-device-width: 800px)">
+        <MediaQuery query="(max-device-width: 649px)">
           <input type="checkbox" id="nav-primary-trigger"/>
         </MediaQuery>
-        <MediaQuery query="(min-device-width: 801px)">
+        <MediaQuery query="(min-device-width: 650px)">
           <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
         </MediaQuery>
         <div className="nav-primary--fan">
