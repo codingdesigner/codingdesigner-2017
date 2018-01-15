@@ -6,7 +6,6 @@ const importHeaderImages = (files) => {
   return images;
 };
 
-
 exports.allHeaderImages = importHeaderImages(require.context('../../assets/images/headers', false, /\.(png|jpe?g)$/));
 
 exports.randomheaderRange = (min = 1, max = 10) => {
@@ -28,6 +27,5 @@ exports.getRandomHeader = () => {
 
 exports.randomizeHeader = (component) => {
   const randomPhotoObject = exports.getRandomHeader();
-  console.log(component);
   component.setState({randomPhotoObject});
 };

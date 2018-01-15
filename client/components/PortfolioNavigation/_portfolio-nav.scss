@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  border-bottom: 0.25em solid color(black);
+  border-bottom: 0.25em solid get-color(black);
 
   @include bp(navigation--wide) {
     margin-top: -2em;
@@ -16,22 +16,17 @@
 }
 
 .pn--nav-list {
-  display: flex;
+  display: grid;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(4em, 6em));
 }
 
 .pn--nav-list-item {
-  margin-right: 1em;
-  margin-bottom: 1em;
-  min-width: 4em;
-  max-width: 6em;
   list-style-type: none;
-
-  @include bp(navigation--wide) {
-    margin-right: 2em;
-  }
 
   &:last-of-type {
     margin-right: 0;
