@@ -27,13 +27,21 @@
 
     &.collapse-header {
       display: grid;
+      align-items: start;
       padding: 0.25em 0.75rem 0;
-      height: 90px;
-      grid-template-columns: 400px 1fr;
+      height: 110px;
+      grid-template-columns: 320px 1fr;
       grid-gap: 1em;
       @include breakpoint($page-max-width) {
         @include content-limiter-padding();
       }
+    }
+  }
+
+  @include bp(navigation--full) {
+    &.collapse-header {
+      height: 90px;
+      grid-template-columns: 400px 1fr;
     }
   }
 

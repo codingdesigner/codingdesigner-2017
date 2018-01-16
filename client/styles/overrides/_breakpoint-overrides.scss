@@ -20,6 +20,7 @@ $breakpoint-map: (
   footer-small-text: max-width 400px,
   navigation--narrow: max-width ($navigation--wide - 1),
   navigation--wide: $navigation--wide,
+  navigation--full: 960px,
   page-max-width: $page-max-width,
   page-over-wide: $page-max-width,
   page-speaking-1: 400px,
