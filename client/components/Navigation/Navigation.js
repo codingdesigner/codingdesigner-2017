@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import navigation from '../../data/navigation';
 import PropTypes from 'prop-types';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faBars from '@fortawesome/fontawesome-pro-solid/faBars';
 
 class NavigationMain extends React.Component {
   constructor() {
@@ -30,7 +32,9 @@ class NavigationMain extends React.Component {
           <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
         </MediaQuery>
         <div className="nav-primary--fan">
-          <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label"><i className="fa fa-bars fa-lg" aria-label="Menu"></i></label>
+          <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label">
+            <FontAwesomeIcon icon={faBars} />
+          </label>
         </div>
         { Object.keys(navigation).map(this.navItem) }
       </nav>
