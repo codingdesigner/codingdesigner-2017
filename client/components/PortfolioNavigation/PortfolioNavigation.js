@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faPlusCircle from '@fortawesome/fontawesome-pro-light/faPlusCircle';
+import faBars from "@fortawesome/fontawesome-pro-solid/faBars";
 
 class PortfolioNavigation extends React.Component {
   constructor(props) {
@@ -35,6 +38,10 @@ class PortfolioNavigation extends React.Component {
     return (
       <nav className="portfolio-navigation">
         <h2 className="section-title">Portfolio</h2>
+        <input type="checkbox" id="nav-portfolio-trigger" className="hidden"/>
+        <label htmlFor="nav-portfolio-trigger" className="nav-portfolio-trigger--label">
+          <FontAwesomeIcon icon={faPlusCircle}/>
+        </label>
         <ul className="pn--nav-list">
           {Object.keys(this.props.portfolioItems).map(this.navigationItems)}
         </ul>
