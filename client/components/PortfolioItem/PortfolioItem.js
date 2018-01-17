@@ -47,12 +47,6 @@ class PortfolioItem extends React.Component {
     const item = this.props.portfolioItem.responsibilities[key];
     let icon = '';
 
-    // if (item.icon == "faPaintBrush") {
-    //   icon = faPaintBrush
-    // }
-
-    console.log(item.icon);
-
     switch (item.icon) {
       case 'faPaintBrush':
         icon = faPaintBrush;
@@ -137,11 +131,6 @@ class PortfolioItem extends React.Component {
         </div>
         <div className="pi--content">
           <div className="pi--details">
-            {/*<input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>*/}
-            {/*<label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label">What I did <FontAwesomeIcon icon={faCaretLeft} /></label>*/}
-            {/*<label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label--close">*/}
-            {/*<FontAwesomeIcon icon={faWindowClose} />*/}
-            {/*</label>*/}
             <h3 className="pi--details--title">What I did</h3>
             <MediaQuery query="(max-device-width: 949px)">
               <input type="checkbox" id="pi--details-trigger" className="hidden"/>
