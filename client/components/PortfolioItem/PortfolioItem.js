@@ -1,8 +1,16 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import {Player} from 'video-react';
-import 'eq.js';
 import PropTypes from 'prop-types';
+import MediaQuery from 'react-responsive';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faPlusCircle from '@fortawesome/fontawesome-pro-light/faPlusCircle';
+import faBookmark from '@fortawesome/fontawesome-pro-solid/faBookmark';
+import faPaintBrush from '@fortawesome/fontawesome-pro-solid/faPaintBrush';
+import faCode from '@fortawesome/fontawesome-pro-solid/faCode';
+import faMicrophoneAlt from '@fortawesome/fontawesome-pro-solid/faMicrophoneAlt';
+import faPencilAlt from '@fortawesome/fontawesome-pro-solid/faPencilAlt';
+import faSass from '@fortawesome/fontawesome-free-brands/faSass';
 
 class PortfolioItem extends React.Component {
   constructor(props) {
@@ -37,8 +45,40 @@ class PortfolioItem extends React.Component {
 
   piResponsibilities(key) {
     const item = this.props.portfolioItem.responsibilities[key];
+    let icon = '';
+
+    // if (item.icon == "faPaintBrush") {
+    //   icon = faPaintBrush
+    // }
+
+    console.log(item.icon);
+
+    switch (item.icon) {
+      case 'faPaintBrush':
+        icon = faPaintBrush;
+        break;
+      case 'faCode':
+        icon = faCode;
+        break;
+      case 'faMicrophoneAlt':
+        icon = faMicrophoneAlt;
+        break;
+      case 'faPencilAlt':
+        icon = faPencilAlt;
+        break;
+      case 'faSass':
+        icon = faSass;
+        break;
+    }
     return (
-      <li key={key}>{item.item}</li>
+      <li className="responsibility-item" key={key}>
+        <div className="fa-layers fa-fw responsibility-icon">
+          <FontAwesomeIcon icon={faBookmark} className="responsibility-icon--bg fa-3x"/>
+          <FontAwesomeIcon icon={icon} className="responsibility-icon--fg fa-inverse" style={{color: 'white'}}/>
+
+        </div>
+        <span className="responsibility-text">{item.item}</span>
+      </li>
     );
   }
 
@@ -74,6 +114,7 @@ class PortfolioItem extends React.Component {
       return (
         <LazyLoad height={400} offset={100} key={key}>
           <Player
+            className="pi--image--full"
             playsInline
             loop
             width={1400}
@@ -94,33 +135,46 @@ class PortfolioItem extends React.Component {
           <div className="pi--overview--text"
                dangerouslySetInnerHTML={{__html: this.props.portfolioItem.overview__text}}/>
         </div>
-        <div className="pi--details">
-          <input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>
-          <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label">What I did</label>
-          <div className="pi--details--offside">
-            <label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label--close">X</label>
+        <div className="pi--content">
+          <div className="pi--details">
+            {/*<input type="checkbox" className="pi--details--trigger hidden" id="pi--details--trigger--score"/>*/}
+            {/*<label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label">What I did <FontAwesomeIcon icon={faCaretLeft} /></label>*/}
+            {/*<label htmlFor="pi--details--trigger--score" className="pi--details--trigger-label--close">*/}
+            {/*<FontAwesomeIcon icon={faWindowClose} />*/}
+            {/*</label>*/}
             <h3 className="pi--details--title">What I did</h3>
+            <MediaQuery query="(max-device-width: 949px)">
+              <input type="checkbox" id="pi--details-trigger" className="hidden"/>
+            </MediaQuery>
+            <MediaQuery query="(max-device-width: 949px)">
+              <label htmlFor="pi--details-trigger" className="pi--details-trigger--label">
+                <FontAwesomeIcon icon={faPlusCircle}/>
+              </label>
+            </MediaQuery>
+            <MediaQuery query="(min-device-width: 950px)">
+              <input type="checkbox" id="pi--details-trigger" className="hidden" defaultChecked/>
+            </MediaQuery>
             <div className="pi--item-description">
               <h4 className="pi--item-label--client">Client:</h4>
               <div className="pi--client"
                    dangerouslySetInnerHTML={{__html: this.props.portfolioItem.item_label__client}}/>
               {this.piLinkShow(this.props.portfolioItem)}
               {this.piAboutShow(this.props.portfolioItem)}
-              <div className="pi--item-description">
+              <div className="pi--item-responsibilities">
                 <h4 className="pi--item-label--responsibilities">Responsibilities:</h4>
                 <ul className="pi--responsibilities">
                   {Object.keys(this.props.portfolioItem.responsibilities).map(this.piResponsibilities)}
                 </ul>
               </div>
-              <div className="pi--item-description">
+              <div className="pi--item-agency">
                 <h4 className="pi--item-label--agency">Agency:</h4>
                 {this.piLinkToAgency(this.props.portfolioItem)}
               </div>
             </div>
           </div>
-        </div>
-        <div className="pi--images" data-eq-pts="small: 600, mid: 800, large: 1200">
-          {Object.keys(this.props.portfolioItem.images).map(this.piImages)}
+          <div className="pi--images">
+            {Object.keys(this.props.portfolioItem.images).map(this.piImages)}
+          </div>
         </div>
       </div>
     )

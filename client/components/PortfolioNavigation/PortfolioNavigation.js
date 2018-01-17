@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faPlusCircle from '@fortawesome/fontawesome-pro-light/faPlusCircle';
-import faBars from "@fortawesome/fontawesome-pro-solid/faBars";
 
 class PortfolioNavigation extends React.Component {
   constructor(props) {
