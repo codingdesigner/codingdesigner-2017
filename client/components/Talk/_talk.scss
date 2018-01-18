@@ -100,12 +100,15 @@
 }
 
 .talk--reactions {
-  display: grid;
   align-items: start;
   grid-template-columns: repeat(auto-fit, 19rem);
   grid-auto-flow: dense;
-  grid-gap: inherit;
+  grid-gap: 3rem;
   grid-column: 1 / -1;
+
+  @include bp(talk-event--wide) {
+    display: grid;
+  }
 
   .tall {
     grid-row: span 2;

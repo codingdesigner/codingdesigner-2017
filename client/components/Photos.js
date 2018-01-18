@@ -91,6 +91,18 @@ class Photos extends React.Component {
 
   displayImage(key) {
     const item = this.state.photosets[flickrPhotoset].photo[key];
+    const original = find(item.sizes, {'label': 'Original'});
+
+    let aspectRatio = 'square';
+    switch (original.width > original.height) {
+      case true:
+        aspectRatio = 'landscape';
+        break;
+      case false:
+        aspectRatio = 'portrait';
+        break;
+    }
+
     let srcSet = '';
 
     imageSizes.forEach((size) => {
@@ -100,9 +112,11 @@ class Photos extends React.Component {
       }
     });
 
+    const photoClass = 'photograph ' + aspectRatio;
+
     return (
       <LazyLoad height={800} offset={100} key={key}>
-        <figure className="photograph">
+        <figure className={photoClass}>
           <img srcSet={srcSet}/>
             {typeof item.title !== 'undefined' &&
               <figcaption>{item.title}</figcaption>

@@ -50,7 +50,7 @@ class PostsTeasers extends React.Component {
     return (
       <li className="post-teaser--li" key={key}>
         <div className={postTeaserClass}>
-          <div className="post-teaser-text">
+          <div className="post-teaser--text">
             <h2 className="post-teaser--title">
               <Link to={postLink} className="post-teaser--link">{item.headline}</Link>
             </h2>
