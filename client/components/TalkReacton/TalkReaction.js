@@ -9,9 +9,7 @@ class TalkReaction extends React.Component {
       const tweetBool = JSON.parse(talkReaction.reaction_type_tweet);
       if (tweetBool === true) {
         return (
-          <div>
-            <TweetEmbed id={talkReaction.reaction_content}></TweetEmbed>
-          </div>
+          <TweetEmbed id={talkReaction.reaction_content}></TweetEmbed>
         );
       }
     }
@@ -29,8 +27,10 @@ class TalkReaction extends React.Component {
   }
 
   render() {
+    const size = (typeof this.props.talkReaction.reaction_size !== 'undefined') ? this.props.talkReaction.reaction_size : '';
+
     return (
-      <div>
+      <div className={size}>
         {this.reactionTweet(this.props.talkReaction)}
         {this.reactionQuote(this.props.talkReaction)}
       </div>
