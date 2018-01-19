@@ -7,6 +7,7 @@ import debounce from 'lodash/debounce';
 import find from 'lodash/find';
 const randomHeader = require('./Header/randomHeader');
 import CustomProperties from 'react-custom-properties';
+import Lightbox from "react-image-lightbox";
 
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
@@ -22,10 +23,16 @@ class Photos extends React.Component {
     this.getFlickrPhoto = this.getFlickrPhoto.bind(this);
     this.buildPhotosets = this.buildPhotosets.bind(this);
     this.buildPhotos = this.buildPhotos.bind(this);
+    this.getLightboxImage = this.getLightboxImage.bind(this);
+    this.getNextLightboxImage = this.getNextLightboxImage.bind(this);
+    this.getPrevLightboxImage = this.getPrevLightboxImage.bind(this);
+    this.startLightBox = this.startLightBox.bind(this);
 
     this.state = {
       'randomPhotoObject': {},
-      'photosets': []
+      'photosets': [],
+      'photoIndex': 0,
+      'lightboxOpen': false
     };
   }
 
@@ -117,13 +124,36 @@ class Photos extends React.Component {
     return (
       <LazyLoad height={800} offset={100} key={key}>
         <figure className={photoClass}>
-          <img srcSet={srcSet}/>
-            {typeof item.title !== 'undefined' &&
-              <figcaption>{item.title}</figcaption>
-            }
+          <a href="#" onClick={() => this.startLightBox(key)}>
+            <img srcSet={srcSet}/>
+          </a>
+          {typeof item.title !== 'undefined' &&
+            <figcaption>{item.title}</figcaption>
+          }
         </figure>
       </LazyLoad>
     );
+  }
+
+  getLightboxImage(index) {
+    const photo = this.state.photosets[flickrPhotoset].photo[index];
+    const lightboxPhoto = find(photo.sizes, {'label': 'Original'});
+    return lightboxPhoto.source;
+  }
+
+  getNextLightboxImage() {
+    const nextIndex = (this.state.photoIndex + 1) % this.state.photosets[flickrPhotoset].photo.length;
+    return this.getLightboxImage(nextIndex);
+  }
+
+  getPrevLightboxImage() {
+    const prevIndex = (this.state.photoIndex + this.state.photosets[flickrPhotoset].photo.length - 1) % this.state.photosets[flickrPhotoset].photo.length;
+    return this.getLightboxImage(prevIndex);
+  }
+
+  startLightBox(key) {
+    this.setState({photoIndex: key});
+    this.setState({lightboxOpen: true});
   }
 
   render() {
@@ -151,6 +181,22 @@ class Photos extends React.Component {
               }
             </div>
           </div>
+          {this.state.lightboxOpen && (
+            <Lightbox
+              mainSrc={this.getLightboxImage(this.state.photoIndex)}
+              nextSrc={this.getNextLightboxImage()}
+              prevSrc={this.getPrevLightboxImage()}
+              onCloseRequest={() => this.setState({ lightboxOpen: false })}
+              onMovePrevRequest={() =>
+                this.setState({
+                  photoIndex: (this.state.photoIndex + this.state.photosets[flickrPhotoset].photo.length - 1) % this.state.photosets[flickrPhotoset].photo.length
+                })}
+              onMoveNextRequest={() =>
+                this.setState({
+                  photoIndex: (this.state.photoIndex + 1) % this.state.photosets[flickrPhotoset].photo.length
+                })}
+            />
+          )}
         </div>
         <Footer/>
       </div>
