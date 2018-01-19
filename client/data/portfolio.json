@@ -12,14 +12,38 @@
       "about__show": true,
       "about": "<p>I worked with SCORE to realign their design to their brand. Through discovery exercises and research I learned that the relationships they facilitate between experienced business mentors and entrepreneurs is at the core of everything they do. The arrows that point between different content items and sections are subtle reminders of those relationships.</p><p>I also wanted to connect with entrepreneurs and their passion for their businesses. The moment when an entrepreneur first holds their own business card is the moment when their dreams start to feel real. I wanted to bring that reality to this site. So I made real letterpress business cards and photographed them for the site header. The result is more tangible, and suggests that we’re ready to get down to business.</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Responsive Design"},
-        {"item": "Presentations"},
-        {"item": "Kick-off lead"},
-        {"item": "Front End Development"},
-        {"item": "Styleguide"},
-        {"item": "Prototyping"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Responsive Design",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Kick-off lead",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Styleguide",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        }
       ],
       "agency": "Phase2",
       "link_to_agency": true,
@@ -115,13 +139,34 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Responsive Design"},
-        {"item": "Presentations"},
-        {"item": "Front End Development"},
-        {"item": "Styleguide"},
-        {"item": "Prototyping"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Responsive Design",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Styleguide",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": true,
       "agency": "Phase2",
@@ -162,13 +207,34 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Responsive Design"},
-        {"item": "Presentations"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Speaker"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Responsive Design",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Speaker",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": false,
       "agency": "The Coding Designer",
@@ -324,12 +390,30 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Writing"},
-        {"item": "Speaking"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Writing",
+          "icon": "faPencilAlt"
+        },
+        {
+          "item": "Speaking",
+          "icon": "faMicrophoneAlt"
+        }
       ],
       "link_to_agency": false,
       "agency": "The Coding Designer",
@@ -347,12 +431,12 @@
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-3-design-in-browser-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-4-present-in-browser-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
@@ -372,7 +456,7 @@
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-8-blank-page-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
@@ -382,7 +466,7 @@
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-10-musical-thinking-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
@@ -392,12 +476,12 @@
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-12-component-based-design-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-13-instruments-and-designers-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
@@ -422,12 +506,12 @@
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-18-unity-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         },
         {
-          "image__classes": "pi--image--wide",
+          "image__classes": "pi--image--medium",
           "image__path": "thinking-box-19-simple-trick-laptop",
           "image__alt": "Thinking Inside the Box Inside the Box Inside the Box"
         }
@@ -445,12 +529,30 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Responsive Designs"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Styleguide"},
-        {"item": "Drupal Theming"},
-        {"item": "Presentations"}
+        {
+          "item": "Responsive Designs",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Styleguide",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        }
       ],
       "link_to_agency": true,
       "agency": "Phase2",
@@ -511,11 +613,26 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Responsive Designs"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Drupal Theming"},
-        {"item": "Presentations"}
+        {
+          "item": "Responsive Designs",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        }
       ],
       "link_to_agency": true,
       "agency": "Phase2",
@@ -574,11 +691,26 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Front End Development"},
-        {"item": "Responsive Design"},
-        {"item": "Prototyping"},
-        {"item": "Drupal Theming"},
-        {"item": "Drupal Build"}
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Responsive Design",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Build",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": false,
       "agency": "NBC Universal",
@@ -618,13 +750,34 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Presentations"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Drupal Theming"},
-        {"item": "Drupal Build"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Build",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": false,
       "agency": "Canary Promotion & Design",
@@ -669,12 +822,30 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Presentations"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Drupal Theming"},
-        {"item": "Drupal Build"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Build",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": false,
       "agency": "Canary Promotion & Design",
@@ -704,14 +875,38 @@
       "about__show": false,
       "about": "<p>tktktktk</p>",
       "responsibilities": [
-        {"item": "Art Direction"},
-        {"item": "Lead Designer"},
-        {"item": "Presentations"},
-        {"item": "Front End Development"},
-        {"item": "Prototyping"},
-        {"item": "Styleguide"},
-        {"item": "Drupal Theming"},
-        {"item": "Drupal Build"}
+        {
+          "item": "Art Direction",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Lead Designer",
+          "icon": "faPaintBrush"
+        },
+        {
+          "item": "Presentations",
+          "icon": "faMicrophoneAlt"
+        },
+        {
+          "item": "Front End Development",
+          "icon": "faCode"
+        },
+        {
+          "item": "Prototyping",
+          "icon": "faCode"
+        },
+        {
+          "item": "Styleguide",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Theming",
+          "icon": "faCode"
+        },
+        {
+          "item": "Drupal Build",
+          "icon": "faCode"
+        }
       ],
       "link_to_agency": false,
       "agency": "Canary Promotion & Design",

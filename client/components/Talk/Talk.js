@@ -61,7 +61,7 @@ class Talk extends React.Component {
           <div className="talk--description" dangerouslySetInnerHTML={{__html: this.props.talk.talk_description}}/>
           <div className="talk--events">
             <h3>Events</h3>
-            <ul>
+            <ul className="fa-ul">
               {Object.keys(this.props.talk.talk_events).map(this.talkEvents)}
             </ul>
           </div>

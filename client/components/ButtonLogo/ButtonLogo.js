@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 class ButtonLogo extends React.Component {
   render() {
-    const buttonClass = 'button-logo image-' + this.props.headerImage;
-
     return (
-      <div className={buttonClass}>
+      <div className='button-logo'>
         <div className="title-curve" aria-label="The Coding Designer">
           <span className="char1" aria-hidden="true">T</span>
           <span className="char2" aria-hidden="true">h</span>
@@ -36,9 +34,5 @@ class ButtonLogo extends React.Component {
     )
   }
 }
-
-ButtonLogo.propTypes = {
-  headerImage: PropTypes.number.isRequired
-};
 
 export default ButtonLogo;

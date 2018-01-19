@@ -6,8 +6,6 @@
 @import '~video-react/styles/scss/video-react';
 
 // Vendor
-@import 'vendor/variables';
-@import 'vendor/fontAwesome/font-awesome';
 
 // Tools
 @import 'tools/utilities/utilities-index';
@@ -15,9 +13,7 @@
 @import 'tools/functions-shadows';
 @import 'tools/mixins-rotate';
 @import 'tools/shapes-mixins';
-@import 'tools/layouts/helpers';
-@import 'tools/layouts/mixins';
-@import 'tools/layouts/mixins-grid';
+@import 'tools/layouts/layouts-index';
 
 // Variable overrides
 @import 'overrides/breakpoint-overrides';
@@ -36,24 +32,21 @@
 @import 'base/html-body/base';
 @import 'base/images/images';
 @import 'base/p/p';
-@import 'base/page/page';
-@import 'base/page/page-title';
+@import '../components/Page/page';
+@import '../components/Page/page-title';
 @import 'base/utility/utility';
 
 // COMPONENTS
 @import '../components/Header/header';
-@import '../components/ButtonLogo/variables';
-@import '../components/ButtonLogo/mixins';
-@import '../components/ButtonLogo/button-logo';
-@import '../components/Navigation/navigation';
-@import '../components/Navigation/navigation-main';
+@import '../components/ButtonLogo/button-logo-index';
+@import '../components/Navigation/navigation-index';
 @import '../components/Intro/intro';
 @import '../components/HomeIntro/home-intro';
-@import '../components/PortfolioItem/portfolio-item';
-@import '../components/PortfolioNavigation/portfolio-nav';
 @import '../components/PortfolioOverview/portfolio-overview';
-@import '../components/Photography/photography';
+@import '../components/PortfolioNavigation/portfolio-nav';
+@import '../components/PortfolioItem/portfolio-item';
 @import '../components/Talk/talk';
+@import '../components/Photography/photography';
 @import '../components/Post/posts';
 @import '../components/Footer/footer';
 @import '../components/Monogram/monogram';

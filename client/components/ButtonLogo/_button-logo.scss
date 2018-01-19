@@ -1,44 +1,56 @@
 .button-logo {
-  @include button-logo--base($background-color: $button-logo-background-color, $foreground-color: $button-logo-foreground-color);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: var(--header-background-color);
+  background-image: var(--header-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 330px;
+  line-height: 1.2;
+  color: $button-logo-background-color;
+  font-family: get-font(surveyor);
+  font-size: fontsize-rem(ms(4));
+  background-blend-mode: var(--header-blend);
 
-  &.image-1 {
-    @include button-logo-image('../assets/images/headers/space-helmet.jpg');
+  @include bp(navigation--narrow) {
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
   }
 
-  &.image-2 {
-    @include button-logo-image('../assets/images/headers/aligator-skull.jpg');
+  @include bp(navigation--wide) {
+    border-radius: 50%;
+    width: 330px;
+
+    .collapse-header & {
+      border-radius: 0;
+    }
   }
 
-  &.image-3 {
-    @include button-logo-image('../assets/images/headers/antler-skull.jpg');
+  @include bp(title-curve--shrink) {
+    font-size: fontsize-rem(ms(3));
   }
 
-  &.image-4 {
-    @include button-logo-image('../assets/images/headers/snake-skeleton.jpg');
+  .button-logo--word {
+    color: get-color(black);
+    mix-blend-mode: screen;
+
+    .collapse-header & {
+      @include bp(navigation--wide) {
+        color: var(--header-color);
+      }
+    }
   }
 
-  &.image-5 {
-    @include button-logo-image('../assets/images/headers/moon-landing.jpg', $background-color: #EFE07A);
-  }
-
-  &.image-6 {
-    @include button-logo-image('../assets/images/headers/rockies-1.jpg');
-  }
-
-  &.image-7 {
-    @include button-logo-image('../assets/images/headers/rockies-2.jpg');
-  }
-
-  &.image-8 {
-    @include button-logo-image('../assets/images/headers/roofs.jpg');
-  }
-
-  &.image-9 {
-    @include button-logo-image('../assets/images/headers/sc-sky.jpg');
-  }
-
-  &.image-10 {
-    @include button-logo-image('../assets/images/headers/bridge-lights.jpg');
+  .collapse-header & {
+    @include button-logo--collapse-header-common();
+    @include button-logo--collapse-header-narrow();
+    @include button-logo--collapse-header-wide();
   }
 
 }
@@ -53,6 +65,12 @@
 
   @include bp(title-curve--shrink) {
     left: -16px;
+  }
+
+  .collapse-header & {
+    @include button-logo--words-wrapper--collapse-header-common();
+    @include button-logo--words-wrapper--collapse-header-narrow();
+    @include button-logo--words-wrapper--collapse-header-wide();
   }
 
 }
@@ -84,6 +102,12 @@
   font-size: fontsize-rem(ms(0));
   font-weight: 700;
 
+  .collapse-header & {
+    @include button-logo--title-curve--collapse-header-common();
+    @include button-logo--title-curve--collapse-header-narrow();
+    @include button-logo--title-curve--collapse-header-wide();
+  }
+
   .rectangle & {
     right: 10em;
     left: auto;
@@ -100,7 +124,6 @@
   );
 
   [class^='char'] {
-    //outline: 1px solid red;
     position: absolute;
     $height-small: 6em;
     $height: 7em;
@@ -114,6 +137,12 @@
     height: $height;
     text-align: center;
     transform-origin: 50% 100%;
+
+    .collapse-header & {
+      @include button-logo--class-char--collapse-header-common();
+      @include button-logo--class-char--collapse-header-narrow();
+      @include button-logo--class-char--collapse-header-wide();
+    }
 
     @include bp(title-curve--shrink) {
       top: -$height-small;

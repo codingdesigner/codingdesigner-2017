@@ -1,72 +1,48 @@
 .site-header {
-  @include margin-compensation();
-  position: relative;
+  display: grid;
+  position: fixed;
+  z-index: get-z(toggled-menu);
+  border-bottom: 0.75em solid get-color(white);
+  background-clip: padding-box;
+  background-color: currentColor;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--header-color);
+  grid-template-rows: repeat(2, auto);
 
   @include bp(navigation--wide) {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 5em;
     border-bottom: 0.33em dashed currentColor;
     background-clip: padding-box;
     padding-top: 1.5em;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
     padding-left: get-size(side-margin--wide);
     min-width: 40em;
-    transition-property: background-color;
+    height: 398px;
+    transition-property: background-color, height;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+    grid-template-columns: 330px .6fr;
 
-    &.image-1 {
-      background-color: currentColor;
-      color: #253e3f;
+    &.collapse-header {
+      display: grid;
+      align-items: start;
+      padding: 0.25em 0.75rem 0;
+      height: 110px;
+      grid-template-columns: 320px 1fr;
+      grid-gap: 1em;
+      @include breakpoint($page-max-width) {
+        @include content-limiter-padding();
+      }
     }
+  }
 
-    &.image-2 {
-      background-color: currentColor;
-      color: #023a43;
+  @include bp(navigation--full) {
+    &.collapse-header {
+      height: 90px;
+      grid-template-columns: 400px 1fr;
     }
-
-    &.image-3 {
-      background-color: currentColor;
-      color: #2a2933;
-    }
-
-    &.image-4 {
-      background-color: currentColor;
-      color: #b1b8a4;
-    }
-
-    &.image-5 {
-      background-color: currentColor;
-      color: #d6bb4a;
-    }
-
-    &.image-6 {
-      background-color: currentColor;
-      color: #094e8e;
-    }
-
-    &.image-7 {
-      background-color: currentColor;
-      color: #2D5185;
-    }
-
-    &.image-8 {
-      background-color: currentColor;
-      color: #303738;
-    }
-
-    &.image-9 {
-      background-color: currentColor;
-      color: #504530;
-    }
-
-    &.image-10 {
-      background-color: currentColor;
-      color: #002a32;
-    }
-
   }
 
   @include breakpoint(870px) {
@@ -76,11 +52,10 @@
   @include breakpoint(1100px) {
     justify-content: center;
     padding-left: 0;
+  }
 
-    .button-logo {
-      margin-left: -7em;
-    }
-
+  @include breakpoint($page-max-width) {
+    @include content-limiter-padding();
   }
 
   .button-logo {

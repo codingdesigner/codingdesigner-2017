@@ -1,0 +1,74 @@
+{
+  "headerLayouts": [
+    {
+      "image": "space-helmet",
+      "color": "#253e3f",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "aligator-skull",
+      "color": "#023a43",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "antler-skull",
+      "color": "#2a2933",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "snake-skeleton",
+      "color": "#f1dd7c",
+      "backgroundColor": "#EFE07A",
+      "blend": "multiply",
+      "linkColor": "#000000"
+    },
+    {
+      "image": "moon-landing",
+      "color": "#d6bb4a",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "rockies-1",
+      "color": "#094e8e",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "rockies-2",
+      "color": "#2D5185",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "roofs",
+      "color": "#303738",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "sc-sky",
+      "color": "#504530",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    },
+    {
+      "image": "bridge-lights",
+      "color": "#002a32",
+      "backgroundColor": "#BBBBBB",
+      "blend": "multiply",
+      "linkColor": "#FFFFFF"
+    }
+  ]
+}

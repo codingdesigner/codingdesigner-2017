@@ -5,6 +5,8 @@ import PortfolioItem from './PortfolioItem/PortfolioItem';
 import Footer from './Footer/Footer';
 import {portfolio_items} from '../data/portfolio';
 import find from 'lodash/find';
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 const importAllImages = (files) => {
   let images = {};
@@ -18,13 +20,15 @@ class Portfolio extends React.Component {
     super(props);
     this.initialPortfolio = this.initialPortfolio.bind(this);
     this.updatePortfolio = this.updatePortfolio.bind(this);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange(),
+      'randomPhotoObject': {},
       'PortfolioItem': this.initialPortfolio()
     };
+  }
+
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   initialPortfolio() {
@@ -40,31 +44,32 @@ class Portfolio extends React.Component {
     this.setState({'PortfolioItem': updatedPortfolioItem});
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
-  }
-
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
-      <div>
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+      <CustomProperties className="full-page" properties={headerStyles} >
+      <div className="full-page">
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--portfolio page-content">
           <PortfolioNavigation
             portfolioItems={portfolio_items}
             allImages={allImages}
             updatePortfolio={this.updatePortfolio}
-            randomizeHeader={this.randomizeHeader}/>
+            randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
           <PortfolioItem
             portfolioItem={this.state.PortfolioItem}
             allImages={allImages}/>
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }
