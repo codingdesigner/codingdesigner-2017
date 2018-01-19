@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import navigation from '../../data/navigation';
 import PropTypes from 'prop-types';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faBars from '@fortawesome/fontawesome-pro-solid/faBars';
 
 class NavigationMain extends React.Component {
   constructor() {
@@ -23,14 +25,16 @@ class NavigationMain extends React.Component {
   render() {
     return (
       <nav id="nav-primary" className="nav nav-primary">
-        <MediaQuery query="(max-device-width: 800px)">
+        <MediaQuery query="(max-device-width: 649px)">
           <input type="checkbox" id="nav-primary-trigger"/>
         </MediaQuery>
-        <MediaQuery query="(min-device-width: 801px)">
+        <MediaQuery query="(min-device-width: 650px)">
           <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
         </MediaQuery>
         <div className="nav-primary--fan">
-          <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label"><i className="fa fa-bars fa-lg" aria-label="Menu"></i></label>
+          <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label">
+            <FontAwesomeIcon icon={faBars} />
+          </label>
         </div>
         { Object.keys(navigation).map(this.navItem) }
       </nav>
@@ -39,7 +43,6 @@ class NavigationMain extends React.Component {
 }
 
 NavigationMain.propTypes = {
-  headerImage: PropTypes.number.isRequired,
   randomizeHeader: PropTypes.func.isRequired
 };
 

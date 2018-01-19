@@ -15,6 +15,7 @@
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
   @include bp(typography-narrow) {
     margin-bottom: 0;
     font-size: fontsize-rem(ms(7));

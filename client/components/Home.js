@@ -4,33 +4,36 @@ import HomeIntro from './HomeIntro/HomeIntro';
 import PortfolioOverview from './PortfolioOverview/PortfolioOverview';
 import TweetEmbed from 'react-tweet-embed'
 import Footer from './Footer/Footer';
-
-
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange()
+      'randomPhotoObject': {}
     };
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
-      <div>
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+      <CustomProperties className="full-page" properties={headerStyles} >
+      <div className="full-page">
+
+        <Header randomizeHeader={() => randomHeader.randomizeHeader}/>
         <div className="page--home page-content">
           <h1 className="page-title">
             Hi. <span className="my-name">I’m <span className="no-break">Mason Wendell.</span></span>
@@ -41,6 +44,7 @@ class Home extends React.Component {
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

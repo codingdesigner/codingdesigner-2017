@@ -4,6 +4,8 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import {posts} from '../data/posts-teasers';
 const ReactMarkdown = require('react-markdown');
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
 
 const importAllImages = (files) => {
   let images = {};
@@ -15,22 +17,15 @@ const allImages = importAllImages(require.context('../assets/images/posts', fals
 class PostsTeasers extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
     this.postTeaser = this.postTeaser.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange()
+      'randomPhotoObject': {}
     };
   }
 
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
+  componentWillMount() {
+    randomHeader.randomizeHeader(this);
   }
 
   postTeaserImage(post) {
@@ -55,7 +50,7 @@ class PostsTeasers extends React.Component {
     return (
       <li className="post-teaser--li" key={key}>
         <div className={postTeaserClass}>
-          <div className="post-teaser-text">
+          <div className="post-teaser--text">
             <h2 className="post-teaser--title">
               <Link to={postLink} className="post-teaser--link">{item.headline}</Link>
             </h2>
@@ -68,9 +63,18 @@ class PostsTeasers extends React.Component {
   }
 
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
-      <div>
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+      <CustomProperties className="full-page" properties={headerStyles} >
+      <div className="full-page">
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--posts-feed page-content">
           <h1 className="page-title">Posts</h1>
           <section className="section latest-posts">
@@ -81,6 +85,7 @@ class PostsTeasers extends React.Component {
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

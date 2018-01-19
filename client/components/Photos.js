@@ -5,6 +5,9 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import debounce from 'lodash/debounce';
 import find from 'lodash/find';
+const randomHeader = require('./Header/randomHeader');
+import CustomProperties from 'react-custom-properties';
+import Lightbox from "react-image-lightbox";
 
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
@@ -16,30 +19,26 @@ let photosetBuild = [];
 class Photos extends React.Component {
   constructor(props) {
     super(props);
-    this.randomheaderRange = this.randomheaderRange.bind(this);
-    this.randomizeHeader = this.randomizeHeader.bind(this);
     this.displayImage = this.displayImage.bind(this);
     this.getFlickrPhoto = this.getFlickrPhoto.bind(this);
     this.buildPhotosets = this.buildPhotosets.bind(this);
     this.buildPhotos = this.buildPhotos.bind(this);
+    this.getLightboxImage = this.getLightboxImage.bind(this);
+    this.getNextLightboxImage = this.getNextLightboxImage.bind(this);
+    this.getPrevLightboxImage = this.getPrevLightboxImage.bind(this);
+    this.startLightBox = this.startLightBox.bind(this);
 
     this.state = {
-      'randomPhoto': this.randomheaderRange(),
-      'photosets': []
+      'randomPhotoObject': {},
+      'photosets': [],
+      'photoIndex': 0,
+      'lightboxOpen': false
     };
   }
 
   componentWillMount () {
+    randomHeader.randomizeHeader(this);
     this.getFlickrPhotoset(flickrPhotoset);
-  }
-
-  randomheaderRange(min = 1, max = 10) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  randomizeHeader() {
-    const random = this.randomheaderRange();
-    this.setState({'randomPhoto': random});
   }
 
   axiosCall(url, callbackFunction, passthru) {
@@ -99,6 +98,18 @@ class Photos extends React.Component {
 
   displayImage(key) {
     const item = this.state.photosets[flickrPhotoset].photo[key];
+    const original = find(item.sizes, {'label': 'Original'});
+
+    let aspectRatio = 'square';
+    switch (original.width > original.height) {
+      case true:
+        aspectRatio = 'landscape';
+        break;
+      case false:
+        aspectRatio = 'portrait';
+        break;
+    }
+
     let srcSet = '';
 
     imageSizes.forEach((size) => {
@@ -108,22 +119,56 @@ class Photos extends React.Component {
       }
     });
 
+    const photoClass = 'photograph ' + aspectRatio;
+
     return (
       <LazyLoad height={800} offset={100} key={key}>
-        <figure className="photograph">
-          <img srcSet={srcSet}/>
-            {typeof item.title !== 'undefined' &&
-              <figcaption>{item.title}</figcaption>
-            }
+        <figure className={photoClass}>
+          <a href="#" onClick={() => this.startLightBox(key)}>
+            <img srcSet={srcSet}/>
+          </a>
+          {typeof item.title !== 'undefined' &&
+            <figcaption>{item.title}</figcaption>
+          }
         </figure>
       </LazyLoad>
     );
   }
 
+  getLightboxImage(index) {
+    const photo = this.state.photosets[flickrPhotoset].photo[index];
+    const lightboxPhoto = find(photo.sizes, {'label': 'Original'});
+    return lightboxPhoto.source;
+  }
+
+  getNextLightboxImage() {
+    const nextIndex = (this.state.photoIndex + 1) % this.state.photosets[flickrPhotoset].photo.length;
+    return this.getLightboxImage(nextIndex);
+  }
+
+  getPrevLightboxImage() {
+    const prevIndex = (this.state.photoIndex + this.state.photosets[flickrPhotoset].photo.length - 1) % this.state.photosets[flickrPhotoset].photo.length;
+    return this.getLightboxImage(prevIndex);
+  }
+
+  startLightBox(key) {
+    this.setState({photoIndex: key});
+    this.setState({lightboxOpen: true});
+  }
+
   render() {
+    const headerStyles = {
+      '--header-image': 'url(' + this.state.randomPhotoObject.image + ')',
+      '--header-color': this.state.randomPhotoObject.color,
+      '--header-background-color': this.state.randomPhotoObject.backgroundColor,
+      '--header-blend': this.state.randomPhotoObject.blend,
+      '--header-link-color': this.state.randomPhotoObject.linkColor
+    };
+
     return (
-      <div>
-        <Header headerImage={this.state.randomPhoto} randomizeHeader={this.randomizeHeader}/>
+      <CustomProperties className="full-page" properties={headerStyles} >
+      <div className="full-page">
+        <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
@@ -136,9 +181,26 @@ class Photos extends React.Component {
               }
             </div>
           </div>
+          {this.state.lightboxOpen && (
+            <Lightbox
+              mainSrc={this.getLightboxImage(this.state.photoIndex)}
+              nextSrc={this.getNextLightboxImage()}
+              prevSrc={this.getPrevLightboxImage()}
+              onCloseRequest={() => this.setState({ lightboxOpen: false })}
+              onMovePrevRequest={() =>
+                this.setState({
+                  photoIndex: (this.state.photoIndex + this.state.photosets[flickrPhotoset].photo.length - 1) % this.state.photosets[flickrPhotoset].photo.length
+                })}
+              onMoveNextRequest={() =>
+                this.setState({
+                  photoIndex: (this.state.photoIndex + 1) % this.state.photosets[flickrPhotoset].photo.length
+                })}
+            />
+          )}
         </div>
         <Footer/>
       </div>
+      </CustomProperties>
     )
   }
 }

@@ -74,6 +74,7 @@
         },
         {
           "reaction_type_tweet": true,
+          "reaction_size": "tall",
           "reaction_content": "474308270555791360"
         },
         {
@@ -86,6 +87,7 @@
         },
         {
           "reaction_type_quote": true,
+          "reaction_size": "wide",
           "reaction_content": "<blockquote class=\"comment\">\n<p>This session was hands-down my most productive hour at Drupalcon. Not only did it open my mind to a completely different approach to design, but it streamlined my development process as well. I now have a brand new mindset going into my current projects.</p><footer>\n<cite>drupalatx via <a href=\"https://austin2014.drupal.org/comment/2513.html#comment-2513\">Drupalcon</a></cite>\n</footer></blockquote>"
         }
       ]
@@ -116,6 +118,7 @@
       "talk_reactions": [
         {
           "reaction_type_quote": true,
+          "reaction_size": "wide",
           "reaction_content": "<blockquote class=\"comment\">\n<p>Doing mostly backend development, over time I've shied away from front end development. Mason as a coding designer has made me more interested in bridging those. One of the things I like about Sass is how reusable style rules can help the process become really simplified and more logical. But one of the questions I've had is how to keep it all manageable - media queries for example. A tool to help with that sounds like something I'd like to hear about.</p><footer>\n<cite>scottrigby via <a href=\"https://portland2013.drupal.org/comment/928.html#comment-928\">Drupalcon</a></cite>\n</footer></blockquote>"
         }
       ]

@@ -33,6 +33,10 @@
   @for $i from 1 through $num-items {
     &:nth-of-type(#{$i}) {
       transform: rotate($angle-offset + $angle-per-item * $i);
+
+      .collapse-header & {
+        transform: rotate(0);
+      }
     }
   }
 }
