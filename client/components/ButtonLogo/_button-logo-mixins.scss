@@ -79,17 +79,17 @@
 @mixin button-logo--words-wrapper--collapse-header-narrow() {
   @include bp(navigation--narrow) {
     margin-top: -6px;
-    font-size: fontsize-rem(ms(2));
+    //font-size: fontsize-rem(ms(2));
   }
 }
 
 @mixin button-logo--words-wrapper--collapse-header-wide() {
   @include bp(navigation--wide) {
-    font-size: fontsize-rem(ms(2));
+    font-size: fontsize-rem(ms(-2));
   }
 
   @include bp(navigation--full) {
-    font-size: fontsize-rem(ms(3));
+    font-size: fontsize-rem(ms(-1));
   }
 }
 
@@ -112,11 +112,11 @@
   @include bp(navigation--wide) {
     margin: 0;
     white-space: nowrap;
-    font-size: fontsize-rem(ms(-1));
+    font-size: fontsize-rem(ms(-4));
   }
 
   @include bp(navigation--full) {
-    font-size: fontsize-rem(ms(0));
+    font-size: fontsize-rem(ms(-3));
   }
 }
 

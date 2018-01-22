@@ -1,68 +1,72 @@
 $navigation-count: 7;
 
 .nav-primary {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 2;
 
+  //
   @include bp(navigation--narrow) {
-    order: -1;
-    background-color: get-color(white);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+    padding-right: get-size(side-margin);
+    padding-left: get-size(side-margin);
   }
-
-  @include bp(navigation--wide) {
-    top: -1em;
-    z-index: 3;
-
-    .collapse-header & {
-      display: grid;
-      top: auto;
-      grid-template-columns: repeat(auto-fill, 9em);
-      grid-gap: .5em;
-    }
-  }
+  //
+  //  @include bp(navigation--wide) {
+  //    top: -1em;
+  //    z-index: 3;
+  //
+  //    .collapse-header & {
+  //      top: 0.375em;
+  //      flex-direction: row;
+  //      flex-wrap: wrap;
+  //    }
+  //  }
 }
 
 .nav-primary-trigger--label {
-  @include nav-primary--item();
-  opacity: 1;
-  z-index: 1;
-  margin: 0;
-  letter-spacing: 0;
-  transition-property: opacity;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+  //  @include nav-primary--item();
+  //  opacity: 1;
+  //  z-index: 1;
+  //  margin: 0;
+  //  letter-spacing: 0;
+  //  transition-property: opacity;
+  //  transition-duration: 0.3s;
+  //  transition-timing-function: ease-in-out;
+
   @include bp(navigation--narrow) {
     color: get-color(white);
   }
-  @include bp(navigation--wide) {
-    color: var(--header-link-color);
 
-    [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
-      opacity: 0.1;
-    }
-  }
+  //  @include bp(navigation--wide) {
+  //    color: var(--header-link-color);
+  //
+  //    [id='nav-primary-trigger']:checked ~ .nav-primary--fan & {
+  //      opacity: 0.1;
+  //    }
+  //  }
 }
 
 .nav-primary--fan {
   @include nav-primary--item();
 
   @include bp(navigation--narrow) {
-    padding-top: 0;
-    padding-right: 0.5em;
-    padding-bottom: 0;
-    padding-left: 0.5em;
+    margin-right: -#{get-size(side-margin)};
     max-height: 0;
     overflow: hidden;
-    text-align: right;
+    font-size: ms(0);
     font-weight: 800;
     transition-property: max-height, padding, margin;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-
-
+    //    padding-top: 0;
+    //    padding-right: 0.5em;
+    //    padding-bottom: 0;
+    //    padding-left: 0.5em;
+    //    text-align: right;
+    //
+    //
     &:nth-of-type(1) {
       position: absolute;
       top: 100%;
@@ -79,101 +83,97 @@ $navigation-count: 7;
       padding-right: 0;
     }
 
-    // sass-lint:disable no-ids
     [id='nav-primary-trigger']:checked ~ & {
       margin-top: 0;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
       max-height: 10em;
     }
-    // sass-lint:enable no-ids
   }
-
-  @include bp(navigation--wide) {
-    position: absolute;
-    right: 0;
-    left: 0;
-    transform: rotate(0deg);
-    margin-left: -9em;
-    padding-left: 10em;
-    list-style-type: none;
-    transform-origin: 0 50%;
-    transition-property: transform, opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-
-    &:nth-of-type(1n + 2) {
-      opacity: 0;
-    }
-
-    .collapse-header & {
-      position: relative;
-      margin-right: 1em;
-      margin-left: 0;
-      padding-left: 0;
-      transition-property: none;
-
-      &:nth-of-type(1) {
-        display: none;
-      }
-    }
-
-    @for $i from 1 through $navigation-count {
-      &:nth-of-type(#{$i}) {
-        z-index: $navigation-count - $i;
-      }
-    }
-
-    // sass-lint:disable no-ids
-    #nav-primary-trigger:checked ~ & {
-      @include fan-items(
-        $num-items: $navigation-count,
-        $angle-span: 65deg,
-        $angle-offset: -40deg
-      );
-      opacity: 1;
-    }
-
-    // sass-lint:enable no-ids
+  //
+  //  @include bp(navigation--wide) {
+  //    position: absolute;
+  //    right: 0;
+  //    left: 0;
+  //    transform: rotate(0deg);
+  //    margin-left: -9em;
+  //    padding-left: 10em;
+  //    list-style-type: none;
+  //    transform-origin: 0 50%;
+  //    transition-property: transform, opacity;
+  //    transition-duration: 0.3s;
+  //    transition-timing-function: ease-in-out;
+  //
+  //    &:nth-of-type(1n + 2) {
+  //      opacity: 0;
+  //    }
+  //
+  //    .collapse-header & {
+  //      position: relative;
+  //      margin-right: 1em;
+  //      margin-left: 0;
+  //      padding-left: 0;
+  //      transition-property: none;
+  //
+  //      &:nth-of-type(1) {
+  //        display: none;
+  //      }
+  //    }
+  //
+  //    @for $i from 1 through $navigation-count {
+  //      &:nth-of-type(#{$i}) {
+  //        z-index: $navigation-count - $i;
+  //      }
+  //    }
+  //
+  //    // sass-lint:disable no-ids
+  //    #nav-primary-trigger:checked ~ & {
+  //      @include fan-items(
+  //        $num-items: $navigation-count,
+  //        $angle-span: 65deg,
+  //        $angle-offset: -40deg
+  //      );
+  //      opacity: 1;
+  //    }
+  //
+  //    // sass-lint:enable no-ids
+  //    a {
+  //      @include unset-faux-underline-links();
+  //      display: inline-block;
+  //      color: var(--header-link-color);
+  //
+  //      &:link {
+  //        color: var(--header-link-color);
+  //      }
+  //
+  //      &:visited {
+  //        color: var(--header-link-color);
+  //      }
+  //
+  //      &:hover {
+  //        color: var(--header-link-color);
+  //      }
+  //
+  //      &:active {
+  //        color: var(--header-link-color);
+  //      }
+  //
+  //      &:focus {
+  //        color: var(--header-link-color);
+  //      }
+  //
+  //      .collapse-header & {
+  //        border-bottom: 1px solid rgba(get-color(black), 0.5);
+  //      }
+  //    }
+  //  }
+  //
     a {
       @include unset-faux-underline-links();
-      display: inline-block;
-      color: var(--header-link-color);
-
-      &:link {
-        color: var(--header-link-color);
-      }
-
-      &:visited {
-        color: var(--header-link-color);
-      }
-
-      &:hover {
-        color: var(--header-link-color);
-      }
-
-      &:active {
-        color: var(--header-link-color);
-      }
-
-      &:focus {
-        color: var(--header-link-color);
-      }
-
-      .collapse-header & {
-        border-bottom: 1px solid rgba(get-color(black), 0.5);
-      }
+      display: block;
     }
-  }
-
-  a {
-    @include unset-faux-underline-links();
-    display: block;
-  }
 }
 
-// sass-lint:disable no-ids
 [id='nav-primary-trigger'] {
   @include visuallyhidden();
 }
-// sass-lint:enable no-ids
