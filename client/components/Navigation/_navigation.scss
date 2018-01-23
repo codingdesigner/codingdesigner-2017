@@ -12,6 +12,16 @@ $navigation-count: 7;
     padding-right: get-size(side-margin);
     padding-left: get-size(side-margin);
   }
+
+  @include bp(navigation--wide) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+    padding-right: get-size(side-margin--wide);
+    padding-left: get-size(side-margin--wide);
+  }
   //
   //  @include bp(navigation--wide) {
   //    top: -1em;

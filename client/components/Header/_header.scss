@@ -53,6 +53,20 @@
     }
   }
 
+  @include bp(navigation--wide) {
+    //display: grid;
+    display: flex;
+    background-color: var(--header-background-color);
+    justify-content: space-between;
+    //background-image: var(--header-image);
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
+    //background-blend-mode: var(--header-blend);
+    //grid-template-rows: repeat(2, auto);
+
+  }
+
   //&.collapse-header {
   //  position: fixed;
   //  width: 100vw;
