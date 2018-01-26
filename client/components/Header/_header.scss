@@ -56,14 +56,27 @@
   @include bp(navigation--wide) {
     //display: grid;
     display: flex;
-    background-color: var(--header-background-color);
+    background-color: var(--header-color);
+    //background-image: var(--header-image);
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
     justify-content: space-between;
+
+    border-bottom: 0.33em dashed var(--header-color);
+    background-clip: padding-box;
+    //display: grid;
+    //grid-template-rows: repeat(2, auto);
     //background-image: var(--header-image);
     //background-repeat: no-repeat;
     //background-position: center;
     //background-size: cover;
     //background-blend-mode: var(--header-blend);
     //grid-template-rows: repeat(2, auto);
+    .nav-primary {
+      //order: -1;
+      //background-color: get-color(white);
+    }
 
   }
 

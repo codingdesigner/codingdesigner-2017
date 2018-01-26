@@ -47,10 +47,11 @@ class Header extends React.Component {
       <div className="header-wrapper">
         <header className={headerClassSpacer} role="banner">
           <ButtonLogo/>
+          <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={false}/>
         </header>
         <header className={headerClass} role="banner">
           <ButtonLogo/>
-          <NavigationMain randomizeHeader={this.props.randomizeHeader}/>
+          <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={true}/>
         </header>
       </div>
     )
