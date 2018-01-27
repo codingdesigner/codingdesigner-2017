@@ -5,11 +5,7 @@
   margin-bottom: 0.33em;
   font-weight: 800;
   font-style: italic;
-  @include bp(typography-narrow) {
-    margin-left: 2vw;
-  }
   @include bp(portfolio--show-details) {
     flex-basis: 100vw;
-    margin-left: 3vw;
   }
 }

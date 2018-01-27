@@ -15,25 +15,39 @@ class NavigationMain extends React.Component {
   navItem(key) {
     const navItem = navigation[key];
 
-    return (
-      <div className="nav-primary--fan" key={key}>
-        <Link to={navItem.path} className="nav-item" onClick={() => this.props.randomizeHeader()}>{navItem.text}</Link>
-      </div>
-    )
+    if (this.props.navFunctional === true) {
+      return (
+        <div className="nav-primary--fan" key={key}>
+          <Link to={navItem.path} className="nav-item" onClick={() => this.props.randomizeHeader()}>{navItem.text}</Link>
+        </div>
+      )
+    } else {
+      return (
+        <div className="nav-primary--fan" key={key}>
+          <Link to='' className="nav-item">{navItem.text}</Link>
+        </div>
+      )
+    }
+
+
   }
 
   render() {
     return (
       <nav id="nav-primary" className="nav nav-primary">
-        <MediaQuery query="(max-device-width: 649px)">
-          <input type="checkbox" id="nav-primary-trigger"/>
-        </MediaQuery>
-        <MediaQuery query="(min-device-width: 650px)">
-          <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
-        </MediaQuery>
+        {this.props.navFunctional === true &&
+          <MediaQuery query="(max-width: 649px)">
+            <input type="checkbox" id="nav-primary-trigger"/>
+          </MediaQuery>
+        }
+        {this.props.navFunctional === true &&
+          <MediaQuery query="(min-width: 650px)">
+            <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
+          </MediaQuery>
+        }
         <div className="nav-primary--fan">
           <label htmlFor="nav-primary-trigger" className="nav-primary-trigger--label">
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faBars}/>
           </label>
         </div>
         { Object.keys(navigation).map(this.navItem) }
@@ -43,7 +57,8 @@ class NavigationMain extends React.Component {
 }
 
 NavigationMain.propTypes = {
-  randomizeHeader: PropTypes.func.isRequired
+  randomizeHeader: PropTypes.func.isRequired,
+  navFunctional: PropTypes.bool.isRequired
 };
 
 export default NavigationMain;

@@ -12,7 +12,8 @@ import Lightbox from "react-image-lightbox";
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
 const flickrUser = '86001309%40N00'; // me
-const flickrPhotoset = '72157648966372560'; // Autumn/Wissahickon 2014
+// const flickrPhotoset = '72157648966372560'; // Autumn/Wissahickon 2014
+const flickrPhotoset = '72157662816209747'; // Portfolio
 const imageSizes = ['Small 320', 'Medium', 'Large', 'Large 2048', 'Original'];
 let photosetBuild = [];
 
@@ -172,9 +173,9 @@ class Photos extends React.Component {
         <div className="page--photography-page page-content">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
-            <h3>{typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&
-              this.state.photosets[flickrPhotoset].title
-            }</h3>
+            {/*<h3>{typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&*/}
+              {/*this.state.photosets[flickrPhotoset].title*/}
+            {/*}</h3>*/}
             <div className="photo-gallery--photos">
               {typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&
                 Object.keys(this.state.photosets[flickrPhotoset].photo).map(this.displayImage)

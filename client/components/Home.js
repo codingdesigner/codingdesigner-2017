@@ -12,7 +12,8 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      'randomPhotoObject': {}
+      'randomPhotoObject': {},
+      'expandHeader': true
     };
   }
 
@@ -29,11 +30,13 @@ class Home extends React.Component {
       '--header-link-color': this.state.randomPhotoObject.linkColor
     };
 
+    const pageClass = 'full-page ' + ((this.state.expandHeader === true)? 'large-header' : '');
+
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
-      <div className="full-page">
+      <div className={pageClass}>
 
-        <Header randomizeHeader={() => randomHeader.randomizeHeader}/>
+        <Header randomizeHeader={() => randomHeader.randomizeHeader} expandHeader={this.state.expandHeader}/>
         <div className="page--home page-content">
           <h1 className="page-title">
             Hi. <span className="my-name">I’m <span className="no-break">Mason Wendell.</span></span>

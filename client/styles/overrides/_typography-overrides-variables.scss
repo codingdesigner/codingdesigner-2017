@@ -10,7 +10,8 @@ $font-body: get-font(archer);
 
 /// site root type size
 /// @type px
-$root-typesize: 18px;
+//$root-typesize: 1.125em;
+$root-typesize: 1em;
 
 /// Use fluid type sizes on the root element?
 /// @type boolean
@@ -18,7 +19,7 @@ $use-fluid-type: false;
 
 /// site minimum type size
 /// @type px
-$root-typesize--min: 14px;
+$root-typesize--min: 1em;
 
 /// baseline size in pixels
 /// set as a multiplier of `$root-typesize`
