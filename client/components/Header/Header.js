@@ -10,13 +10,15 @@ class Header extends React.Component {
     this.collapseClass = this.collapseClass.bind(this);
 
     this.state = {
-      'collapseHeader': false
+      'collapseHeader': (this.props.expandHeader === true) ? false : 'collapse-header'
     };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    window.addEventListener('scroll', this.handleScroll);
+    if (this.props.expandHeader === true) {
+      window.addEventListener('scroll', this.handleScroll);
+    }
   }
 
   componentWillUnmount() {
@@ -38,19 +40,27 @@ class Header extends React.Component {
   }
 
   render() {
-    const headerClass = 'site-header ' + this.collapseClass();
+    const headerClass = 'site-header site-header-fixed ' + this.collapseClass();
+    const headerClassSpacer = 'site-header site-header-spacer ' + this.collapseClass();
 
     return (
+      <div className="header-wrapper">
+        <header className={headerClassSpacer} role="banner">
+          <ButtonLogo/>
+          <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={false}/>
+        </header>
         <header className={headerClass} role="banner">
           <ButtonLogo/>
-          <NavigationMain randomizeHeader={this.props.randomizeHeader}/>
+          <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={true}/>
         </header>
+      </div>
     )
   }
 }
 
 Header.propTypes = {
-  randomizeHeader: PropTypes.func.isRequired
+  randomizeHeader: PropTypes.func.isRequired,
+  expandHeader: PropTypes.bool.isRequired
 };
 
 export default Header;

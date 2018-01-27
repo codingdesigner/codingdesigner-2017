@@ -1,64 +1,52 @@
-.site-header {
-  display: grid;
-  position: fixed;
-  z-index: get-z(toggled-menu);
-  border-bottom: 0.75em solid get-color(white);
-  background-clip: padding-box;
-  background-color: currentColor;
+.header-wrapper {
+  margin-right: -#{get-size(side-margin)};
+  margin-left: -#{get-size(side-margin)};
   width: 100vw;
-  overflow: hidden;
-  color: var(--header-color);
-  grid-template-rows: repeat(2, auto);
 
   @include bp(navigation--wide) {
+    margin-right: -#{get-size(side-margin--wide)};
+    margin-left: -#{get-size(side-margin--wide)};
+  }
+}
+
+.site-header-spacer {
+  position: relative;
+}
+
+.site-header-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+}
+
+.site-header {
+  background-clip: padding-box;
+  width: 100%;
+  overflow: hidden;
+  color: var(--header-color);
+
+  @include bp(navigation--narrow) {
     display: grid;
-    align-items: center;
-    border-bottom: 0.33em dashed currentColor;
+    background-color: var(--header-background-color);
+    background-image: var(--header-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: var(--header-blend);
+    grid-template-rows: repeat(2, auto);
+
+    .nav-primary {
+      order: -1;
+      background-color: get-color(white);
+    }
+  }
+
+  @include bp(navigation--wide) {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.33em dashed var(--header-color);
     background-clip: padding-box;
-    padding-top: 1.5em;
-    padding-bottom: 2em;
-    padding-left: get-size(side-margin--wide);
-    min-width: 40em;
-    height: 398px;
-    transition-property: background-color, height;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    grid-template-columns: 330px .6fr;
-
-    &.collapse-header {
-      display: grid;
-      align-items: start;
-      padding: 0.25em 0.75rem 0;
-      height: 110px;
-      grid-template-columns: 320px 1fr;
-      grid-gap: 1em;
-      @include breakpoint($page-max-width) {
-        @include content-limiter-padding();
-      }
-    }
-  }
-
-  @include bp(navigation--full) {
-    &.collapse-header {
-      height: 90px;
-      grid-template-columns: 400px 1fr;
-    }
-  }
-
-  @include breakpoint(870px) {
-    padding-left: 15%;
-  }
-
-  @include breakpoint(1100px) {
-    justify-content: center;
-    padding-left: 0;
-  }
-
-  @include breakpoint($page-max-width) {
-    @include content-limiter-padding();
-  }
-
-  .button-logo {
-    z-index: 1;
+    background-color: var(--header-color);
   }
 }
