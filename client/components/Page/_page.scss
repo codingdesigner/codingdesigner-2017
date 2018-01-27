@@ -10,34 +10,6 @@
     padding-right: get-size(side-margin--wide);
     padding-left: get-size(side-margin--wide);
   }
-
-  @include bp(navigation--narrow) {
-    //padding-top: 15em;
-
-    //&.small-header {
-    //  //padding-top: 3em;
-    //  padding-top: 0;
-    //  grid-template-rows: auto 1fr auto;
-    //
-    //  .site-header {
-    //    position: relative;
-    //  }
-    //}
-  }
-
-  @include bp(navigation--wide) {
-    //padding-top: 24em;
-
-    //&.small-header {
-    //  //padding-top: 3em;
-    //  padding-top: 0;
-    //  grid-template-rows: auto 1fr auto;
-    //
-    //  .site-header {
-    //    position: relative;
-    //  }
-    //}
-  }
 }
 
 .page-content {

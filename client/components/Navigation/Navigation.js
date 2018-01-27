@@ -36,12 +36,12 @@ class NavigationMain extends React.Component {
     return (
       <nav id="nav-primary" className="nav nav-primary">
         {this.props.navFunctional === true &&
-          <MediaQuery query="(max-device-width: 649px)">
+          <MediaQuery query="(max-width: 649px)">
             <input type="checkbox" id="nav-primary-trigger"/>
           </MediaQuery>
         }
         {this.props.navFunctional === true &&
-          <MediaQuery query="(min-device-width: 650px)">
+          <MediaQuery query="(min-width: 650px)">
             <input type="checkbox" id="nav-primary-trigger" defaultChecked/>
           </MediaQuery>
         }
