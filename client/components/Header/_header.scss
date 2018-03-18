@@ -1,3 +1,7 @@
+.skip-link {
+  @include visuallyhidden--focusable();
+}
+
 .header-wrapper {
   margin-right: -#{get-size(side-margin)};
   margin-left: -#{get-size(side-margin)};
@@ -11,6 +15,7 @@
 
 .site-header-spacer {
   position: relative;
+  opacity: 0;
 }
 
 .site-header-fixed {

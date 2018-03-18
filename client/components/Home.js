@@ -34,10 +34,10 @@ class Home extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className={pageClass}>
-
         <Header randomizeHeader={() => randomHeader.randomizeHeader} expandHeader={this.state.expandHeader}/>
-        <div className="page--home page-content">
+        <div className="page--home page-content" id="maincontent">
           <h1 className="page-title">
             Hi. <span className="my-name">I’m <span className="no-break">Mason Wendell.</span></span>
           </h1>

@@ -8,6 +8,7 @@ import find from 'lodash/find';
 const randomHeader = require('./Header/randomHeader');
 import CustomProperties from 'react-custom-properties';
 import Lightbox from "react-image-lightbox";
+import MediaQuery from 'react-responsive';
 
 // Flickr
 const flickrKey = 'a7f3502c5a8c43300589c8ed4b6a01ff';
@@ -138,7 +139,14 @@ class Photos extends React.Component {
 
   getLightboxImage(index) {
     const photo = this.state.photosets[flickrPhotoset].photo[index];
-    const lightboxPhoto = find(photo.sizes, {'label': 'Original'});
+    let lightboxPhoto = '';
+    if (window.matchMedia('(max-width: 649px)').matches) {
+      lightboxPhoto = find(photo.sizes, {'label': 'Medium 640'});
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+      lightboxPhoto = find(photo.sizes, {'label': 'Large'});
+    } else {
+      lightboxPhoto = find(photo.sizes, {'label': 'Original'});
+    }
     return lightboxPhoto.source;
   }
 
@@ -168,9 +176,10 @@ class Photos extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
-        <div className="page--photography-page page-content">
+        <div className="page--photography-page page-content" id="maincontent">
           <h1 className="page-title">Photography</h1>
           <div className="photo-gallery">
             {/*<h3>{typeof this.state.photosets[flickrPhotoset] !== 'undefined' &&*/}

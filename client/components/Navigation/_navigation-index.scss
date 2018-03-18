@@ -45,8 +45,7 @@ $navigation-count: 7;
   &:nth-of-type(1n+2) {
     border-bottom: 2px solid get-color(gray, light);
     padding-right: 0;
-    border-bottom: 2px solid get-color(gray, light);
-    padding-right: 0;
+
   }
 
   @include bp(navigation--narrow) {
