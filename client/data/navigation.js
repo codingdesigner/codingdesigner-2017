@@ -13,7 +13,7 @@ const navigation = [
   },
   {
     'path': '/photos',
-    'text': 'Photos'
+    'text': 'Photography'
   },
   {
     'path': '/posts',

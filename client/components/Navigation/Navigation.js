@@ -24,12 +24,10 @@ class NavigationMain extends React.Component {
     } else {
       return (
         <div className="nav-primary--fan" key={key}>
-          <Link to='' className="nav-item">{navItem.text}</Link>
+          <Link to='' className="nav-item" tabIndex="-1">{navItem.text}</Link>
         </div>
       )
     }
-
-
   }
 
   render() {

@@ -46,11 +46,11 @@ class Header extends React.Component {
     return (
       <div className="header-wrapper">
         <header className={headerClassSpacer} role="banner">
-          <ButtonLogo/>
+          <ButtonLogo navFunctional={false}/>
           <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={false}/>
         </header>
         <header className={headerClass} role="banner">
-          <ButtonLogo/>
+          <ButtonLogo navFunctional={true}/>
           <NavigationMain randomizeHeader={this.props.randomizeHeader} navFunctional={true}/>
         </header>
       </div>

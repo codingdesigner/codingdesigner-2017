@@ -83,7 +83,7 @@
   "devDependencies": {
     "base64-inline-loader": "^1.1.0",
     "breakpoint-sass": "^2.7.1",
-    "codingdesigner-styles": "^0.1.1",
+    "codingdesigner-styles": "^0.1.2",
     "copy-webpack-plugin": "^4.0.1",
     "eq.js": "^1.9.0",
     "expect": "^1.18.0",

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class ButtonLogo extends React.Component {
@@ -27,12 +28,16 @@ class ButtonLogo extends React.Component {
           <span className="char19" aria-hidden="true">r</span>
         </div>
         <div className="button-logo--words-wrapper">
-          <div className="button-logo--word word-1">Mason</div>
-          <div className="button-logo--word word-2">Wendell</div>
+          <div className="button-logo--word word-1"><Link to='/' className="no-underline" tabIndex={this.props.navFunctional ? '' : '-1'}>Mason</Link></div>
+          <div className="button-logo--word word-2"><Link to='/' className="no-underline" tabIndex={this.props.navFunctional ? '' : '-1'}>Wendell</Link></div>
         </div>
       </div>
     )
   }
 }
+
+ButtonLogo.propTypes = {
+  navFunctional: PropTypes.bool.isRequired
+};
 
 export default ButtonLogo;
