@@ -73,9 +73,10 @@ class PostsTeasers extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
-        <div className="page--posts-feed page-content">
+        <div className="page--posts-feed page-content" id="maincontent">
           <h1 className="page-title">Posts</h1>
           <section className="section latest-posts">
             <ul className="post-list">

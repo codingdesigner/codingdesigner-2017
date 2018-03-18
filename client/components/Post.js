@@ -95,9 +95,10 @@ class Post extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
-        <div className="page--posts-page page-content">
+        <div className="page--posts-page page-content" id="maincontent">
           <h1 className="page-title">{this.state.PostItem.headline}</h1>
           <article className="page">
             {this.postImage(this.state.PostItem)}

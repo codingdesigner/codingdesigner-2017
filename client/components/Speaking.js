@@ -50,9 +50,10 @@ class Speaking extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
-        <div className="page--speaking page-content">
+        <div className="page--speaking page-content" id="maincontent">
           <SpeakingIntro allImages={allImages}/>
           {Object.keys(talks).map(this.loadTalks)}
         </div>

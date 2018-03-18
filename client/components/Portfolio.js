@@ -55,9 +55,10 @@ class Portfolio extends React.Component {
 
     return (
       <CustomProperties className="full-page" properties={headerStyles} >
+      <a href="#maincontent" className="skip-link">Skip to main content</a>
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
-        <div className="page--portfolio page-content">
+        <div className="page--portfolio page-content" id="maincontent">
           <PortfolioNavigation
             portfolioItems={portfolio_items}
             allImages={allImages}
