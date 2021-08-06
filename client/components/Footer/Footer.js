@@ -16,11 +16,11 @@ class Footer extends React.Component {
 
           <div className="contact">
             <div className="contact-item email">
-              <Link to="mailto:mason@thecodingdesigner.com" className="icon-link">
+              <Link to="mailto:Mae@thecodingdesigner.com" className="icon-link">
                 <FontAwesomeIcon icon={faEnvelopeOpen} className="fa-2x" aria-label="Menu"/>
               </Link>
-              <Link to="mailto:mason@thecodingdesigner.com">
-                <span className="text">mason@thecodingdesigner.com</span>
+              <Link to="mailto:Mae@thecodingdesigner.com">
+                <span className="text">Mae@thecodingdesigner.com</span>
               </Link>
             </div>
             <div className="contact-item instagram">
@@ -40,11 +40,11 @@ class Footer extends React.Component {
               </Link>
             </div>
             <div className="contact-item LinkedIn">
-              <Link to="http://www.linkedin.com/in/masonwendell" className="icon-link">
+              <Link to="http://www.linkedin.com/in/Maewendell" className="icon-link">
                 <FontAwesomeIcon icon={faLinkedin} className="fa-2x" aria-label="Menu"/>
               </Link>
-              <Link to="http://www.linkedin.com/in/masonwendell">
-                <span className="text">Mason Wendell</span>
+              <Link to="http://www.linkedin.com/in/Maewendell">
+                <span className="text">Mae Wendell</span>
               </Link>
             </div>
           </div>
@@ -55,7 +55,7 @@ class Footer extends React.Component {
           </p>
         </div>
         <div className="copyright">
-          <p>&copy; 2016, 2017 Mason Wendell. All rights reserved.</p>
+          <p>&copy; 2016, 2017 Mae Wendell. All rights reserved.</p>
         </div>
       </footer>
     )

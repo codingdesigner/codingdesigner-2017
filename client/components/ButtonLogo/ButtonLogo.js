@@ -28,7 +28,7 @@ class ButtonLogo extends React.Component {
           <span className="char19" aria-hidden="true">r</span>
         </div>
         <div className="button-logo--words-wrapper">
-          <div className="button-logo--word word-1"><Link to='/' className="no-underline" tabIndex={this.props.navFunctional ? '' : '-1'}>Mason</Link></div>
+          <div className="button-logo--word word-1"><Link to='/' className="no-underline" tabIndex={this.props.navFunctional ? '' : '-1'}>Mae</Link></div>
           <div className="button-logo--word word-2"><Link to='/' className="no-underline" tabIndex={this.props.navFunctional ? '' : '-1'}>Wendell</Link></div>
         </div>
       </div>

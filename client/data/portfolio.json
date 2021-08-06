@@ -333,12 +333,12 @@
         },
         {
           "image__classes": "pi--image--wide",
-          "image__path": "sassconf-2014-speakers-mason-laptop",
+          "image__path": "sassconf-2014-speakers-Mae-laptop",
           "image__alt": "SassConf 2014 speakers"
         },
         {
           "image__classes": "pi--image--narrow",
-          "image__path": "sassconf-2014-speakers-mason-phone",
+          "image__path": "sassconf-2014-speakers-Mae-phone",
           "image__alt": "SassConf 2014 speakers"
         },
         {
@@ -383,7 +383,7 @@
       "project_name": "Thinking Inside the Box Inside the Box Inside the Box",
       "project_name_short": "Thinking Inside the Box",
       "overview__text": "A web design presentation about <em>styleguides</em> and <em>jazz</em>",
-      "item_label__client": "Mason Wendell",
+      "item_label__client": "Mae Wendell",
       "item_label__link__show": "true",
       "item_label__link": "http://codingdesigner.github.io/box/",
       "item_label__link__domain": "codingdesigner.github.io/box",
