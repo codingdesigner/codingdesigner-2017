@@ -43,9 +43,9 @@ class About extends React.Component {
         <div className="page--posts-page page-content" id="maincontent">
           <h1 className="page-title">About Mae Wendell</h1>
           <article className="page">
-            <div className="feature-image organic">
+            {/* <div className="feature-image organic">
               <img src={allImages['sassconf-podium']} alt="Mae Wendell podium" />
-            </div>
+            </div> */}
             <ReactMarkdown source={aboutMD}/>
           </article>
         </div>

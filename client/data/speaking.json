@@ -82,10 +82,6 @@
           "reaction_content": "474301519475388416"
         },
         {
-          "reaction_type_tweet": true,
-          "reaction_content": "474298313739862016"
-        },
-        {
           "reaction_type_quote": true,
           "reaction_size": "wide",
           "reaction_content": "<blockquote class=\"comment\">\n<p>This session was hands-down my most productive hour at Drupalcon. Not only did it open my mind to a completely different approach to design, but it streamlined my development process as well. I now have a brand new mindset going into my current projects.</p><footer>\n<cite>drupalatx via <a href=\"https://austin2014.drupal.org/comment/2513.html#comment-2513\">Drupalcon</a></cite>\n</footer></blockquote>"

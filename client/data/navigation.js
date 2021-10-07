@@ -12,14 +12,6 @@ const navigation = [
     'text': 'Speaking'
   },
   {
-    'path': '/photos',
-    'text': 'Photography'
-  },
-  {
-    'path': '/posts',
-    'text': 'Posts'
-  },
-  {
     'path': '/about',
     'text': 'About'
   }

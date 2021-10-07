@@ -39,7 +39,7 @@ class Home extends React.Component {
         <Header randomizeHeader={() => randomHeader.randomizeHeader} expandHeader={this.state.expandHeader}/>
         <div className="page--home page-content" id="maincontent">
           <h1 className="page-title">
-            Hi. <span className="my-name">I’m <span className="no-break">Mae Wendell.</span></span>
+            Hi. <span className="my-name">I’m <span className="no-break">Mae.</span> I make big design systems.</span>
           </h1>
           <HomeIntro/>
           <PortfolioOverview/>

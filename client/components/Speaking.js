@@ -54,7 +54,7 @@ class Speaking extends React.Component {
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--speaking page-content" id="maincontent">
-          <SpeakingIntro allImages={allImages}/>
+          {/* <SpeakingIntro allImages={allImages}/> */}
           {Object.keys(talks).map(this.loadTalks)}
         </div>
         <Footer/>
