@@ -1,10 +1,10 @@
 {
   "intro": {
     "intro_graphs": "<p>I've been speaking national and regional conferences, meetups, bar camps for the last six years.</p><p>I often speak about Designing in the Browser, Responsive Web Design, Sass, and Drupal. I produced a video podcast that teaches people about how they can use these tools and techniques creatively. I also blog at The Coding Designer and The Sass Way.</p>",
-    "intro_graphs_caption": "SassConf Speakers Panel. l-r: Una Kravets, Rachel Ober, Elise Holladay, Mason Wendell, Jina Anne, Natalie Weizenbaum",
+    "intro_graphs_caption": "SassConf Speakers Panel. l-r: Una Kravets, Rachel Ober, Elise Holladay, Mae Wendell, Jina Anne, Natalie Weizenbaum",
     "intro_image": {
       "src": "devsigner-2015-keynote",
-      "alt": "Mason Wendell speaking at Devsigner in Portland, Oregon",
+      "alt": "Mae Wendell speaking at Devsigner in Portland, Oregon",
       "caption": "Keynote speaker at Devsigner in Portland, Oregon <br/>Photo by <a href='https://twitter.com/Mindewen/status/614835142842912768'>@Mindewen</a>"
     }
   },
@@ -82,10 +82,6 @@
           "reaction_content": "474301519475388416"
         },
         {
-          "reaction_type_tweet": true,
-          "reaction_content": "474298313739862016"
-        },
-        {
           "reaction_type_quote": true,
           "reaction_size": "wide",
           "reaction_content": "<blockquote class=\"comment\">\n<p>This session was hands-down my most productive hour at Drupalcon. Not only did it open my mind to a completely different approach to design, but it streamlined my development process as well. I now have a brand new mindset going into my current projects.</p><footer>\n<cite>drupalatx via <a href=\"https://austin2014.drupal.org/comment/2513.html#comment-2513\">Drupalcon</a></cite>\n</footer></blockquote>"
@@ -119,7 +115,7 @@
         {
           "reaction_type_quote": true,
           "reaction_size": "wide",
-          "reaction_content": "<blockquote class=\"comment\">\n<p>Doing mostly backend development, over time I've shied away from front end development. Mason as a coding designer has made me more interested in bridging those. One of the things I like about Sass is how reusable style rules can help the process become really simplified and more logical. But one of the questions I've had is how to keep it all manageable - media queries for example. A tool to help with that sounds like something I'd like to hear about.</p><footer>\n<cite>scottrigby via <a href=\"https://portland2013.drupal.org/comment/928.html#comment-928\">Drupalcon</a></cite>\n</footer></blockquote>"
+          "reaction_content": "<blockquote class=\"comment\">\n<p>Doing mostly backend development, over time I've shied away from front end development. Mae as a coding designer has made me more interested in bridging those. One of the things I like about Sass is how reusable style rules can help the process become really simplified and more logical. But one of the questions I've had is how to keep it all manageable - media queries for example. A tool to help with that sounds like something I'd like to hear about.</p><footer>\n<cite>scottrigby via <a href=\"https://portland2013.drupal.org/comment/928.html#comment-928\">Drupalcon</a></cite>\n</footer></blockquote>"
         }
       ]
     },
@@ -183,7 +179,7 @@
       "talk_video": {
         "talk_video_vimeo_embed": [
           {
-            "embed_url": "<iframe src=\"https://player.vimeo.com/video/44889054\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n      <p><a href=\"https://vimeo.com/44889054\">Mobile and Responsive Design with Sass by Mason Wendell</a> from <a href=\"https://vimeo.com/drupaldelphia\">Drupaldelphia</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p></iframe>"
+            "embed_url": "<iframe src=\"https://player.vimeo.com/video/44889054\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n      <p><a href=\"https://vimeo.com/44889054\">Mobile and Responsive Design with Sass by Mae Wendell</a> from <a href=\"https://vimeo.com/drupaldelphia\">Drupaldelphia</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p></iframe>"
           }
         ]
       }

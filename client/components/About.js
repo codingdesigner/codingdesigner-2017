@@ -41,11 +41,11 @@ class About extends React.Component {
       <div className="full-page">
         <Header randomizeHeader={() => randomHeader.randomizeHeader(this)}/>
         <div className="page--posts-page page-content" id="maincontent">
-          <h1 className="page-title">About Mason Wendell</h1>
+          <h1 className="page-title">About Mae Wendell</h1>
           <article className="page">
-            <div className="feature-image organic">
-              <img src={allImages['sassconf-podium']} alt="Mason Wendell podium" />
-            </div>
+            {/* <div className="feature-image organic">
+              <img src={allImages['sassconf-podium']} alt="Mae Wendell podium" />
+            </div> */}
             <ReactMarkdown source={aboutMD}/>
           </article>
         </div>

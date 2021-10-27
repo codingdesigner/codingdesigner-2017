@@ -13,10 +13,10 @@ class HomeIntro extends React.Component {
               <ReactMarkdown source={homeIntro}/>
             </div>
           </div>
-          <figure className="intro-image">
+          {/* <figure className="intro-image">
             <img src={introImage.src} alt={introImage.alt}/>
             <figcaption>{introImage.caption}</figcaption>
-          </figure>
+          </figure> */}
         </div>
 
     )

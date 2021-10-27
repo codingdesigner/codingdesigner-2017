@@ -22,7 +22,7 @@
   "engines": {
     "node": "^6.11"
   },
-  "author": "Mason Wendell",
+  "author": "Mae Wendell",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.2",
     "@fortawesome/fontawesome-free-brands": "^5.0.4",
